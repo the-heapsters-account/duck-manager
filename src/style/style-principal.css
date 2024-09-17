@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #f4f4f4;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.topo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+ .bt-escolha{
+    background-color: #007BFF;
+    color: white;
+    font-size: 20px;
+    border: none;
+    margin-right: 5px;
+    margin-left: -15px;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+} 
+
+
+.barra-pesquisa {
+    display: flex;
+    align-items: center;
+}
+
+.barra-pesquisa input[type="text"] {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 8px;
+    font-size: 20px;
+    width: 600px;
+    outline: none;
+}
+
+.icon-pesquisa{
+    background-color: #007BFF;
+    color: white;
+    height: 40px;
+    width: 35px;
+    border: none;
+    border-radius: 0px 5px 5px 0px;
+    padding: 8px;
+    cursor: pointer;
+    margin-left: -20px;
+}
+
+.icon-pesquisa:hover {
+    background-color: #0056b3;
+}
+.gerar-doc{
+    background-color: #007BFF;
+    color: white;
+    font-size: 20px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+}
+.tabela{
+    width: 650px;
+}
+.tabela th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+tbody, td{
+    text-align: center;
+}
