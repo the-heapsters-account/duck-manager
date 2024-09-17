@@ -1,5 +1,5 @@
 # Processo de instalação
-Para instalar os arquivos necessários para rodar a aplicação e baixar o *node_modules*, é necessário executar o comando abaixo no seu cmd.
+Para instalar os arquivos necessários para rodar a aplicação e baixar o ***node_modules***, é necessário executar o comando abaixo no seu cmd.
 ```cmd
 npm install
 ```
