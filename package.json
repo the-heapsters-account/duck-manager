@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "projeto de extensão de Java da faculdade",
   "main": "main.js",
-  "scripts": "electron .",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "keywords": [],
   "authors": "edgar augusto, pedro arthur, joão gilberto, pedro dos anjos, ana marcella, lucas madureira, murylo costa",
   "license": "MIT",
