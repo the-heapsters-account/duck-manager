@@ -66,12 +66,17 @@ body {
         border: none;
         border-radius: 5px;
     }
+    main{
+        background-color: violet;
+        width: 650px;
+    }
     .tabela{
         width: 650px;
+        border-collapse: collapse;
     }
     .tabela th, td{
         border: 1px solid black;
-        border-collapse: collapse;
+        padding: auto;
     }
     tbody, td{
         text-align: center;
@@ -141,12 +146,17 @@ body {
         border: none;
         border-radius: 5px;
     }
+    main{
+        background-color: violet;
+        width: 500px;
+    }
     .tabela{
         width: 500px;
+        border-collapse: collapse;
     }
     .tabela th, td{
         border: 1px solid black;
-        border-collapse: collapse;
+        padding: auto;
     }
     tbody, td{
         text-align: center;
@@ -210,12 +220,17 @@ body {
         border: none;
         border-radius: 5px;
     }
+    main{
+        background-color: violet;
+        width: 475px;
+    }
     .tabela{
-        width: 400px;
+        width: 475px;
+        border-collapse: collapse;
     }
     .tabela th, td{
         border: 1px solid black;
-        border-collapse: collapse;
+        padding: auto;
     }
     tbody, td{
         text-align: center;
@@ -279,12 +294,17 @@ body {
         border: none;
         border-radius: 5px;
     }
+    main{
+        background-color: violet;
+        width: 400px;
+    }
     .tabela{
-        width: 325px;
+        width: 400px;
+        border-collapse: collapse;
     }
     .tabela th, td{
         border: 1px solid black;
-        border-collapse: collapse;
+        padding: auto;
     }
     tbody, td{
         text-align: center;
@@ -345,15 +365,20 @@ body {
         padding: 8px 16px;
         margin-right: -15px;
         margin-left: 5px;
+        height: 34px;
         border: none;
         border-radius: 5px;
     }
+    main{
+        background-color: violet;
+        width: 325px;
+    }
     .tabela{
         width: 325px;
+        border-collapse: collapse;
     }
     .tabela th, td{
         border: 1px solid black;
-        border-collapse: collapse;
     }
     tbody, td{
         text-align: center;
