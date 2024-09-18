@@ -13,14 +13,24 @@ npm start
 ```
 
 # Programas necessários
-1. [Visual Studio Code](https://code.visualstudio.com/Download)
-2. [Node.JS](https://nodejs.org/pt/download/package-manager) (**obrigatório** para usar o *npm*)
-3. [git](https://git-scm.com/downloads) (Git)
-4. [GitHub Desktop](https://desktop.github.com/download/)
+1. [Node.JS](https://nodejs.org/pt/download/package-manager) (**obrigatório** para usar o *npm*)
+2. [git](https://git-scm.com/downloads)
+3. [GitHub Desktop](https://desktop.github.com/download/)
+
+## IDEs recomendadas
+Pode-se usar o *VS Code* para desenvolvimento Java? Sim, nada lhe impede disso. Porém, existem *IDEs* voltadas para esta linguagem e estas são as mais indicadas e recomendadas para se usar.
+
+- Para desenvolvimento geral
+    - [Visual Studio Code](https://code.visualstudio.com/Download)
+- Para desenvolvimento em Java
+    - [Intellij IDEA Community Edition](https://www.jetbrains.com/pt-br/idea/download/?section=windows#:~:text=uso%20completamente%20gratuito-,IntelliJ%20IDEA%20Community%20Edition,-O%20IDE%20para)
+    - [Apache NetBeans](https://netbeans.apache.org/front/main/)
 
 # Recursos utilizados e necessários
-1. [npm](https://www.npmjs.com/) (JavaScript package manager)
-2. [git](https://git-scm.com/downloads) (Git)
+1. [npm](https://www.npmjs.com/) - JavaScript package manager
+2. [git](https://git-scm.com/downloads) - Git
+3. [Java](https://www.java.com/pt-BR/download/)
+4. [JDK 23](https://www.oracle.com/br/java/technologies/downloads/)
 
 # Pacotes instalados
 1. *Electron*
@@ -28,6 +38,7 @@ npm start
     - Para mais informações: [electron - npm](https://www.npmjs.com/package/electron) (npm), [Introdução | Electron](https://www.electronjs.org/pt/docs/latest/) (Electron)
 2. *Nodemon*
     - Atualiza a aplicação que está rodando sem ter a necessidade de fechar e abrir a aplicação a cada mudança no código
+    - A cada alteração no código, após o código ser salvo, a aplicação reseta
     - Para mais informações: [nodemon - npm](https://www.npmjs.com/package/nodemon) (nodemon), [remy/nodemon](https://github.com/remy/nodemon#nodemon) (GitHub)
 
 # Observação
