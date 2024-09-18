@@ -15,9 +15,12 @@ npm start
 # Programas necessários
 1. [Visual Studio Code](https://code.visualstudio.com/Download)
 2. [Node.JS](https://nodejs.org/pt/download/package-manager) (**obrigatório** para usar o *npm*)
+3. [git](https://git-scm.com/downloads) (Git)
+4. [GitHub Desktop](https://desktop.github.com/download/)
 
 # Recursos utilizados e necessários
 1. [npm](https://www.npmjs.com/) (JavaScript package manager)
+2. [git](https://git-scm.com/downloads) (Git)
 
 # Pacotes instalados
 1. *Electron*
