@@ -66,19 +66,37 @@ body {
         border: none;
         border-radius: 5px;
     }
-    main{
-        background-color: violet;
-        width: 650px;
+    .principal{
+        background-color: purple;
+        display: flex;
+        flex-direction: row;
+    }
+    .scroll{
+        overflow-x: auto;
     }
     .tabela{
+        height: 450px;
         width: 650px;
         border-collapse: collapse;
     }
-    .tabela th, td{
+    .tabela th{
+        background-color: violet;
+        border: 1px solid black;
+        padding: auto;
+    }
+    .tabela td{
+        background-color: rgb(233, 233, 40);
         border: 1px solid black;
         padding: auto;
     }
     tbody, td{
+        text-align: center;
+    }
+    .fundo-produtos{
+        background-color: rgb(206, 79, 206);
+        width: 710px;
+        height: 591px;
+        line-height: 33rem;
         text-align: center;
     }
 }
@@ -146,15 +164,17 @@ body {
         border: none;
         border-radius: 5px;
     }
-    main{
-        background-color: violet;
-        width: 500px;
-    }
     .tabela{
-        width: 500px;
+        width: 650px;
         border-collapse: collapse;
     }
-    .tabela th, td{
+    .tabela th{
+        background-color: violet;
+        border: 1px solid black;
+        padding: auto;
+    }
+    .tabela td{
+        background-color: rgb(233, 233, 40);
         border: 1px solid black;
         padding: auto;
     }
@@ -220,15 +240,17 @@ body {
         border: none;
         border-radius: 5px;
     }
-    main{
-        background-color: violet;
-        width: 475px;
-    }
     .tabela{
-        width: 475px;
+        width: 650px;
         border-collapse: collapse;
     }
-    .tabela th, td{
+    .tabela th{
+        background-color: violet;
+        border: 1px solid black;
+        padding: auto;
+    }
+    .tabela td{
+        background-color: rgb(233, 233, 40);
         border: 1px solid black;
         padding: auto;
     }
@@ -294,15 +316,17 @@ body {
         border: none;
         border-radius: 5px;
     }
-    main{
-        background-color: violet;
-        width: 400px;
-    }
     .tabela{
-        width: 400px;
+        width: 650px;
         border-collapse: collapse;
     }
-    .tabela th, td{
+    .tabela th{
+        background-color: violet;
+        border: 1px solid black;
+        padding: auto;
+    }
+    .tabela td{
+        background-color: rgb(233, 233, 40);
         border: 1px solid black;
         padding: auto;
     }
@@ -369,16 +393,19 @@ body {
         border: none;
         border-radius: 5px;
     }
-    main{
-        background-color: violet;
-        width: 325px;
-    }
     .tabela{
-        width: 325px;
+        width: 650px;
         border-collapse: collapse;
     }
-    .tabela th, td{
+    .tabela th{
+        background-color: violet;
         border: 1px solid black;
+        padding: auto;
+    }
+    .tabela td{
+        background-color: rgb(233, 233, 40);
+        border: 1px solid black;
+        padding: auto;
     }
     tbody, td{
         text-align: center;
