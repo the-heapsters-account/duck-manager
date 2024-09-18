@@ -1,104 +1,108 @@
 body {
     font-family: Arial, sans-serif;
 }
-@media (min-width: 912px) and (max-width: 2560px){
-    header {
-        background-color: #f4f4f4;
-        padding: 10px 20px;
-        border-bottom: 1px solid #ddd;
-    }
+@media(max-width: 2560px) and (min-width: 912px){
+        header {
+            background-color: #f4f4f4;
+            padding: 10px 20px;
+            border-bottom: 1px solid #ddd;
+        }
 
-    .topo{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
+        .topo{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
 
-    .bt-escolha{
-        background-color: #007BFF;
-        color: white;
-        font-size: 20px;
-        border: none;
-        margin-left: -15px;
-        padding: 8px 16px;
-        border-radius: 5px;
-        cursor: pointer;
-    }
+        .bt-escolha{
+            background-color: #007BFF;
+            color: white;
+            font-size: 20px;
+            border: none;
+            margin-left: -15px;
+            padding: 8px 16px;
+            border-radius: 5px;
+            outline: none;
+            cursor: pointer;
+        }
+        .barra-pesquisa {
+            display: flex;
+            align-items: center;
+        }
 
+        .barra-pesquisa input[type="text"] {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 8px;
+            margin: 0px 5px 0px 5px;
+            font-size: 20px;
+            width: 600px;
+            outline: none;
+        }
 
-    .barra-pesquisa {
-        display: flex;
-        align-items: center;
-    }
+        .icon-pesquisa{
+            background-color: #007BFF;
+            color: white;
+            height: 40px;
+            width: 35px;
+            border: none;
+            border-radius: 0px 5px 5px 0px;
+            padding: 8px;
+            cursor: pointer;
+            margin-left: -20px;
+        }
 
-    .barra-pesquisa input[type="text"] {
-        border: 1px solid #ddd;
-        border-radius: 5px;
-        padding: 8px;
-        margin: 0px 5px 0px 5px;
-        font-size: 20px;
-        width: 600px;
-        outline: none;
-    }
+        .icon-pesquisa:hover {
+            background-color: #0056b3;
+        }
+        .gerar-doc{
+            background-color: #007BFF;
+            color: white;
+            font-size: 20px;
+            padding: 8px 16px;
+            margin-right: -15px;
+            margin-left: 5px;
+            border: none;
+            border-radius: 5px;
+        }
+        .gerar-doc:hover{
+            background-color: #0056b3;
+        }
+        main{
+            height: 100%;
+        }
+        .principal{
+            background-color: purple;
+            display: flex;
+            flex-direction: row;
+            height: 100%;
+        }
 
-    .icon-pesquisa{
-        background-color: #007BFF;
-        color: white;
-        height: 40px;
-        width: 35px;
-        border: none;
-        border-radius: 0px 5px 5px 0px;
-        padding: 8px;
-        cursor: pointer;
-        margin-left: -20px;
-    }
-
-    .icon-pesquisa:hover {
-        background-color: #0056b3;
-    }
-    .gerar-doc{
-        background-color: #007BFF;
-        color: white;
-        font-size: 20px;
-        padding: 8px 16px;
-        margin-right: -15px;
-        margin-left: 5px;
-        border: none;
-        border-radius: 5px;
-    }
-    .principal{
-        background-color: purple;
-        display: flex;
-        flex-direction: row;
-    }
-    .scroll{
-        overflow-x: auto;
-    }
-    .tabela{
-        height: 450px;
-        width: 650px;
-        border-collapse: collapse;
-    }
-    .tabela th{
-        background-color: violet;
-        border: 1px solid black;
-        padding: auto;
-    }
-    .tabela td{
-        background-color: rgb(233, 233, 40);
-        border: 1px solid black;
-        padding: auto;
-    }
-    tbody, td{
-        text-align: center;
-    }
-    .fundo-produtos{
-        background-color: rgb(206, 79, 206);
-        width: 710px;
-        height: 591px;
-        line-height: 33rem;
-        text-align: center;
-    }
+        .tabela{
+            height: 75%;
+            width: 500px;
+            border-collapse: collapse;
+        }
+        .tabela th{
+            background-color: violet;
+            border: 1px solid black;
+            padding: auto;
+        }
+        .tabela td{
+            background-color: rgb(233, 233, 40);
+            border: 1px solid black;
+            padding: auto;
+        }
+        tbody, td{
+            text-align: center;
+        }
+        .fundo-produtos{
+            background-color: rgb(206, 79, 206);
+            width: 2043px;
+            height: 90.5vh;
+            line-height: 33rem;
+            text-align: center;
+        }
 }
 
  /* MEDIA QUERIES */
@@ -121,6 +125,7 @@ body {
         margin-left: -15px;
         padding: 8px 16px;
         border-radius: 5px;
+        outline: none;
         cursor: pointer;
     }
     .barra-pesquisa {
@@ -155,32 +160,48 @@ body {
         color: white;
         font-size: 16px;
         padding: 8px 16px;
-        margin-right: -15px; .topo{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-        margin-left: 5px;
+        margin-right: -15px;
         border: none;
         border-radius: 5px;
+        cursor: pointer;
     }
-    .tabela{
-        width: 650px;
-        border-collapse: collapse;
+    .gerar-doc:hover{
+        background-color: #0056b3;
     }
-    .tabela th{
-        background-color: violet;
-        border: 1px solid black;
-        padding: auto;
-    }
-    .tabela td{
-        background-color: rgb(233, 233, 40);
-        border: 1px solid black;
-        padding: auto;
-    }
-    tbody, td{
-        text-align: center;
-    }
+    main{
+            height: 100%;
+        }
+        .principal{
+            background-color: purple;
+            display: flex;
+            flex-direction: row;
+            height: 100%;
+        }
+        .tabela{
+            height: 75%;
+            width: 400px;
+            border-collapse: collapse;
+        }
+        .tabela th{
+            background-color: violet;
+            border: 1px solid black;
+            padding: auto;
+        }
+        .tabela td{
+            background-color: rgb(233, 233, 40);
+            border: 1px solid black;
+            padding: auto;
+        }
+        tbody, td{
+            text-align: center;
+        }
+        .fundo-produtos{
+            background-color: rgb(206, 79, 206);
+            width: 500px;
+            height: 90vh;
+            line-height: 33rem;
+            text-align: center;
+        }
 }
 @media (max-width: 822px) and  (min-width: 705px){
     header {
@@ -201,6 +222,7 @@ body {
         margin-left: -15px;
         padding: 8px 16px;
         border-radius: 5px;
+        outline: none;
         cursor: pointer;
     }
     .barra-pesquisa {
@@ -240,8 +262,22 @@ body {
         border: none;
         border-radius: 5px;
     }
+    .gerar-doc:hover{
+        background-color: #0056b3;
+    }
+    main{
+        height: 100%;
+    }
+    .principal{
+        background-color: purple;
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+    }
+
     .tabela{
-        width: 650px;
+        height: 75%;
+        width: 350px;
         border-collapse: collapse;
     }
     .tabela th{
@@ -255,6 +291,13 @@ body {
         padding: auto;
     }
     tbody, td{
+        text-align: center;
+    }
+    .fundo-produtos{
+        background-color: rgb(206, 79, 206);
+        width: 456px;
+        height: 91.5vh;
+        line-height: 33rem;
         text-align: center;
     }
 }
@@ -277,6 +320,7 @@ body {
         margin-left: -15px;
         padding: 8px 16px;
         border-radius: 5px;
+        outline: none;
         cursor: pointer;
     } 
     .barra-pesquisa {
@@ -316,8 +360,22 @@ body {
         border: none;
         border-radius: 5px;
     }
+    .gerar-doc:hover{
+        background-color: #0056b3;
+    }
+    main{
+        height: 100%;
+    }
+    .principal{
+        background-color: purple;
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+    }
+
     .tabela{
-        width: 650px;
+        height: 75%;
+        width: 300px;
         border-collapse: collapse;
     }
     .tabela th{
@@ -331,6 +389,13 @@ body {
         padding: auto;
     }
     tbody, td{
+        text-align: center;
+    }
+    .fundo-produtos{
+        background-color: rgb(206, 79, 206);
+        width: 456px;
+        height: 91.5vh;
+        line-height: 33rem;
         text-align: center;
     }
 }
@@ -353,6 +418,7 @@ body {
         margin-left: -15px;
         padding: 8px 16px;
         border-radius: 5px;
+        outline: none;
         cursor: pointer;
     } 
     .barra-pesquisa {
@@ -393,8 +459,22 @@ body {
         border: none;
         border-radius: 5px;
     }
+    .gerar-doc:hover{
+        background-color: #0056b3;
+    }
+    main{
+        height: 100%;
+    }
+    .principal{
+        background-color: purple;
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+    }
+
     .tabela{
-        width: 650px;
+        height: 75%;
+        width: 250px;
         border-collapse: collapse;
     }
     .tabela th{
@@ -408,6 +488,13 @@ body {
         padding: auto;
     }
     tbody, td{
+        text-align: center;
+    }
+    .fundo-produtos{
+        background-color: rgb(206, 79, 206);
+        width: 456px;
+        height: 91.5vh;
+        line-height: 33rem;
         text-align: center;
     }
 }

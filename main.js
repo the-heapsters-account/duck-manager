@@ -4,7 +4,7 @@ function createWindow() {
     const win = new BrowserWindow({
         width: 800,
         height: 1000,
-        resizable: false
+        resizable: true
     });
 
     win.loadFile("src/pages/main/index.html");
