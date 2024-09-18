@@ -11,6 +11,6 @@
   "authors": "edgar augusto, pedro arthur, joão gilberto, pedro dos anjos, ana marcella, lucas madureira, murylo costa",
   "license": "MIT",
   "devDependencies": {
-    "electron": "^32.1.0"
+    "electron": "^32.1.1",
   }
 }
