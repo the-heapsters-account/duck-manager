@@ -64,6 +64,7 @@ body {
             margin-left: 5px;
             border: none;
             border-radius: 5px;
+            cursor: pointer;
         }
         .gerar-doc:hover{
             background-color: #0056b3;
@@ -261,6 +262,7 @@ body {
         margin-left: 5px;
         border: none;
         border-radius: 5px;
+        cursor: pointer;
     }
     .gerar-doc:hover{
         background-color: #0056b3;
@@ -359,6 +361,7 @@ body {
         margin-left: 5px;
         border: none;
         border-radius: 5px;
+        cursor: pointer;
     }
     .gerar-doc:hover{
         background-color: #0056b3;
@@ -458,6 +461,7 @@ body {
         height: 34px;
         border: none;
         border-radius: 5px;
+        cursor: pointer;
     }
     .gerar-doc:hover{
         background-color: #0056b3;
