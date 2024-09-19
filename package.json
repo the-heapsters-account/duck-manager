@@ -2,15 +2,16 @@
   "name": "my-app",
   "version": "1.0.0",
   "description": "projeto de extensão de Java da faculdade",
-  "main": "main.js",
+  "main": "app.js",
   "scripts": {
-    "start": "electron .",
+    "start": "nodemon",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "authors": "edgar augusto, pedro arthur, joão gilberto, pedro dos anjos, ana marcella, lucas madureira, murylo costa",
   "license": "MIT",
   "devDependencies": {
-    "electron": "^32.1.0"
+    "electron": "^32.1.1",
+    "nodemon": "^3.1.5"
   }
 }
