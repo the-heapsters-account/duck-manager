@@ -1,13 +1,13 @@
 # Processo importantes
 
-## Injeção de dependências
-Para instalar os arquivos necessários para aplicação (*injeção de depedência*), execute o comando abaixo, **independente do seu sistema operacional**.
+## Instalação de pacotes
+Para instalar os arquivos necessários para aplicação , execute o comando abaixo, **independente do seu sistema operacional**.
 ```cmd
 npm install
 ```
 
 ## Processo de execução
-Após a injeção de de dependências, para executar a aplicação basta executar o comando abaixo no seu cmd e esperar a aplicação abrir na sua máquina.
+Após a instalação de pacotes, para executar a aplicação basta executar o comando abaixo no seu cmd e esperar a aplicação abrir na sua máquina.
 ```cmd
 npm start
 ```
