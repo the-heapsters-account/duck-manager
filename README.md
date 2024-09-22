@@ -1,4 +1,4 @@
-# Processo importantes
+# Processos importantes
 
 ## Instalação de pacotes
 Para instalar os arquivos necessários para aplicação , execute o comando abaixo, **independente do seu sistema operacional**.
@@ -40,6 +40,9 @@ Pode-se usar o *VS Code* para desenvolvimento Java? Sim, nada lhe impede disso. 
     - Atualiza a aplicação que está rodando sem ter a necessidade de fechar e abrir a aplicação a cada mudança no código
     - A cada alteração no código, após o código ser salvo, a aplicação reseta
     - Para mais informações: [nodemon - npm](https://www.npmjs.com/package/nodemon) (nodemon), [remy/nodemon](https://github.com/remy/nodemon#nodemon) (GitHub)
+3. *File-system* & *FS*
+    - Permite a leitura, criação de diretórios, cópia de diretórios e afins
+    - Para mais informações: [file-system](https://www.npmjs.com/package/file-system) (file-system), [fs](https://www.npmjs.com/package/fs) (fs)
 
 # Observação
 É sempre bom **ATUALIZAR** o repositório constantemente para garantir que todos arquivos estão devidamente sincronizados com o repositório do projeto.
