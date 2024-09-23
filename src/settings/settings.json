@@ -5,7 +5,7 @@
         "pesquisa": "tecla + outra tecla",
         "menu": "tecla + outra tecla"
     },
-    "atalhosNaoPode": {
+    "atalhosNaoPodem": {
         "exemplo": "tecla",
         "outroExemplo": "tecla + outra tecla",
         "atalhosDefinidos": {
