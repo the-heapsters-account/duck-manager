@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<settings>
+    <quantidadeMinima>10</quantidadeMinima>
+    <pathImageCopied>C:/...</pathImageCopied>
+    <atalhos>
+        <pesqsisa>"tecla + outra tecla"</pesqsisa>
+        <menu>tecla + outra tecla</menu>
+    </atalhos>
+    <atalhosNaoPodem>
+        <exemplo>tecla</exemplo>
+        <outroExemplo>tecla + outra tecla</outroExemplo>
+        <atalhosDefinidos>
+            <pesquisaAtalho>tecla + outra tecla</pesquisaAtalho>
+            <menuAtalho>tecla + outra tecla</menuAtalho>
+        </atalhosDefinidos>
+    </atalhosNaoPodem>
+</settings>
