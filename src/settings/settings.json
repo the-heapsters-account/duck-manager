@@ -9,8 +9,8 @@
         "exemplo": "tecla",
         "outroExemplo": "tecla + outra tecla",
         "atalhosDefinidos": {
-            "pesquisa": "tecla + outra tecla",
-            "menu":"tecla + outra tecla"
+            "pesquisaAtalho": "tecla + outra tecla",
+            "menuAtalho":"tecla + outra tecla"
         }
     }
 }
