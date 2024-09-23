@@ -6,12 +6,12 @@
         <pesqsisa>"tecla + outra tecla"</pesqsisa>
         <menu>tecla + outra tecla</menu>
     </atalhos>
-    <atalhosNaoPode>
+    <atalhosNaoPodem>
         <exemplo>tecla</exemplo>
         <outroExemplo>tecla + outra tecla</outroExemplo>
         <atalhosDefinidos>
-            <pesquisa>tecla + outra tecla</pesquisa>
-            <menu>tecla + outra tecla</menu>
+            <pesquisaAtalho>tecla + outra tecla</pesquisaAtalho>
+            <menuAtalho>tecla + outra tecla</menuAtalho>
         </atalhosDefinidos>
-    </atalhosNaoPode>
+    </atalhosNaoPodem>
 </settings>
