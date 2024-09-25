@@ -12,68 +12,70 @@
     <link rel="stylesheet" href="../../style/media-queries/style-media-queries.css">
 </head>
 <body>
-    <header>
-        <div class="topo">
-            <select class="bt-escolha">
-                <option value="#" selected>Escolha</option>
-                <option value="#">Atalho</option>
-                <option value="#">Atalho</option>
-                <option value="#">Atalho</option>
-                <option value="#">Atalho</option>
-                <option value="#">Atalho</option>
-            </select>
-            <form class="barra-pesquisa">
-                <input type="text" id="pesquisa" name="search" placeholder="Pesquisar">
-                <input type="button" value="🔍" class="icon-pesquisa">
-            </form>
-            <input type="button" value="Gerar Doc." class="gerar-doc">
-        </div>
+    <header class=".topo">
+        <input type="button"
+        value="configurações"
+        class="bt-settings">
+
+        <section class="barra-pesquisa">
+            <input type="search"
+            id="pesquisa"
+            name="search"
+            placeholder="Pesquisar">
+
+            <input type="button"
+            value="🔍"
+            class="icon-pesquisa">
+        </section>
+
+        <input type="button"
+        value="Gerar Doc."
+        class="gerar-doc">
     </header>
 
     <main class="principal">
-        <div class="scroll">
-            <table class="tabela">
-                <thead>
-                    <tr>
-                        <th>Título 1</th>
-                        <th>Título 2</th>
-                        <th>Título 3</th>
-                        <th>Título 4</th>
-                        <th>Título 5</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Linha 1</td>
-                        <td>Linha 2</td>
-                        <td>Linha 3</td>
-                        <td>Linha 4</td>
-                        <td>Linha 5</td>
-                    </tr>
-                    <tr>
-                        <td>Linha 6</td>
-                        <td>Linha 7</td>
-                        <td>Linha 8</td>
-                        <td>Linha 9</td>
-                        <td>Linha 10</td>
-                    </tr>
-                    <tr>
-                        <td>Linha 11</td>
-                        <td>Linha 12</td>
-                        <td>Linha 13</td>
-                        <td>Linha 14</td>
-                        <td>Linha 15</td>
-                    </tr>
-                    <tr>
-                        <td>Linha 16</td>
-                        <td>Linha 17</td>
-                        <td>Linha 18</td>
-                        <td>Linha 19</td>
-                        <td>Linha 20</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+        <table class="tabela">
+            <thead>
+                <tr>
+                    <th>produto</th>
+                    <th>preço</th>
+                    <th>quantidade</th>
+                    <th>código de referência</th>
+                    <th>código de barras</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Linha 1</td>
+                    <td>Linha 2</td>
+                    <td>Linha 3</td>
+                    <td>Linha 4</td>
+                    <td>Linha 5</td>
+                </tr>
+                <tr>
+                    <td>Linha 6</td>
+                    <td>Linha 7</td>
+                    <td>Linha 8</td>
+                    <td>Linha 9</td>
+                    <td>Linha 10</td>
+                </tr>
+                <tr>
+                    <td>Linha 11</td>
+                    <td>Linha 12</td>
+                    <td>Linha 13</td>
+                    <td>Linha 14</td>
+                    <td>Linha 15</td>
+                </tr>
+                <tr>
+                    <td>Linha 16</td>
+                    <td>Linha 17</td>
+                    <td>Linha 18</td>
+                    <td>Linha 19</td>
+                    <td>Linha 20</td>
+                </tr>
+            </tbody>
+        </table>
+
         <div class="fundo-produtos">
             Fundo seção
         </div>
