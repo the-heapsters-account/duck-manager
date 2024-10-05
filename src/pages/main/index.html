@@ -80,20 +80,44 @@
         </div>
     </main>
 
-    <dialog class="dialog">
+    <dialog class="dialog" open>
         <h1>Configurações</h1>
 
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae cum repellat laboriosam eos! Ipsam non eum et natus eaque quod alias inventore eius, magni maiores necessitatibus dolores cumque rem nesciunt.</p>
+        <main>
+            <article class="content">
+                <section>
+                    <p>Quantidade miníma: </p>
 
-        <section class="inputs">
-            <input type="button"
-            class="bt-close"
-            value="fechar">
-            <input type="button"
-            class="bt-save"
-            value="salvar">
-        </section>
+                    <input type="number" id="inputQuantidadeMinima">
+                </section>
+
+                <section>
+                    <p>Imagem: </p>
+
+                    <input type="file" id="inputPathCopied">
+                </section>
+
+                <section>
+                    <p>atalhos</p>
+
+                    <ul id="atalhos">
+                        <li>atalho</li>
+                    </ul>
+                </section>
+            </article>
+
+            <article class="inputs">
+                <input type="button"
+                class="bt-close"
+                value="fechar">
+
+                <input type="button"
+                class="bt-save"
+                value="salvar">
+            </article>
+        </main>
     </dialog>
+    <script type="module" src="../../js/renderJSON.js"></script>
     <script src="../../js/search.js"></script>
     <script src="../../js/dialogEvents.js"></script>
 </body>
