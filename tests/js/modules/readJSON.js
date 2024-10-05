@@ -4,9 +4,8 @@ module.exports = {
 };
 
 function readJSON(path) {
-    // método de leitura de arquivo
     const data = fs.readFileSync(path, "utf-8");
 
-    const jsonData = JSON.parse(data); // conversão de string para um objeto
+    const jsonData = JSON.parse(data);
     return jsonData;
 }
