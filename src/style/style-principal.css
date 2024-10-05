@@ -98,7 +98,39 @@ body > main .fundo-produtos{
 
     padding: 20px;
     margin-top: 10px;
-    width: 50%;
     width: 65%;
 }
+.dialog[open] h1 {
+    text-align: center;
+}
+.dialog[open] main {
+    border: 1px solid;
+    gap: 10px;
+
+    padding: 5px;
+}
+.dialog[open] main .content {
+    gap: 20px;
+}
+.dialog[open] main, .dialog[open] main .content {
+    display: flex;
+    flex-direction: column;
+}
+.dialog[open] main .content section p {
+    /* width: 50%; */
+}
+.dialog[open] main .content section input {
+    /* width: 50%; */
+}
+.dialog[open] main .content section input[type="number"] {
+    border: 1px solid;
+    padding: 1px 4px;
+    border-radius: 10px;
+    width: 10%;
+}
+.dialog[open] main .content section ul {
+    list-style-position: inside;
+}
+.dialog[open] main .content section:not(:has(ul)) {
+    display: flex;
 }
