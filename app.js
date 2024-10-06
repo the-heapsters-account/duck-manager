@@ -29,6 +29,14 @@ ipcMain.handle('read-json', async () => {
 
     return JSON.parse(data);
 });
+
+ipcMain.handle("save-json", async (event, config) => {
+    const filePath = path.join(__dirname, pathSettingJSON);
+    fs.writeFileSync(filePath, JSON.stringify(config, null, 2));
+
+    return { status: "success" };
+});
+
 // fechando a janela do app em no windows e linux
 app.on("window-all-closed", () => {
     if(process.platform != "darwin") {
