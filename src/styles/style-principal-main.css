@@ -96,12 +96,14 @@ body > main .fundo-produtos{
     display: grid;
     place-self: start center;
 
-    padding: 20px;
+    padding: 30px 115px;
     margin-top: 10px;
     width: 65%;
 }
 .dialog[open] h1 {
     text-align: center;
+
+    padding: 20px 0;
 }
 .dialog[open] main {
     border: 1px solid;
@@ -116,12 +118,6 @@ body > main .fundo-produtos{
     display: flex;
     flex-direction: column;
 }
-.dialog[open] main .content section p {
-    /* width: 50%; */
-}
-.dialog[open] main .content section input {
-    /* width: 50%; */
-}
 .dialog[open] main .content section input[type="number"] {
     border: 1px solid;
     padding: 1px 4px;
@@ -133,4 +129,7 @@ body > main .fundo-produtos{
 }
 .dialog[open] main .content section:not(:has(ul)) {
     display: flex;
+}
+.dialog[open] main .inputs {
+    margin: auto;
 }
