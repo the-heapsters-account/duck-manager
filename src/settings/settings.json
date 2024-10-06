@@ -1,16 +1,8 @@
 {
-    "quantidadeMinima": 10,
-    "pathImageCopied": "C:/...",
-    "atalhos": {
-        "pesquisa": "tecla + outra tecla",
-        "menu": "tecla + outra tecla"
-    },
-    "atalhosNaoPodem": {
-        "exemplo": "tecla",
-        "outroExemplo": "tecla + outra tecla",
-        "atalhosDefinidos": {
-            "pesquisaAtalho": "tecla + outra tecla",
-            "menuAtalho":"tecla + outra tecla"
-        }
-    }
+  "quantidadeMinima": 10,
+  "pathImageCopied": "C:/...",
+  "atalhos": {
+    "pesquisa": "tecla + outra tecla",
+    "menu": "tecla + outra tecla"
+  }
 }
