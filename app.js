@@ -12,6 +12,9 @@ function createWindow() {
         height: heightSize,
         minwidth: widthSize,
         minheight: heightSize,
+        webPreferences: {
+            preload: path.join(__dirname, './preload.js') // comunicação entre processos para renderização de na interface
+        }
     });
 
     win.loadFile("src/pages/main/index.html");
