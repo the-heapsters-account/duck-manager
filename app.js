@@ -12,6 +12,7 @@ function createWindow() {
         height: heightSize,
         minwidth: widthSize,
         minheight: heightSize,
+        // icon: iconPath, // --> icon path bem aqui
         webPreferences: {
             preload: path.join(__dirname, './preload.js') // comunicação entre processos para renderização de na interface
         }
