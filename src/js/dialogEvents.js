@@ -6,7 +6,3 @@ const btSave = document.querySelector("dialog .bt-save");
 // btSettings.addEventListener("click", dialogElement.showModal());
 btSettings.addEventListener("click", () => dialogElement.showModal());
 btClose.addEventListener("click", () => dialogElement.close());
-btSave.addEventListener("click", () => {
-    // mudanças nas configurações
-    dialogElement.close();
-});
