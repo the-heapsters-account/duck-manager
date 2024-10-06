@@ -18,6 +18,8 @@ function createWindow() {
     });
 
     win.loadFile("src/pages/main/index.html");
+
+    win.maximize();
 };
 
 // fechando a janela do app em no windows e linux
