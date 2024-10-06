@@ -1,6 +1,7 @@
 const {app, BrowserWindow, ipcMain } = require('electron/main');
 const fs = require('fs');
 const path = require('path');
+const pathSettingJSON = "src/settings/settings.json";
 
 function createWindow() {
     const win = new BrowserWindow({
