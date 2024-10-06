@@ -4,6 +4,9 @@ const path = require('path');
 const pathSettingJSON = "src/settings/settings.json";
 
 function createWindow() {
+    widthSize = 800;
+    heightSize = 600;
+
     const win = new BrowserWindow({
         width: 800,
         height: 1000,
