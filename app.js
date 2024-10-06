@@ -8,9 +8,10 @@ function createWindow() {
     heightSize = 600;
 
     const win = new BrowserWindow({
-        width: 800,
-        height: 1000,
-        resizable: true
+        width: widthSize,
+        height: heightSize,
+        minwidth: widthSize,
+        minheight: heightSize,
     });
 
     win.loadFile("src/pages/main/index.html");
