@@ -22,6 +22,13 @@ function createWindow() {
     win.maximize();
 };
 
+ipcMain.handle('read-json', async () => {
+    const filePath = path.join(__dirname, pathSettingJSON);
+    const data = fs.readFileSync(filePath, 'utf-8');
+
+
+    return JSON.parse(data);
+});
 // fechando a janela do app em no windows e linux
 app.on("window-all-closed", () => {
     if(process.platform != "darwin") {
