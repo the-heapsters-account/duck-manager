@@ -13,6 +13,7 @@ function createWindow() {
         minwidth: widthSize,
         minheight: heightSize,
         // icon: iconPath, // --> icon path bem aqui
+        resizable: true,
         webPreferences: {
             preload: path.join(__dirname, './preload.js') // comunicação entre processos para renderização de na interface
         }
@@ -22,6 +23,8 @@ function createWindow() {
 
     win.maximize();
 };
+
+app.whenReady().then(() => createWindow());
 
 ipcMain.handle('read-json', async () => {
     const filePath = path.join(__dirname, pathSettingJSON);
@@ -45,6 +48,9 @@ app.on("window-all-closed", () => {
     }
 });
 
-app.whenReady().then(() => {
-    createWindow();
+// abrindo a aplicação no macOS
+app.on("activate", () => {
+    if (BrowserWindow.getAllWindows().length === 0) {
+        createWindow();
+    }
 });
