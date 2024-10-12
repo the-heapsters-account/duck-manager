@@ -10,11 +10,9 @@ window.api.readJSON().then((settingsJSON) => {
     inputPathCopied.value = "";
     atalhosList.innerHTML = "";
 
-    for (const [key, value] of Object.entries(settingsJSON.atalhos)) {
     for (const [dbConfigKey, dbConfigValue] of Object.entries(settingsJSON.dbConfigs)) {
         const li = document.createElement("li");
 
-        li.textContent = `${key}: ${value}`;
         li.textContent = `${dbConfigKey}:${dbConfigValue}`;
 
         atalhosList.appendChild(li);
