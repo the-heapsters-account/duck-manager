@@ -2,6 +2,7 @@ const { app, BrowserWindow, ipcMain } = require('electron/main');
 const fs = require('fs');
 const path = require('path');
 const pathSettingJSON = "src/settings/settings.json";
+const mysql = require('mysql2/promise');
 
 function createWindow() {
     widthSize = 800;
