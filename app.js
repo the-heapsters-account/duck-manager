@@ -52,6 +52,21 @@ ipcMain.handle("save-json", async (event, config) => {
     return { status: "success" };
 });
 
+ipcMain.handle('execute-query', async (event, query, params) => {
+    const dbConfig = loadDBConfig();
+    const connection = await mysql.createConnection(dbConfig);
+
+    try {
+        const [rows, fields] = await connection.execute(query);
+        return rows;
+    } catch (error) {
+        console.error('erro ao executar query:', error);
+        throw error;
+    } finally {
+        await connection.end();
+    }
+});
+
 // fechando a janela do app em no windows e linux
 app.on("window-all-closed", () => {
     if(process.platform != "darwin") {
