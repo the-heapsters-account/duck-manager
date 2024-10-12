@@ -4,6 +4,16 @@ const path = require('path');
 const pathSettingJSON = "src/settings/settings.json";
 const mysql = require('mysql2/promise');
 
+// carregando credenciais do arquivo settings.json
+const loadDBConfig = () => {
+    const configPath = path.join(__dirname, "src/settings/settings.json");
+    const rawConfig = fs.readFileSync(configPath);
+    const json = JSON.parse(rawConfig);
+    const dbConfigs = json.dbConfigs;
+
+    return dbConfigs;
+};
+
 function createWindow() {
     widthSize = 800;
     heightSize = 600;
