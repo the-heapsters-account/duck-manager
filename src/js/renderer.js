@@ -1,7 +1,7 @@
 const inputQuantidadeMinima = document.querySelector("#inputQuantidadeMinima");
-const inputPathCopied = document.querySelector("#inputPathCopied");
-const atalhosList = document.querySelector("#atalhos");
-const filePathDisplay = document.querySelector("#filePathDisplay");
+const inputPathCopied = document.querySelector("#input-path-copied");
+const atalhosList = document.querySelector("#db-configs");
+const filePathDisplay = document.querySelector("#file-path-display");
 const buttonSave = document.querySelector(".bt-save");
 
 window.api.readJSON().then((settingsJSON) => {
@@ -11,9 +11,11 @@ window.api.readJSON().then((settingsJSON) => {
     atalhosList.innerHTML = "";
 
     for (const [key, value] of Object.entries(settingsJSON.atalhos)) {
+    for (const [dbConfigKey, dbConfigValue] of Object.entries(settingsJSON.dbConfigs)) {
         const li = document.createElement("li");
 
         li.textContent = `${key}: ${value}`;
+        li.textContent = `${dbConfigKey}:${dbConfigValue}`;
 
         atalhosList.appendChild(li);
     }
