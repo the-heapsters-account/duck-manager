@@ -4,5 +4,11 @@
   "atalhos": {
     "pesquisa": "tecla + outra tecla",
     "menu": "tecla + outra tecla"
+  },
+  "dbConfigs": {
+    "host": "localhost",
+    "user": "root",
+    "password": "",
+    "database": "lc_sistemas"
   }
 }
