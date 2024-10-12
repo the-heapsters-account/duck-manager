@@ -11,12 +11,13 @@
   "authors": "edgar augusto, pedro arthur, joão gilberto, pedro dos anjos, ana marcella, lucas madureira, murylo costa",
   "license": "MIT",
   "devDependencies": {
+    "@types/mysql": "^2.15.26",
     "electron": "^32.1.1",
     "fs": "^0.0.1-security",
     "nodemon": "^3.1.5",
     "shelljs": "^0.8.5"
   },
   "dependencies": {
-    "mysql": "^2.18.1"
+    "mysql2": "^3.11.3"
   }
 }
