@@ -67,16 +67,16 @@ body > main {
     grid-template-columns: 1fr 1fr;
     width: 100%;
 }
-body > main .tabela{
+body > main table{
     width: 100%;
     border-collapse: collapse;
 }
-body > main .tabela th{
+body > main table th{
     background-color: violet;
     border: 1px solid black;
     padding: 10px;
 }
-body > main .tabela td{
+body > main table td{
     background-color: rgb(233, 233, 40);
     border: 1px solid black;
     padding: 10px;
