@@ -10,5 +10,13 @@
     "user": "root",
     "password": "",
     "database": "lc_sistemas"
+  },
+  "dbColumns": {
+    "código": "codigo",
+    "referência": "referencia",
+    "código de barras": "codigo_barras",
+    "nome": "nome",
+    "preço": "preco_venda",
+    "quantidade": "estoque"
   }
 }
