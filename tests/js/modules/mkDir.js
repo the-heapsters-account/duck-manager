@@ -1,7 +1,5 @@
 const fs = require('fs');
-module.exports = {
-    mkDir
-}
+module.exports = { mkDir }
 
 function mkDir(nameDir) {
     // método de criação de diretório
