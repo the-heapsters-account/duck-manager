@@ -1,5 +1,5 @@
 const dialogElement = document.querySelector("dialog");
-const btSettings = document.querySelector(".bt-settings");
+const btSettings = document.querySelector("header .bt-settings");
 const btClose = document.querySelector("dialog .bt-close");
 
 // btSettings.addEventListener("click", dialogElement.showModal());
