@@ -1,10 +1,10 @@
-const mysql = require("mysql");
+const mysql = require("mysql2");
 
 const connection = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "",
-    database: "lc_sistemas"
+    host: 'localhost',
+    user: 'root',
+    password: '',
+    database: 'lc_sistemas'
 });
 
 connection.connect(err => {
@@ -16,9 +16,9 @@ connection.connect(err => {
     console.log("conexão bem-sucedida com o MySQL!");
 });
 
-const query = 'SELECT * FROM produto WHERE id = 100001;';
+const querySQL = 'SELECT * FROM produto WHERE id = 100001;';
 
-connection.query(query, (error, results) => {
+connection.query(querySQL, (error, results) => {
     if (error) {
         console.error("Erro na consulta: ", error);
         return;
