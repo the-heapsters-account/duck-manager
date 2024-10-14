@@ -3,7 +3,6 @@ const filePathDisplay = document.querySelector("#file-path-display");
 const inputPathCopied = document.querySelector("#input-path-copied");
 const configsDB = document.querySelector("#db-configs");
 const buttonSave = document.querySelector(".bt-save");
-const query = document.querySelector('#queryInput').value;
 
 window.api.readJSON().then((settingsJSON) => {
     inputQuantidadeMinima.value = settingsJSON.quantidadeMinima;
@@ -74,22 +73,4 @@ buttonSave.addEventListener("click", () => {
             alert("Não foi possível salvar as configurações");
         }
     }).catch((error) => console.error("Erro ao salvar o arquivo JSON: " + error));
-});
-
-document.getElementById('executeQueryButton').addEventListener('click', () => {
-    console.log("conexão com o banco de dados inicializada com sucesso");
-
-    window.api.executeQuery(query).then(data => {
-            const queryResult = document.querySelector('#query-result');
-
-            if(data == '') {
-                queryResult.innerText = "coluna vazia ou não encontrada";
-            } else {
-                queryResult.innerHTML = JSON.stringify(data, null, 2);
-            }
-
-            console.log("query executada com sucesso");
-        })
-        .catch(error => console.error('erro ao executar query:', error))
-        .finally(() => console.log("conexão finalizada com sucesso"));
 });
