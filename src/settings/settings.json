@@ -2,8 +2,8 @@
   "quantidadeMinima": 10,
   "pathImageCopied": "C:/...",
   "atalhos": {
-    "pesquisa": "tecla + outra tecla",
-    "menu": "tecla + outra tecla"
+    "pesquisa": "CTRL + i",
+    "menu": "CTRL + ,"
   },
   "dbConfigs": {
     "host": "localhost",
