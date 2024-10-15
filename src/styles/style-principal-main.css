@@ -97,7 +97,7 @@ body > main .fundo-produtos{
     display: grid;
     place-self: start center;
 
-    padding: 30px 115px;
+    padding: 30px 20px;
     margin-top: 10px;
     width: 65%;
 }
