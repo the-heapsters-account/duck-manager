@@ -38,7 +38,7 @@ header .barra-pesquisa input[type="search"] {
     font-size: 20px;
     outline: none;
 }
-header .icon-pesquisa {
+header .barra-pesquisa .sub {
     border: none;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
