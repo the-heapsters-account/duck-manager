@@ -55,11 +55,11 @@ nav .btn {
     outline: none;
     cursor: pointer;
 }
-header .bt-settings, header .icon-pequisa, header .gerar-doc {
+nav .btn {
     background-color: #007BFF;
     color: white;
 }
-header .bt-settings:hover, header .icon-pesquisa:hover, header .gerar-doc:hover {
+nav .btn:hover {
     background-color: #0056b3;
 }
 
