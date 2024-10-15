@@ -18,5 +18,11 @@
     "nome": "nome",
     "preço": "preco_venda",
     "quantidade": "estoque"
-  }
+  },
+  "themes": {
+    "claro": "tema_claro_path",
+    "escuro": "tema_escuro_path",
+    "tucupi": "tema_tucupi_path"
+  },
+  "themeSelected": "tema_selected_path"
 }
