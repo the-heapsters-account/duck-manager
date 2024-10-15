@@ -49,23 +49,38 @@
         <main>
             <article class="content">
                 <section>
-                    <p>Quantidade mínima: </p>
+                    <h1>configuração da lista de pedidos</h1>
 
-                    <input type="number" id="input-quantidade-minima">
+                    <p>
+                        Quantidade mínima:
+                        <input type="number" id="input-quantidade-minima" minlength="0">
+                    </p>
                 </section>
 
                 <section>
-                    <p>Imagem: </p>
+                    <h1>imagem</h1>
 
-                    <input type="file" id="input-path-copied">
+                    <p>
+                        Imagem:
+                        <input type="file" id="input-path-copied">
+                    </p>
                     <p id="file-path-display"></p>
                 </section>
 
                 <section>
-                    <p>configuração do banco de dados</p>
+                    <h1>configuração do banco de dados</h1>
 
-                    <ul id="db-configs">
-                    </ul>
+                    <ul id="db-configs"></ul>
+
+                    <h2>colunas</h2>
+
+                    <ul id="db-configs-columns"></ul>
+                </section>
+
+                <section>
+                    <h1>temas</h1>
+
+                    <ul id="themes-presentation"></ul>
                 </section>
             </article>
 
