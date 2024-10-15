@@ -128,9 +128,6 @@ body > main .fundo-produtos{
 .dialog[open] main .content section ul {
     list-style-position: inside;
 }
-.dialog[open] main .content section:not(:has(ul)) {
-    display: flex;
-}
 .dialog[open] main .inputs {
     margin: auto;
 }
