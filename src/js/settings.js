@@ -1,4 +1,4 @@
-const dialogElement = document.querySelector("dialog");
+const settingsDialogElement = document.querySelector("dialog#settings");
 const btnSettings = document.querySelector("header .btn-settings");
 const btnClose = document.querySelector("dialog .btn-close");
 const configsDB = document.querySelector("#db-configs");
@@ -86,7 +86,7 @@ btnSettings.addEventListener("click", () => {
         }
     }).catch((error) => console.error("erro ao ler o arquivo JSON: " + error));
 
-    dialogElement.showModal()
+    settingsDialogElement.showModal();
 });
 
-btnClose.addEventListener("click", () => dialogElement.close());
+btnClose.addEventListener("click", () => settingsDialogElement.close());
