@@ -9,9 +9,12 @@ public class Main {
     public static void main(String[] args) {
         try {
             File file = new File("../xml/settings.xml");
+            
+            // Parser do xml
             DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
             DocumentBuilder db = dbf.newDocumentBuilder();
             Document document = db.parse(file);
+            //normalização do documento
             document.getDocumentElement().normalize();
 
             // Lendo quantidade mínima
@@ -36,15 +39,17 @@ public class Main {
             NodeList atalhosList = document.getElementsByTagName("atalhos");
             if (atalhosList.getLength() > 0) {
                 Element atalhos = (Element) atalhosList.item(0);
-                NodeList pesquisaList = atalhos.getElementsByTagName("pesqsisa");
+                //lendo atalho de 'pesquisa'
+                NodeList pesquisaList = atalhos.getElementsByTagName("pesquisa");
                 if (pesquisaList.getLength() > 0) {
                     String pesquisa = pesquisaList.item(0).getTextContent();
                     System.out.println("Atalhos:");
                     System.out.println("    Pesquisa: " + pesquisa);
                 } else {
-                    System.out.println("Tag 'pesqsisa' não encontrada.");
+                    System.out.println("Tag 'pesquisa' não encontrada.");
                 }
 
+                //atalho de menu
                 NodeList menuList = atalhos.getElementsByTagName("menu");
                 if (menuList.getLength() > 0) {
                     String menu = menuList.item(0).getTextContent();
@@ -54,7 +59,7 @@ public class Main {
                 }
             }
 
-            // Lendo atalhos que não podem
+            // Lendo atalhos que não podem(exemplos)
             NodeList atalhosNaoPodemList = document.getElementsByTagName("atalhosNaoPodem");
             if (atalhosNaoPodemList.getLength() > 0) {
                 Element atalhosNaoPodem = (Element) atalhosNaoPodemList.item(0);
