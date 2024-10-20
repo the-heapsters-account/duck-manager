@@ -6,8 +6,7 @@
   "scripts": {
     "start": "nodemon"
   },
-  "keywords": [],
-  "authors": "edgar augusto, pedro arthur, joão gilberto, pedro dos anjos, ana marcella, lucas madureira, murylo costa",
+  "author": "edgar augusto, pedro arthur, joão gilberto, pedro dos anjos, ana marcella, lucas madureira, murylo costa",
   "license": "MIT",
   "devDependencies": {
     "@types/mysql": "^2.15.26",
