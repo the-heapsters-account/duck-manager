@@ -35,6 +35,17 @@ function createWindow() {
     win.maximize();
 };
 
+function execCommand(cmd, msgError) {
+    exec(cmd, (error, stdout, stderr) => {
+        if (error) {
+            return msgError + error.message;
+        }
+        if (stderr) {
+            return "error: " + stderr;
+        }
+    });
+}
+
 app.whenReady().then(() => createWindow());
 
 ipcMain.handle('read-json', async () => {
