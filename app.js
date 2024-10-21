@@ -52,7 +52,6 @@ ipcMain.handle('read-json', async () => {
     const filePath = path.join(__dirname, pathSettingJSON);
     const data = fs.readFileSync(filePath, 'utf-8');
 
-
     return JSON.parse(data);
 });
 
