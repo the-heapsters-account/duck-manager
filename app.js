@@ -62,7 +62,7 @@ ipcMain.handle("save-json", async (event, config) => {
     return { status: "success" };
 });
 
-ipcMain.handle('execute-query', async (event, query, params) => {
+ipcMain.handle('execute-query', async (event, query) => {
     const dbConfig = loadDBConfig();
     const connection = await mysql.createConnection(dbConfig);
 
