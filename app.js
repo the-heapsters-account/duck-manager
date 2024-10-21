@@ -72,7 +72,7 @@ ipcMain.handle('execute-query', async (event, query) => {
     } catch (error) {
         console.error('erro ao executar query:', error);
     } finally {
-        await connection.end();
+        connection.end();
     }
 });
 
