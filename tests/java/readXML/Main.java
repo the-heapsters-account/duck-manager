@@ -8,8 +8,8 @@ import org.w3c.dom.NodeList;
 public class Main {
     public static void main(String[] args) {
         try {
-            File file = new File("../xml/settings.xml");
-            
+            File file = new File("../../xml/settings.xml");
+
             // Parser do xml
             DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
             DocumentBuilder db = dbf.newDocumentBuilder();
