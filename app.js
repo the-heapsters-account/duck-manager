@@ -1,10 +1,9 @@
 const { app, BrowserWindow, ipcMain } = require('electron/main');
 const fs = require('fs');
 const path = require('path');
-const pathSettingJSON = "src/settings/settings.json";
 const mysql = require('mysql2');
 
-// carregando credenciais do arquivo settings.json
+const pathSettingJSON = "src/settings/settings.json";
 const loadDBConfig = () => {
     const configPath = path.join(__dirname, "src/settings/settings.json");
     const rawConfig = fs.readFileSync(configPath);
