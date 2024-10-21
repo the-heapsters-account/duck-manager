@@ -92,6 +92,28 @@ body > main .fundo-produtos{
     align-items: center;
     justify-content: center;
 }
+.selected-product {
+    background-color: rgba(206, 79, 206, 0.7); 
+    padding: 10px;
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    width: 100%; 
+}
+
+.selected-product .btn-remove {
+    background-color: #ff4d4d; 
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.selected-product .btn-remove:hover {
+    background-color: #ff1a1a; 
+}
 
 dialog[open] {
     display: grid;

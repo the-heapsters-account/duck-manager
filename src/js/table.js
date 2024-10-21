@@ -1,15 +1,17 @@
 const main = document.querySelector("main.principal");
 const table = document.createElement("table");
+const fundoProdutos = document.createElement("div"); 
 
 window.addEventListener("load", () => {
     const tableTHead = table.createTHead();
     const tableTHeadWithRow = tableTHead.insertRow();
-    const div = document.createElement("div");
+    fundoProdutos.className = "fundo-produtos"; 
+    fundoProdutos.innerText = "fundo produtos"; 
 
     window.api.readJSON().then((settingsJSON) => {
         const columnNames = settingsJSON.dbColumns;
 
-        for(const columnName of Object.getOwnPropertyNames(columnNames)) {
+        for (const columnName of Object.getOwnPropertyNames(columnNames)) {
             const th = document.createElement("th");
             th.textContent = columnName;
             tableTHeadWithRow.appendChild(th);
@@ -17,25 +19,39 @@ window.addEventListener("load", () => {
 
         const tableTBody = table.createTBody();
 
-        for(let i = 1; i <= 10; i++) {
+        for (let i = 1; i <= 10; i++) {
             const tableTBodyWithRow = tableTBody.insertRow();
 
-            for(let c = 1; c <= 6; c++) {
+            for (let c = 1; c <= 6; c++) {
                 const td = document.createElement("td");
                 let index = c - 1;
                 const tHeadName = tableTHeadWithRow.children[index];
 
                 td.innerHTML = `linha <i>${i}</i> da coluna <strong>${tHeadName.innerText}</strong>`;
+                td.style.cursor = "pointer"; 
+                td.addEventListener("click", () => {
+                    const productInfo = `Linha ${i} - ${tHeadName.innerText} - Preço: R$${(0)} - Código de Barras: ${(0)}`;
+                    addProductToSelection(productInfo); // Adiciona o produto à seleção
+                });
 
                 tableTBodyWithRow.appendChild(td);
             }
         }
 
-        div.className = "fundo-produtos";
-        div.innerText = "fundo produtos";
-
         main.appendChild(table);
-        main.appendChild(div);
+        main.appendChild(fundoProdutos); // Adiciona a área de fundo de seleção ao main
     })
     .catch((error) => console.error("Erro ao ler o arquivo JSON: " + error));
 });
+// Função para adicionar o produto a área de fundo de seleção
+function addProductToSelection(productInfo) {
+    const productDiv = document.createElement("div");
+    productDiv.className = "selected-product";
+    productDiv.innerHTML = `${productInfo} <button class="btn-remove">Remover</button>`;
+    // Adiciona o evento de remover
+    productDiv.querySelector(".btn-remove").addEventListener("click", () => {
+        fundoProdutos.removeChild(productDiv);
+    });
+
+    fundoProdutos.appendChild(productDiv);
+}
