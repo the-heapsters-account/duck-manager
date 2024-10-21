@@ -1,10 +1,10 @@
 const { app, BrowserWindow, ipcMain } = require('electron/main');
 const fs = require('fs');
 const path = require('path');
-const pathSettingJSON = "src/settings/settings.json";
 const mysql = require('mysql2');
+const { exec } = require('child_process');
 
-// carregando credenciais do arquivo settings.json
+const pathSettingJSON = "src/settings/settings.json";
 const loadDBConfig = () => {
     const configPath = path.join(__dirname, "src/settings/settings.json");
     const rawConfig = fs.readFileSync(configPath);
@@ -35,12 +35,22 @@ function createWindow() {
     win.maximize();
 };
 
+function execCommand(cmd, msgError) {
+    exec(cmd, (error, stdout, stderr) => {
+        if (error) {
+            return msgError + error.message;
+        }
+        if (stderr) {
+            return "error: " + stderr;
+        }
+    });
+}
+
 app.whenReady().then(() => createWindow());
 
 ipcMain.handle('read-json', async () => {
     const filePath = path.join(__dirname, pathSettingJSON);
     const data = fs.readFileSync(filePath, 'utf-8');
-
 
     return JSON.parse(data);
 });
@@ -52,7 +62,7 @@ ipcMain.handle("save-json", async (event, config) => {
     return { status: "success" };
 });
 
-ipcMain.handle('execute-query', async (event, query, params) => {
+ipcMain.handle('execute-query', async (event, query) => {
     const dbConfig = loadDBConfig();
     const connection = await mysql.createConnection(dbConfig);
 
@@ -61,10 +71,19 @@ ipcMain.handle('execute-query', async (event, query, params) => {
         return rows;
     } catch (error) {
         console.error('erro ao executar query:', error);
-        throw error;
     } finally {
-        await connection.end();
+        connection.end();
     }
+});
+
+ipcMain.handle('compile-java-file', async (event, dir, fileJava) => {
+    execCommand(`cd src/java/${dir} && javac -d bin ${fileJava}`,
+    `erro ao compilar o arquivo Java "${fileJava}": `);
+});
+
+ipcMain.handle('execute-java-class', async (event, dir, classJava) => {
+    execCommand(`cd src/java/${dir}/bin && java -cp bin ${classJava}`,
+    `erro ao executar a classe Java "${classJava}": `);
 });
 
 // fechando a janela do app em no windows e linux

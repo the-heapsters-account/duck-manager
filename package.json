@@ -11,8 +11,7 @@
   "dependencies": {
     "electron": "^33.0.1",
     "fs": "^0.0.1-security",
-    "mysql2": "^3.11.3",
-    "shelljs": "^0.8.5"
+    "mysql2": "^3.11.3"
   },
   "devDependencies": {
     "nodemon": "^3.1.7"

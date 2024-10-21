@@ -1,13 +1,10 @@
-const shell = require('shelljs');
-// const btGerarDoc = document.querySelector(".btn-gerar-doc");
-// const loadingDialogElement = document.querySelector("dialog#loading");
-// const inputGerarList = document.querySelector("#btn-gerar-lista");
+const btnGerarDoc = document.querySelector(".btn-gerar-doc");
+const loadingDialogElement = document.querySelector("dialog#loading");
+const inputGerarList = document.querySelector("#btn-gerar-lista");
 
-// btGerarDoc.addEventListener("click", () => loadingDialogElement.showModal());
+btnGerarDoc.addEventListener("click", () => loadingDialogElement.showModal());
 
-// inputGerarList.addEventListener("click", () => {
-    shell.cd('../');
-    shell.cd('java/');
-    shell.exec('javac -d bin createXML/Main.java');
-    shell.exec('java -cp bin createXML.Main');
-// });
+inputGerarList.addEventListener("click", async () => {
+    window.api.compileJavaFile(null, 'createXML', 'Main.java').then(response => console.log(response));
+    window.api.executeJavaClass(null, 'createXML', 'createXML.Main').then(response => console.log(response));
+});
