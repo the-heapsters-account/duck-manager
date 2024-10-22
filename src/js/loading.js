@@ -16,7 +16,6 @@ inputGerarList.addEventListener("click", async () => {
         console.log("não foi possível gerar a lista de pedidos");
         console.error(error);
     } finally {
-        console.log("processo finalizado")
         loadingDialogElement.close();
     }
 });
