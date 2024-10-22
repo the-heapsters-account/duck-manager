@@ -30,7 +30,7 @@ window.addEventListener("load", () => {
                 td.innerHTML = `linha <i>${i}</i> da coluna <strong>${tHeadName.innerText}</strong>`;
                 td.style.cursor = "pointer"; 
                 td.addEventListener("click", () => {
-                    const productInfo = `Linha ${i} - ${tHeadName.innerText} - Preço: R$${(0)} - Código de Barras: ${(0)}`;
+                    const productInfo = `Linha ${i} - ${tHeadName.innerText} <br> Preço: R$${(0)} <br> Código de Barras: ${(0)}`;
                     addProductToSelection(productInfo); // Adiciona o produto à seleção
                 });
 
