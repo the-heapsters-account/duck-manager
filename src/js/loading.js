@@ -5,6 +5,16 @@ const inputGerarList = document.querySelector("#btn-gerar-lista");
 btnGerarDoc.addEventListener("click", () => loadingDialogElement.showModal());
 
 inputGerarList.addEventListener("click", async () => {
-    window.api.compileJavaFile(null, 'createXML', 'Main.java').then(response => console.log(response));
-    window.api.executeJavaClass(null, 'createXML', 'createXML.Main').then(response => console.log(response));
+    loadingDialogElement.showModal();
+    try {
+        const compileResponse = await window.api.compileJavaFile('createXML', 'Main.java');
+        console.log(compileResponse);
+        const executeResponse = await window.api.executeJavaClass('createXML', 'createXML.Main');
+        console.log(executeResponse);
+    } catch (error) {
+        console.error(error);
+    } finally {
+        console.log("processo finalizado")
+        loadingDialogElement.close();
+    }
 });
