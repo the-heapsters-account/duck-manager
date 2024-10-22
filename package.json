@@ -1,7 +1,7 @@
 {
   "name": "pato-manager",
   "version": "1.0.0",
-  "description": "projeto de extensão de Java da faculdade",
+  "description": "sgbd",
   "main": "app.js",
   "scripts": {
     "start": "nodemon"
