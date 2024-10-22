@@ -36,13 +36,16 @@ function createWindow() {
 };
 
 function execCommand(cmd, msgError) {
+    return new Promise((resolve, reject) => {
     exec(cmd, (error, stdout, stderr) => {
         if (error) {
-            return msgError + error.message;
+            return reject(msgError + error.message);
         }
         if (stderr) {
-            return "error: " + stderr;
+            return reject("error: " + stderr);
         }
+        resolve(stdout);
+        });
     });
 }
 
