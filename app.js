@@ -83,6 +83,7 @@ ipcMain.handle('compile-java-file', async (event, dir, fileJava) => {
     return execCommand(`cd src/java/${dir} && javac -d bin ${fileJava}`, `erro ao compilar o arquivo Java "${fileJava}": `);
 });
 
+// cd src/java/${dir}/bin && java ${fileJava}
 ipcMain.handle('execute-java-class', async (event, dir, classJava) => {
     return execCommand(`cd src/java/${dir}/bin && java ${classJava}`, `erro ao executar a classe Java "${classJava}": `);
 });
