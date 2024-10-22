@@ -28,6 +28,7 @@ function createWindow() {
         webPreferences: {
             preload: path.join(__dirname, './preload.js'), // comunicação entre processos para renderização de na interface
             contextIsolation: true, // garante o isolamento de contexto para segurança
+            enableRemoteModule: false // desativa o módulo remoto para segurança
         }
     });
 
