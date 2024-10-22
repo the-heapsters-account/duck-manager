@@ -1,17 +1,17 @@
 const main = document.querySelector("main.principal");
 const table = document.createElement("table");
-const fundoProdutos = document.createElement("div"); 
+const fundoProdutos = document.createElement("div");
 
 window.addEventListener("load", () => {
     const tableTHead = table.createTHead();
     const tableTHeadWithRow = tableTHead.insertRow();
-    fundoProdutos.className = "fundo-produtos"; 
-    fundoProdutos.innerText = "fundo produtos"; 
+    fundoProdutos.className = "fundo-produtos";
+    fundoProdutos.innerText = "fundo produtos";
 
     window.api.readJSON().then((settingsJSON) => {
         const columnNames = settingsJSON.dbColumns;
 
-        for (const columnName of Object.getOwnPropertyNames(columnNames)) {
+        for(const columnName of Object.getOwnPropertyNames(columnNames)) {
             const th = document.createElement("th");
             th.textContent = columnName;
             tableTHeadWithRow.appendChild(th);
@@ -19,10 +19,10 @@ window.addEventListener("load", () => {
 
         const tableTBody = table.createTBody();
 
-        for (let i = 1; i <= 10; i++) {
+        for(let i = 1; i <= 10; i++) {
             const tableTBodyWithRow = tableTBody.insertRow();
 
-            for (let c = 1; c <= 6; c++) {
+            for(let c = 1; c <= 6; c++) {
                 const td = document.createElement("td");
                 let index = c - 1;
                 const tHeadName = tableTHeadWithRow.children[index];
@@ -43,7 +43,8 @@ window.addEventListener("load", () => {
     })
     .catch((error) => console.error("Erro ao ler o arquivo JSON: " + error));
 });
-// Função para adicionar o produto a área de fundo de seleção
+
+// Função para adicionar o produto à área de fundo de seleção
 function addProductToSelection(productInfo) {
     const productDiv = document.createElement("div");
     productDiv.className = "selected-product";
