@@ -4,7 +4,9 @@
   "description": "sgbd",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon"
+    "start": "nodemon",
+    "build": "electron-builder",
+    "package": "electron-packager . pato-manager --platform=win32 --arch=x64 --out=dist --overwrite"
   },
   "author": "edgar augusto, pedro arthur, joão gilberto, pedro dos anjos, ana marcella, lucas madureira, murylo costa",
   "license": "MIT",
