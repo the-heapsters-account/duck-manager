@@ -37,7 +37,7 @@ function createWindow() {
 
 function execCommand(cmd, msgError) {
     return new Promise((resolve, reject) => {
-    exec(cmd, (error, stdout, stderr) => {
+        exec(cmd, (error, stdout, stderr) => {
         if (error) {
             return reject(msgError + error.message);
         }
