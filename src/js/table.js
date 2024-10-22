@@ -48,6 +48,7 @@ window.addEventListener("load", () => {
 function addProductToSelection(productInfo) {
     const productDiv = document.createElement("div");
     productDiv.className = "selected-product";
+    fundoProdutos.textContent = '';
     productDiv.innerHTML = `${productInfo} <button class="btn-remove">Remover</button>`;
     // Adiciona o evento de remover
     productDiv.querySelector(".btn-remove").addEventListener("click", () => {
