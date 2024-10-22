@@ -12,7 +12,8 @@
   "license": "MIT",
   "dependencies": {
     "fs": "^0.0.1-security",
-    "mysql2": "^3.11.3"
+    "mysql2": "^3.11.3",
+    "pato-manager": "file:"
   },
   "devDependencies": {
     "electron": "^33.0.1",
