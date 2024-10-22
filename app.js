@@ -80,13 +80,11 @@ ipcMain.handle('execute-query', async (event, query) => {
 });
 
 ipcMain.handle('compile-java-file', async (event, dir, fileJava) => {
-    execCommand(`cd src/java/${dir} && javac -d bin ${fileJava}`,
-    `erro ao compilar o arquivo Java "${fileJava}": `);
+    return execCommand(`cd src/java/${dir} && javac -d bin ${fileJava}`, `erro ao compilar o arquivo Java "${fileJava}": `);
 });
 
 ipcMain.handle('execute-java-class', async (event, dir, classJava) => {
-    execCommand(`cd src/java/${dir}/bin && java -cp bin ${classJava}`,
-    `erro ao executar a classe Java "${classJava}": `);
+    return execCommand(`cd src/java/${dir}/bin && java ${classJava}`, `erro ao executar a classe Java "${classJava}": `);
 });
 
 // fechando a janela do app em no windows e linux
