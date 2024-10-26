@@ -1,7 +1,7 @@
 const { app, BrowserWindow, ipcMain } = require('electron/main');
 const fs = require('fs');
 const path = require('path');
-const mysql = require('mysql2');
+const mysql = require('mysql2/promise');
 const { exec } = require('child_process');
 
 const pathSettingJSON = "src/settings/settings.json";
