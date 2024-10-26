@@ -4,3 +4,5 @@ dist/
 *.class
 *.py
 *.xlsx
+*.xml
+package-lock.json
