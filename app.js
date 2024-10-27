@@ -33,6 +33,7 @@ function createWindow() {
         }
     });
 
+    win.webContents.openDevTools();
     win.loadFile("src/pages/main/index.html");
 
     win.maximize();
@@ -55,14 +56,14 @@ function execCommand(cmd, msgError) {
 app.whenReady().then(() => createWindow());
 
 ipcMain.handle('read-json', async () => {
-    const filePath = path.join(__dirname, pathSettingJSON);
+    const filePath = path.join(__dirname, pathSettingsJSON);
     const data = fs.readFileSync(filePath, 'utf-8');
 
     return JSON.parse(data);
 });
 
 ipcMain.handle("save-json", async (event, config) => {
-    const filePath = path.join(__dirname, pathSettingJSON);
+    const filePath = path.join(__dirname, pathSettingsJSON);
     fs.writeFileSync(filePath, JSON.stringify(config, null, 2));
 
     return { status: "success" };
