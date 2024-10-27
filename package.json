@@ -5,8 +5,8 @@
   "main": "app.js",
   "scripts": {
     "start": "nodemon",
-    "build": "electron-builder",
-    "package": "electron-packager . pato-manager --platform=win32 --arch=x64 --out=dist --overwrite"
+    "package": "npx @electron/packager . duck-manager --platform=win32 --arch=x64 --out=package --overwrite --icon=resources/imgs/logo.png --ignore=\"(resources|.gitignore|README.md|.vscode)\"",
+    "build": "electron-builder"
   },
   "author": "edgar augusto, pedro arthur, joão gilberto, pedro dos anjos, ana marcella, lucas madureira, murylo costa",
   "license": "MIT",
