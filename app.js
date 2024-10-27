@@ -4,9 +4,9 @@ const path = require('path');
 const mysql = require('mysql2/promise');
 const { exec } = require('child_process');
 
-const pathSettingJSON = "src/settings/settings.json";
+const pathSettingsJSON = "src/settings/settings.json";
 const loadDBConfig = () => {
-    const configPath = path.join(__dirname, "src/settings/settings.json");
+    const configPath = path.join(__dirname, pathSettingsJSON);
     const rawConfig = fs.readFileSync(configPath);
     const json = JSON.parse(rawConfig);
     const dbConfigs = json.dbConfigs;
