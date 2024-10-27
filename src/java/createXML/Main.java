@@ -1,5 +1,3 @@
-package createXML;
-
 import java.io.File;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -32,10 +30,10 @@ public class TesteDeCriacaoXML {
             Element pessoa = documentoXML.createElement("pessoa");
             Attr id = documentoXML.createAttribute("id");
             id.setValue("1");
-            
+
             //adiciona o "id" em pessoa
             pessoa.setAttributeNode(id);
-            
+
             //adiciona pessoa ao root
             root.appendChild(pessoa);
 
@@ -55,7 +53,7 @@ public class TesteDeCriacaoXML {
 
             DOMSource documentoFonte = new DOMSource(documentoXML);
             //salva o resultado final em um arquivo
-            StreamResult documentoFinal = new StreamResult(new File("D:\\pessoa.xml"));
+            StreamResult documentoFinal = new StreamResult(new File("../xml/pessoa.xml"));
 
             //transforma o documento num arquivo xml
             transformer.transform(documentoFonte, documentoFinal);
