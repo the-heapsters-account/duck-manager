@@ -77,7 +77,7 @@ ipcMain.handle('execute-query', async (event, query) => {
         const [rows, fields] = await connection.execute(query);
         return rows[0];
     } catch (error) {
-        console.error('erro ao executar query:', error);
+        return 'erro ao conectar com o banco de dados: ' + error;
     } finally {
         connection.end();
     }
