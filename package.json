@@ -15,6 +15,32 @@
     "mysql2": "^3.11.3",
     "pato-manager": "file:"
   },
+  "build": {
+    "appId": "com.theheapsters.duckmanager",
+    "productName": "DuckManager",
+    "directories": {
+      "output": "build"
+    },
+    "files": [
+      "src/**/*",
+      "app.js",
+      "package.json",
+      "!**/*.log",
+      "!**/*.map",
+      "!node_modules/**/{test,docs,example}/**",
+      "!**/node_modules/**/.*",
+      "!**/node_modules/**/*.md",
+      "!**/node_modules/**/test/**",
+      "!**/node_modules/**/example/**",
+      "!**/node_modules/**/docs/**"
+    ],
+    "asar": true,
+    "win": {
+      "target": [
+        "nsis"
+      ]
+    }
+  },
   "devDependencies": {
     "electron": "^33.0.1",
     "electron-packager": "^17.1.2",
