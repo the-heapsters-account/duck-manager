@@ -6,6 +6,7 @@ btnGerarDoc.addEventListener("click", () => loadingDialogElement.showModal());
 
 inputGerarList.addEventListener("click", async () => {
     loadingDialogElement.showModal();
+
     try {
         console.log("gerando lista de pedidos...");
         const compileResponse = await window.api.compileJavaFile('readXML', 'Main.java');
