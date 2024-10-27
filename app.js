@@ -5,6 +5,7 @@ const mysql = require('mysql2/promise');
 const { exec } = require('child_process');
 
 const pathSettingsJSON = "src/settings/settings.json";
+const pathIcon = "resources/imgs/logo.png";
 const loadDBConfig = () => {
     const configPath = path.join(__dirname, pathSettingsJSON);
     const rawConfig = fs.readFileSync(configPath);
@@ -23,7 +24,7 @@ function createWindow() {
         height: heightSize,
         minwidth: widthSize,
         minheight: heightSize,
-        // icon: iconPath, // --> icon path bem aqui
+        icon: pathIcon,
         resizable: true,
         webPreferences: {
             preload: path.join(__dirname, './preload.js'), // comunicação entre processos para renderização de na interface
