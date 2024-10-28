@@ -21,30 +21,30 @@ public class Main {
             //novo documento em branco
             Document documentoXML = documentBuilder.newDocument();
 
-            //cria a raiz(root) e adiciona no documento
-            Element root = documentoXML.createElement("root");
-            documentoXML.appendChild(root);
+            //cria a raiz(ListaProdutos) e adiciona no documento
+            Element ListaProdutos = documentoXML.createElement("ListaProdutos");
+            documentoXML.appendChild(ListaProdutos);
 
-            //cria o elemento <pessoa> e o atributo "id"
-            Element pessoa = documentoXML.createElement("pessoa");
+            //cria o elemento <produto> e o atributo "id"
+            Element produto = documentoXML.createElement("produto");
             Attr id = documentoXML.createAttribute("id");
             id.setValue("1");
 
-            //adiciona o "id" em pessoa
-            pessoa.setAttributeNode(id);
+            //adiciona o "id" em produto
+            produto.setAttributeNode(id);
 
-            //adiciona pessoa ao root
-            root.appendChild(pessoa);
+            //adiciona produto ao ListaProdutos
+            ListaProdutos.appendChild(produto);
 
             //adiciona o texto "Murylo" ao <nome>
             Element nome = documentoXML.createElement("nome");
-            nome.appendChild(documentoXML.createTextNode("Murylo"));
-            pessoa.appendChild(nome);
+            nome.appendChild(documentoXML.createTextNode("Cadeira de rodas"));
+            produto.appendChild(nome);
 
-            //adiciona "18" em <idade>
-            Element idade = documentoXML.createElement("idade");
-            idade.appendChild(documentoXML.createTextNode("18"));
-            pessoa.appendChild(idade);
+            //adiciona "18" em <quantidade> 
+            Element quantidade = documentoXML.createElement("quantidade");
+            quantidade.appendChild(documentoXML.createTextNode("18"));
+            produto.appendChild(quantidade);
 
             //transformando o documento em XML
             TransformerFactory transformerFactory = TransformerFactory.newInstance();
@@ -52,7 +52,7 @@ public class Main {
 
             DOMSource documentoFonte = new DOMSource(documentoXML);
             //salva o resultado final em um arquivo
-            StreamResult documentoFinal = new StreamResult(new File("../xml/pessoa.xml"));
+            StreamResult documentoFinal = new StreamResult(new File("../xml/ListaProdutos.xml"));
 
             //exibindo o xml no terminal
             StreamResult consoleResult = new StreamResult(System.out);
