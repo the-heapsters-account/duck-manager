@@ -54,6 +54,10 @@ public class Main {
             //salva o resultado final em um arquivo
             StreamResult documentoFinal = new StreamResult(new File("../xml/pessoa.xml"));
 
+            //exibindo o xml no terminal
+            StreamResult consoleResult = new StreamResult(System.out);
+            transformer.transform(documentoFonte, consoleResult);
+            
             //transforma o documento num arquivo xml
             transformer.transform(documentoFonte, documentoFinal);
 
