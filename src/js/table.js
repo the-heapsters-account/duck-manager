@@ -1,58 +1,61 @@
 const main = document.querySelector("main.principal");
-const table = document.createElement("table");
-const fundoProdutos = document.createElement("div");
+const productList = document.getElementById("produto-container");
 
 window.addEventListener("load", () => {
-    const tableTHead = table.createTHead();
-    const tableTHeadWithRow = tableTHead.insertRow();
-    fundoProdutos.className = "fundo-produtos";
-    fundoProdutos.innerText = "fundo produtos";
-
     window.api.readJSON().then((settingsJSON) => {
         const columnNames = settingsJSON.dbColumns;
+        const produtos = []; // Array para armazenar os produtos
 
-        for(const columnName of Object.getOwnPropertyNames(columnNames)) {
-            const th = document.createElement("th");
-            th.textContent = columnName;
-            tableTHeadWithRow.appendChild(th);
+        for (let i = 1; i <= 10; i++) {
+            const produto = {};
+            columnNames.forEach((columnName) => {
+                produto[columnName] = `linha ${i} da coluna ${columnName}`;
+            });
+            produtos.push(produto); // Adiciona o produto ao array
         }
 
-        const tableTBody = table.createTBody();
+        // Função para exibir os produtos
+        function displayProducts(products) {
+            productList.innerHTML = ""; // Limpa o container de produtos
+            const table = document.createElement("table");
+            const thead = document.createElement("thead");
+            const headerRow = document.createElement("tr");
 
-        for(let i = 1; i <= 10; i++) {
-            const tableTBodyWithRow = tableTBody.insertRow();
+            // Adiciona os cabeçalhos da tabela
+            columnNames.forEach((columnName) => {
+                const th = document.createElement("th");
+                th.textContent = columnName;
+                headerRow.appendChild(th);
+            });
 
-            for(let c = 1; c <= 6; c++) {
-                const td = document.createElement("td");
-                let index = c - 1;
-                const tHeadName = tableTHeadWithRow.children[index];
+            thead.appendChild(headerRow);
+            table.appendChild(thead);
 
-                td.innerHTML = `linha <i>${i}</i> da coluna <strong>${tHeadName.innerText}</strong>`;
-                td.addEventListener("click", () => {
-                    const productInfo = `Linha ${i} - ${tHeadName.innerText} <br> Preço: R$${(0)} <br> Código de Barras: ${(0)}`;
-                    addProductToSelection(productInfo); // Adiciona o produto à seleção
+            const tbody = document.createElement("tbody");
+            products.forEach(produto => {
+                const row = document.createElement("tr");
+                columnNames.forEach((columnName) => {
+                    const td = document.createElement("td");
+                    td.textContent = produto[columnName];
+                    row.appendChild(td);
                 });
+                tbody.appendChild(row);
+            });
 
-                tableTBodyWithRow.appendChild(td);
-            }
+            table.appendChild(tbody);
+            productList.appendChild(table);
         }
 
-        main.appendChild(table);
-        main.appendChild(fundoProdutos); // Adiciona a área de fundo de seleção ao main
-    })
-    .catch((error) => console.error("Erro ao ler o arquivo JSON: " + error));
+        // Adiciona evento de busca
+        const searchInput = document.getElementById("pesquisa");
+        searchInput.addEventListener("input", () => {
+            const searchValue = searchInput.value.toLowerCase();
+            const filteredProducts = produtos.filter(produto =>
+                Object.values(produto).some(value =>
+                    value.toLowerCase().includes(searchValue)
+                )
+            );
+            displayProducts(filteredProducts);
+        });
+    }).catch((error) => console.error("Erro ao ler o arquivo JSON: " + error));
 });
-
-// Função para adicionar o produto à área de fundo de seleção
-function addProductToSelection(productInfo) {
-    const productDiv = document.createElement("div");
-    productDiv.className = "selected-product";
-    fundoProdutos.textContent = '';
-    productDiv.innerHTML = `${productInfo} <button class="btn-remove">Remover</button>`;
-    // Adiciona o evento de remover
-    productDiv.querySelector(".btn-remove").addEventListener("click", () => {
-        fundoProdutos.removeChild(productDiv);
-    });
-
-    fundoProdutos.appendChild(productDiv);
-}
