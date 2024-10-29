@@ -1,6 +1,7 @@
 node_modules/
 bin/
-dist/
+package/
+build/
 *.class
 *.py
 *.xlsx
