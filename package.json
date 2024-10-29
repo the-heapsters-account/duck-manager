@@ -11,9 +11,9 @@
   "author": "edgar augusto, pedro arthur, joão gilberto, pedro dos anjos, ana marcella, lucas madureira, murylo costa",
   "license": "MIT",
   "dependencies": {
+    "duck-manager": "file:",
     "fs": "^0.0.1-security",
-    "mysql2": "^3.11.3",
-    "pato-manager": "file:"
+    "mysql2": "^3.11.3"
   },
   "build": {
     "appId": "com.theheapsters.duckmanager",
