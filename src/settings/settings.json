@@ -1,5 +1,5 @@
 {
-  "quantidadeMinima": 10,
+  "quantidadeMinima": "10",
   "pathImageCopied": "C:/...",
   "atalhos": {
     "pesquisa": "CTRL + i",
@@ -23,6 +23,5 @@
     "claro": "tema_claro_path",
     "escuro": "tema_escuro_path",
     "tucupi": "tema_tucupi_path"
-  },
-  "themeSelected": "tema_selected_path"
+  }
 }
