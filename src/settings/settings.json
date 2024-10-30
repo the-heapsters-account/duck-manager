@@ -1,6 +1,8 @@
 {
   "quantidadeMinima": 10,
   "pathImageCopied": "C:/...",
+  "quantidade_minima": 10,
+  "path_image_copied": "C:/...",
   "atalhos": {
     "produtos": "F1",
     "lista de pedidos": "F2",
@@ -13,7 +15,7 @@
     "password": "",
     "database": "lc_sistemas"
   },
-  "dbColumns": {
+  "db_columns": {
     "código": "codigo",
     "referência": "referencia",
     "código de barras": "codigo_barras",

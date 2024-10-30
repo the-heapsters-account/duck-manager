@@ -3,7 +3,7 @@ public class TestingReadXML {
         ReadXML readXML = new ReadXML("../xml/settings.xml");
 
         String settings = readXML.getTextContentByTagName("settings");
-        String quantidadeMinima = readXML.getTextContentByTagName("quantidadeMinima");
+        String quantidade_minima = readXML.getTextContentByTagName("quantidade_minima");
         String pathImageCopied = readXML.getTextContentByTagName("pathImageCopied");
         String atalhos = readXML.getTextContentByTagName("atalhos");
         String atalhosNaoPodem = readXML.getTextContentByTagName("atalhosNaoPodem");
@@ -11,7 +11,7 @@ public class TestingReadXML {
         String outroExemplo = readXML.getTextContentByTagName("outroExemplo");
 
         System.out.println("settings: " + settings);
-        System.out.println("quantidade mínima: " + quantidadeMinima);
+        System.out.println("quantidade mínima: " + quantidade_minima);
         System.out.println("path image copied: " + pathImageCopied);
         System.out.println("atalhos: " + atalhos);
         System.out.println("atalhos que não podem: " + atalhosNaoPodem);

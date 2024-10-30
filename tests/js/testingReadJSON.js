@@ -2,7 +2,7 @@ const { readJSON } = require('./modules/readJSON');
 
 const jsonData = readJSON('../json/settings.json');
 
-const quantidadeMinima = jsonData.quantidadeMinima;
+const quantidade_minima = jsonData.quantidade_minima;
 const pathImageCopied = jsonData.pathImageCopied;
 const atalhos = jsonData.atalhos;
     const pesquisa = atalhos.pesquisa;
@@ -16,7 +16,7 @@ const atalhosNaoPodem = jsonData.atalhosNaoPodem;
 
 console.log(jsonData);
 
-console.log("quantidade mínima: " + quantidadeMinima);
+console.log("quantidade mínima: " + quantidade_minima);
 console.log("path image copied: " + pathImageCopied);
 console.log("atalhos: " + atalhos);
     console.log("pesquisa: " + pesquisa);

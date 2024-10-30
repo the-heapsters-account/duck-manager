@@ -18,12 +18,12 @@ public class Main {
             document.getDocumentElement().normalize();
 
             // Lendo quantidade mínima
-            NodeList quantidadeMinimaList = document.getElementsByTagName("quantidadeMinima");
-            if(quantidadeMinimaList.getLength() > 0) {
-                String quantidadeMinima = quantidadeMinimaList.item(0).getTextContent();
-                System.out.println("Quantidade mínima: " + quantidadeMinima);
+            NodeList quantidade_minimaList = document.getElementsByTagName("quantidade_minima");
+            if(quantidade_minimaList.getLength() > 0) {
+                String quantidade_minima = quantidade_minimaList.item(0).getTextContent();
+                System.out.println("Quantidade mínima: " + quantidade_minima);
             } else {
-                System.out.println("Tag 'quantidadeMinima' não encontrada.");
+                System.out.println("Tag 'quantidade_minima' não encontrada.");
             }
 
             // Lendo caminho da imagem copiada
