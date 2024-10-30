@@ -7,6 +7,19 @@ const { exec } = require('child_process');
 const pathSettingsJSON = "src/settings/settings.json";
 const pathIcon = "resources/imgs/logo.png";
 
+function execCommand(cmd, msgError) {
+    return new Promise((resolve, reject) => {
+        exec(cmd, (error, stdout, stderr) => {
+        if (error) {
+            return reject(msgError + error.message);
+        }
+        if (stderr) {
+            return reject("error: " + stderr);
+        }
+        resolve(stdout);
+        });
+    });
+}
 
 app.whenReady().then(() => {
     widthSize = 800;
@@ -30,23 +43,7 @@ app.whenReady().then(() => {
     win.loadFile("src/pages/main/index.html");
 
     win.maximize();
-};
-
-function execCommand(cmd, msgError) {
-    return new Promise((resolve, reject) => {
-        exec(cmd, (error, stdout, stderr) => {
-        if (error) {
-            return reject(msgError + error.message);
-        }
-        if (stderr) {
-            return reject("error: " + stderr);
-        }
-        resolve(stdout);
-        });
-    });
-}
-
-app.whenReady().then(() => createWindow());
+});
 
 ipcMain.handle('read-json', async () => {
     const filePath = path.join(__dirname, pathSettingsJSON);
