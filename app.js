@@ -6,16 +6,9 @@ const { exec } = require('child_process');
 
 const pathSettingsJSON = "src/settings/settings.json";
 const pathIcon = "resources/imgs/logo.png";
-const loadDBConfig = () => {
-    const configPath = path.join(__dirname, pathSettingsJSON);
-    const rawConfig = fs.readFileSync(configPath);
-    const json = JSON.parse(rawConfig);
-    const dbConfigs = json.dbConfigs;
 
-    return dbConfigs;
-};
 
-function createWindow() {
+app.whenReady().then(() => {
     widthSize = 800;
     heightSize = 600;
 
