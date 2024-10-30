@@ -2,7 +2,7 @@ const main = document.querySelector("main.principal");
 const productList = document.querySelector(".product-container");
 
 window.addEventListener("load", () => {
-    window.api.readJSON().then((settingsJSON) => {
+    window.api.getConfigs().then((settingsJSON) => {
         const columnNames = settingsJSON.dbColumns;
         const produtos = []; // Array para armazenar os produtos
 
