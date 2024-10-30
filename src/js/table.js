@@ -1,5 +1,5 @@
 const main = document.querySelector("main.principal");
-const productList = document.getElementById("produto-container");
+const productList = document.querySelector(".product-container");
 
 window.addEventListener("load", () => {
     window.api.readJSON().then((settingsJSON) => {
@@ -47,8 +47,8 @@ window.addEventListener("load", () => {
         }
 
         // Adiciona evento de busca
-        const searchInput = document.getElementById("pesquisa");
-        searchInput.addEventListener("input", () => {
+        const searchInput = document.querySelector("#search");
+        searchInput.addEventListener("click", () => {
             const searchValue = searchInput.value.toLowerCase();
             const filteredProducts = produtos.filter(produto =>
                 Object.values(produto).some(value =>
