@@ -28,8 +28,8 @@ app.whenReady().then(() => {
     const win = new BrowserWindow({
         width: widthSize,
         height: heightSize,
-        minwidth: widthSize,
-        minheight: heightSize,
+        minWidth: widthSize,
+        minHeight: heightSize,
         icon: pathIcon,
         resizable: true,
         webPreferences: {
