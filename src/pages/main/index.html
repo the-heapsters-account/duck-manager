@@ -16,8 +16,7 @@
         <nav>
             <input type="button" value="Carrinho" class="btn btn-cart">
             <section class="barra-pesquisa">
-                <input type="search" id="pesquisa" placeholder="Pesquisar">
-                <input type="submit" class="sub" value="">
+                <input type="search" id="pesquisa" placeholder="Pesquisar" onkeypress="if(event.key === 'Enter') { /* Adicione a lógica de pesquisa aqui */ }">
             </section>
             <input type="button" value="Configurações" class="btn btn-settings">
         </nav>
