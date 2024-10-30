@@ -45,14 +45,14 @@ app.whenReady().then(() => {
     win.maximize();
 });
 
-ipcMain.handle('read-json', async () => {
+ipcMain.handle("get-configs", async () => {
     const filePath = path.join(__dirname, pathSettingsJSON);
     const data = fs.readFileSync(filePath, 'utf-8');
 
     return JSON.parse(data);
 });
 
-ipcMain.handle("save-json", async (event, config) => {
+ipcMain.handle("save-configs", async (event, config) => {
     const filePath = path.join(__dirname, pathSettingsJSON);
     fs.writeFileSync(filePath, JSON.stringify(config, null, 2));
 
