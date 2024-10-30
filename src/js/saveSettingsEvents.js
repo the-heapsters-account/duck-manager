@@ -33,7 +33,7 @@ buttonSave.addEventListener("click", () => {
         settings.dbColumns[columnName] = columnNameDB;
     }
 
-    window.api.saveJSON(settings).then((response) => {
+    window.api.saveConfigs(settings).then((response) => {
         if (response.status === "success") {
             alert("Configurações salvas com sucesso!");
 
