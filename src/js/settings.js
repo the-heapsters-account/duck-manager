@@ -84,7 +84,7 @@ btnSettings.addEventListener("click", () => {
 
             themesPresentation.appendChild(li);
         }
-    }).catch((error) => console.error("erro ao ler o arquivo JSON: " + error));
+    }).catch((error) => console.error(error));
 
     settingsDialogElement.showModal();
 });
