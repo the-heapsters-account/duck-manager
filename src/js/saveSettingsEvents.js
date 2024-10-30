@@ -12,7 +12,7 @@ buttonSave.addEventListener("click", () => {
             pesquisa: "CTRL + i",
             menu: "CTRL + ,"
         },
-        dbConfigs: {
+        db_configs: {
             host: hostInput.value,
             user: userInput.value,
             password: passwordInput.value,
