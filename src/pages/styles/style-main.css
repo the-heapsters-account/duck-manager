@@ -3,13 +3,13 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    background-color: #545454; /* para preencher a área branca com cinza escuro */
+    background-color: #545454;
 }
 
 header {
-    background-color: #545454;
+    background-color: #737373;
     padding: 10px 5px;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #505050;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -28,22 +28,28 @@ header .barra-pesquisa {
 }
 
 header .barra-pesquisa input[type="search"] {
-    border: 1px solid #ddd;
-    border-right: none;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
+    border: none;
+    border-radius: 15px 0 0 15px;
     padding: 8px;
     font-size: 20px;
     outline: none;
-    flex-grow: 1; /* para deixar a barra de pesquisa mais larga */
+    flex-grow: 1;
+    width: 700px;
+    background-color: #545454;
+    color: black;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
 }
 
 header .barra-pesquisa .sub {
     border: none;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
+    border-radius: 0 15px 15px 0;
     padding: 10px;
     cursor: pointer;
+    color: black;
+    background-color: #737373;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
 }
 
 header .btn {
@@ -54,28 +60,39 @@ header .btn {
     outline: none;
     cursor: pointer;
     background-color: #737373;
-    color: white;
+    color: black;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
 }
 
 header .btn:hover {
-    background-color: #221f1f;
+    background-color: #545454;
+}
+
+header .btn:active {
+    background-color: #737373;
+}
+
+header .barra-pesquisa input[type="search"],
+header .btn {
+    user-select: none;
 }
 
 main.principal {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-grow: 1; /* para ocupar a altura total */
-    color: white; /* Para o texto no fundo cinza */
-    text-align: center; /* Centralizar o texto no meio */
+    flex-grow: 1;
+    color: white;
+    text-align: center;
 }
 
 .product-container h1 {
-    margin: 0; /* Remove o margin padrão para melhor centralização */
+    margin: 0;
 }
 
 footer {
-    background-color: #737373;
+    background-color: #5e5e5e;
     padding: 10px 5px;
     color: white;
     text-align: center;
