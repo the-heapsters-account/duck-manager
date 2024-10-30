@@ -9,15 +9,15 @@ const filePathDisplay = document.querySelector("#file-path-display");
 const inputPathCopied = document.querySelector("#input-path-copied");
 
 btnSettings.addEventListener("click", () => {
-    window.api.readJSON().then((settingsJSON) => {
-        inputQuantidadeMinima.value = settingsJSON.quantidadeMinima;
-        filePathDisplay.textContent = settingsJSON.pathImageCopied;
+    window.api.getConfigs().then(settings => {
+        inputquantidade_minima.value = settings.quantidade_minima;
+        filePathDisplay.textContent = settings.pathImageCopied;
         inputPathCopied.value = "";
         configsDB.innerHTML = "";
         configsDBColumns.innerHTML = "";
         themesPresentation.innerHTML = "";
 
-        for(const [dbConfigKey, dbConfigValue] of Object.entries(settingsJSON.dbConfigs)) {
+        for(const [dbConfigKey, dbConfigValue] of Object.entries(settings.db_configs)) {
             const li = document.createElement("li");
             const label = document.createElement("label");
             const input = document.createElement("input");
@@ -38,7 +38,7 @@ btnSettings.addEventListener("click", () => {
             configsDB.appendChild(li);
         }
 
-        for(const [columnNamePresentation, columnName] of Object.entries(settingsJSON.dbColumns)) {
+        for(const [columnNamePresentation, columnName] of Object.entries(settings.dbColumns)) {
             const li = document.createElement("li");
             const inputColumnNamePresentation = document.createElement("input");
             const inputColumnName = document.createElement("input");
@@ -59,7 +59,7 @@ btnSettings.addEventListener("click", () => {
             configsDBColumns.appendChild(li);
         }
 
-        for(const theme of Object.getOwnPropertyNames(settingsJSON.themes)) {
+        for(const theme of Object.getOwnPropertyNames(settings.themes)) {
             const li = document.createElement("li");
             const themeInput = document.createElement("input");
             const labelTheme = document.createElement("label");
