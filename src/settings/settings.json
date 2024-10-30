@@ -25,8 +25,8 @@
     "quantidade": "estoque"
   },
   "themes": {
-  }
     "claro": "theme_light_path",
     "escuro": "theme_dark_path"
   },
+  "theme_selected": "theme_selected_path"
 }
