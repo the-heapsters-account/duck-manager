@@ -8,15 +8,15 @@ window.addEventListener("load", () => {
 
         for (let i = 1; i <= 10; i++) {
             const produto = {};
-            columnNames.forEach((columnName) => {
+            columnNames.forEach(columnName => {
                 produto[columnName] = `linha ${i} da coluna ${columnName}`;
             });
+
             produtos.push(produto); // Adiciona o produto ao array
         }
 
-        // Função para exibir os produtos
         function displayProducts(products) {
-            productList.innerHTML = ""; // Limpa o container de produtos
+            productList.innerHTML = "";
             const table = document.createElement("table");
             const thead = document.createElement("thead");
             const headerRow = document.createElement("tr");
@@ -55,6 +55,7 @@ window.addEventListener("load", () => {
                     value.toLowerCase().includes(searchValue)
                 )
             );
+
             displayProducts(filteredProducts);
         });
     }).catch((error) => console.error("Erro ao ler o arquivo JSON: " + error));
