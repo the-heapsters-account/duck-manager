@@ -7,11 +7,14 @@
     "pesquisa": "CTRL + i",
     "menu": "CTRL + ,"
   },
-  "dbConfigs": {
-    "host": "localhost",
-    "user": "root",
-    "password": "",
-    "database": "lc_sistemas"
+  "db_configs": {
+    "connection": {
+      "host": "localhost",
+      "user": "root",
+      "password": "",
+      "database": "lc_sistemas"
+    },
+    "table_selected": "produto"
   },
   "db_columns": {
     "código": "codigo",
