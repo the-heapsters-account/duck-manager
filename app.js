@@ -60,8 +60,12 @@ ipcMain.handle("save-configs", async (event, config) => {
 });
 
 ipcMain.handle('execute-query', async (event, query) => {
-    const dbConfig = loadDBConfig();
-    const connection = await mysql.createConnection(dbConfig);
+    const configPath = path.join(__dirname, pathSettingsJSON);
+    const rawConfig = fs.readFileSync(configPath);
+    const json = JSON.parse(rawConfig);
+    const connectionConfigs = json.db_configs.connection;
+
+    let connection;
 
     try {
         const [rows, fields] = await connection.execute(query);
