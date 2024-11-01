@@ -3,6 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const mysql = require('mysql2/promise');
 const { exec } = require('child_process');
+const absolutePath = "%ABSOLUTE_PATH%"
 
 const pathSettingsJSON = "src/settings/settings.json";
 const pathIcon = "resources/imgs/logo.png";
