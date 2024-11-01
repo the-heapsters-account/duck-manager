@@ -14,18 +14,30 @@
 <body>
     <header>
         <nav>
-            <input type="button" value="produtos (F1)" class="btn btn-products">
+            <input type="button"
+            value="produtos (F1)"
+            class="btn btn-products">
 
-            <input type="button" value="gerar lista de pedidos (F2)" class="btn btn-gerar-doc">
+            <input type="button"
+            value="gerar lista de pedidos (F2)"
+            class="btn btn-gerar-doc">
 
             <section class="barra-pesquisa">
-                <input type="search" id="search" placeholder="Pesquisar">
-                <input type="submit" class="btn btn-search" value="🔍">
+                <input type="search"
+                id="search"
+                placeholder="Pesquisar">
+
+                <input type="submit"
+                class="btn btn-search"
+                value="🔍">
             </section>
 
-            <input type="button" value="Configurações (CTRL + ,)" class="btn btn-settings">
+            <input type="button"
+            class="btn btn-settings"
+            value="Configurações (CTRL + ,)">
         </nav>
     </header>
+
     <main class="principal">
         <div class="product-container">
             <h1>Duck Manager</h1>
@@ -40,7 +52,9 @@
                     <h1>Configuração da lista de pedidos</h1>
                     <p>
                         Quantidade mínima:
-                        <input type="number" id="input-quantidade-minima" minlength="0">
+                        <input type="number"
+                        id="input-quantidade-minima"
+                        minlength="0">
                     </p>
                 </section>
 
@@ -48,7 +62,8 @@
                     <h1>Imagem</h1>
                     <p>
                         Imagem:
-                        <input type="file" id="input-path-copied">
+                        <input type="file"
+                        id="input-path-copied">
                     </p>
                     <p id="file-path-display"></p>
                 </section>
@@ -56,6 +71,7 @@
                 <section>
                     <h1>Configuração do banco de dados</h1>
                     <ul id="db-configs"></ul>
+
                     <h2>Colunas</h2>
                     <ul id="db-configs-columns"></ul>
                 </section>
@@ -66,18 +82,27 @@
                 </section>
             </article>
             <article class="inputs">
-                <input type="button" class="btn-close" value="Fechar">
-                <input type="button" class="btn-save" value="Salvar">
+                <input type="button"
+                class="btn-close"
+                value="Fechar">
+
+                <input type="button"
+                class="btn-save"
+                value="Salvar">
             </article>
         </main>
     </dialog>
+
     <dialog id="loading">
-        <input type="button" value="Gerar lista de pedidos" id="btn-gerar-lista">
+        <input type="button"
+        id="btn-gerar-lista"
+        value="Gerar lista de pedidos">
     </dialog>
 
     <footer>
         <p>Suporte: <a href="mailto:theheapsters@gmail.com">theheapsters@gmail.com</a></p>
     </footer>
+
     <script src="../../js/search.js"></script>
     <script src="../../js/settings.js"></script>
     <script src="../../js/criarListaDePedidos.js"></script>

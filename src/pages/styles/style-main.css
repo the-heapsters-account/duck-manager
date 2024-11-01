@@ -3,7 +3,7 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    background-color: #545454;
+    background-color: #545454; /* para preencher a área branca com cinza escuro */
 }
 
 header {
