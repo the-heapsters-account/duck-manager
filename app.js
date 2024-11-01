@@ -49,6 +49,7 @@ app.whenReady().then(() => {
     win.maximize();
 });
 
+// handler de pegar as configurações
 ipcMain.handle("get-configs", async () => {
     const filePath = path.join(__dirname, paths.settingsJSON);
     const data = fs.readFileSync(filePath, 'utf-8');
@@ -56,6 +57,7 @@ ipcMain.handle("get-configs", async () => {
     return JSON.parse(data);
 });
 
+// handler de salvar as configurações
 ipcMain.handle("save-configs", async (event, config) => {
     const filePath = path.join(__dirname, paths.settingsJSON);
     fs.writeFileSync(filePath, JSON.stringify(config, null, 2));
@@ -63,6 +65,7 @@ ipcMain.handle("save-configs", async (event, config) => {
     return { status: "success" };
 });
 
+// handler de execução de queries
 ipcMain.handle('execute-query', async (event, query) => {
     const configPath = path.join(__dirname, paths.settingsJSON);
     const rawConfig = fs.readFileSync(configPath);
@@ -102,11 +105,12 @@ ipcMain.handle('execute-query', async (event, query) => {
     }
 });
 
+// handler de execução de arquivos Java
 ipcMain.handle('compile-java-file', async (event, dir, fileJava) => {
     return execCommand(`cd java/${dir} && javac -d bin ${fileJava}`, `erro ao compilar o arquivo Java "${fileJava}": `);
 });
 
-// cd src/java/${dir}/bin && java ${fileJava}
+// handler de execução de classes Java
 ipcMain.handle('execute-java-class', async (event, dir, classJava) => {
     return execCommand(`cd java/${dir}/bin && java ${classJava}`, `erro ao executar a classe Java "${classJava}": `);
 });
