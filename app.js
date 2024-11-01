@@ -5,8 +5,11 @@ const mysql = require('mysql2/promise');
 const { exec } = require('child_process');
 const absolutePath = "%ABSOLUTE_PATH%"
 
-const pathSettingsJSON = "src/settings/settings.json";
-const pathIcon = "resources/imgs/logo.png";
+const paths = {
+    settingsJSON: `${absolutePath}src/settings/settings.json`,
+    icon: `${absolutePath}resources/imgs/logo.png`,
+    filesJava: `${absolutePath}`
+}
 
 function execCommand(cmd, msgError) {
     return new Promise((resolve, reject) => {
