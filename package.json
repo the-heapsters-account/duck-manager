@@ -21,7 +21,7 @@
       "output": "build"
     },
     "files": [
-      "src/**/*",
+      "app/**/*",
       "app.js",
       "package.json",
       "!**/*.log",
