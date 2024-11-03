@@ -8,6 +8,7 @@ const paths = {
     settingsJSON: 'app/settings/settings.json',
     icon: 'app/resources/imgs/logo.png',
     filesJava: 'app/resources/lista de pedidos/java/',
+    app: 'app/app.html'
 }
 
 function execCommand(cmd, msgError) {
@@ -43,7 +44,7 @@ app.whenReady().then(() => {
     });
 
     win.webContents.openDevTools();
-    win.loadFile("src/pages/main/index.html");
+    win.loadFile(paths.app);
 
     win.maximize();
 });
