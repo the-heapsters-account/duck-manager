@@ -1,7 +1,7 @@
 {
   "name": "duck-manager",
   "version": "1.0.0",
-  "description": "sgbd",
+  "description": "Sistema de gestão",
   "main": "app.js",
   "scripts": {
     "start": "nodemon",
