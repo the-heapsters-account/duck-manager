@@ -3,12 +3,11 @@ const fs = require('fs');
 const path = require('path');
 const mysql = require('mysql2/promise');
 const { exec } = require('child_process');
-const absolutePath = "%ABSOLUTE_PATH%"
 
 const paths = {
-    settingsJSON: `${absolutePath}src/settings/settings.json`,
-    icon: `${absolutePath}resources/imgs/logo.png`,
-    filesJava: `${absolutePath}`
+    settingsJSON: 'app/settings/settings.json',
+    icon: 'app/resources/imgs/logo.png',
+    filesJava: 'app/resources/lista de pedidos/java/',
 }
 
 function execCommand(cmd, msgError) {
