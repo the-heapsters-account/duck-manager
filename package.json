@@ -8,7 +8,7 @@
     "packaging": "npx @electron/packager . --platform=win32 --arch=x64 --out=package --overwrite --ignore(lista de pedidos|package|tests|resources|presentation|\\.gitignore|README.md|nodemon.json) --icon=resources/imgs/logo.ico",
     "building": "electron-builder"
   },
-  "author": "edgar augusto, pedro arthur, joão gilberto, pedro dos anjos, ana marcella, lucas madureira, murylo costa",
+  "author": "Edgar Augusto, Pedro Arthur, João Gilberto, Pedro dos anjos, Ana Marcella, Lucas Madureira, Murylo Costa, Thiago Titi",
   "license": "MIT",
   "dependencies": {
     "fs": "^0.0.1-security",
