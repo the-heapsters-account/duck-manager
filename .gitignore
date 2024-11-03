@@ -4,6 +4,4 @@ package/
 build/
 *.class
 *.py
-*.xlsx
-*.xml
 package-lock.json
