@@ -1,7 +1,7 @@
 node_modules/
 bin/
 package/
-build/
+app builded/
 *.class
 *.py
 package-lock.json
