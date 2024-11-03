@@ -28,5 +28,15 @@
     "claro": "theme_light_path",
     "escuro": "theme_dark_path"
   },
-  "theme_selected": "theme_selected_path"
+  "theme_selected": "theme_selected_path",
+  "spreadsheet_configs": {
+    "infos": {
+      "logo": "path",
+      "nome_empresa": "",
+      "nome_mascara": "",
+      "cnpj": "",
+      "inscricao_estatal": "",
+      "endereço": ""
+    }
+  }
 }
