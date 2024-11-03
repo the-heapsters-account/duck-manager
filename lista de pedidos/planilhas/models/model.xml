@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<columns>
+    <column-description>
+        <description codigo="código"></description>
+        <description referencia="referência"></description>
+        <description codigo_barras="código de barras"></description>
+        <description nome="nome"></description>
+        <description preco="preco_venda"></description>
+        <description quantidade="estoque"></description>
+    </column-description>
+    <column-description>
+        <description codigo="código"></description>
+        <description referencia="referência"></description>
+        <description codigo_barras="código de barras"></description>
+        <description nome="nome"></description>
+        <description preco="preco_venda"></description>
+        <description quantidade="estoque"></description>
+    </column-description>
+</columns>
+
+<!--
+    MODELO:
+
+    <columns>
+        <column-description>
+            <description %NOME DA COLUNA NO DB%="%EXIBIÇÃO NO MENU%"></description>
+        </column-description>
+    </columns>
+-->
