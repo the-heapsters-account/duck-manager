@@ -16,7 +16,7 @@
   },
   "build": {
     "appId": "com.theheapsters.duckmanager",
-    "productName": "DuckManager",
+    "productName": "Duck Manager",
     "directories": {
       "output": "build"
     },
