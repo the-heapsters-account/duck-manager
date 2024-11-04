@@ -5,8 +5,8 @@ const mysql = require('mysql2/promise');
 const { exec } = require('child_process');
 
 const paths = {
-    settingsJSON: 'app/settings/settings.json',
-    icon: 'app/resources/imgs/logo.png',
+    settingsJSON: 'settings/settings.json',
+    icon: 'resources/imgs/logo.png',
     filesJava: 'app/resources/lista de pedidos/java/',
     app: 'app/app.html'
 }
