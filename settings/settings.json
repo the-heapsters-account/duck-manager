@@ -1,6 +1,5 @@
 {
   "quantidade_minima": 10,
-  "path_image_copied": "C:/...",
   "atalhos": {
     "produtos": "F1",
     "lista de pedidos": "F2",
@@ -24,19 +23,11 @@
     "preço": "preco_venda",
     "quantidade": "estoque"
   },
-  "themes": {
-    "claro": "theme_light_path",
-    "escuro": "theme_dark_path"
-  },
-  "theme_selected": "theme_selected_path",
-  "spreadsheet_configs": {
-    "infos": {
-      "logo": "path",
-      "nome_empresa": "",
-      "nome_mascara": "",
-      "cnpj": "",
-      "inscricao_estatal": "",
-      "endereço": ""
-    }
+  "spreadsheet_infos": {
+    "nome_empresa": "",
+    "nome_mascara": "",
+    "cnpj": "",
+    "inscricao_estatal": "",
+    "endereço": ""
   }
 }
