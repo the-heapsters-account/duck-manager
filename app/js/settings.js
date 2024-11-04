@@ -7,6 +7,8 @@ const configsSpreadsheetInfos = document.querySelector("#spreadsheet-infos");
 const inputquantidade_minima = document.querySelector("#input-quantidade-minima");
 
 btnSettings.addEventListener("click", () => {
+    settingsDialogElement.showModal();
+
     window.api.getConfigs().then(settings => {
         inputquantidade_minima.value = settings.quantidade_minima;
         configsDB.innerHTML = "";
@@ -76,8 +78,6 @@ btnSettings.addEventListener("click", () => {
             configsSpreadsheetInfos.appendChild(li);
         }
     }).catch((error) => console.error(error));
-
-    settingsDialogElement.showModal();
 });
 
 btnClose.addEventListener("click", () => settingsDialogElement.close());
