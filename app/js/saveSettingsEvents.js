@@ -7,7 +7,6 @@ buttonSave.addEventListener("click", () => {
     const databaseInput = document.querySelector("#database-input");
     const settings = {
         quantidadeMinima: inputQuantidadeMinima.value,
-        pathImageCopied: inputPathCopied.files[0]?.path || filePathDisplay.textContent, // usa o novo arquivo ou mantém o antigo
         atalhos: {
             pesquisa: "CTRL + i",
             menu: "CTRL + ,"

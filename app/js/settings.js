@@ -5,14 +5,10 @@ const configsDB = document.querySelector("#db-configs");
 const configsDBColumns = document.querySelector("#db-configs-columns");
 const themesPresentation = document.querySelector("#themes-presentation");
 const inputquantidade_minima = document.querySelector("#input-quantidade-minima");
-const filePathDisplay = document.querySelector("#file-path-display");
-const inputPathCopied = document.querySelector("#input-path-copied");
 
 btnSettings.addEventListener("click", () => {
     window.api.getConfigs().then(settings => {
         inputquantidade_minima.value = settings.quantidade_minima;
-        filePathDisplay.textContent = settings.pathImageCopied;
-        inputPathCopied.value = "";
         configsDB.innerHTML = "";
         configsDBColumns.innerHTML = "";
         themesPresentation.innerHTML = "";
