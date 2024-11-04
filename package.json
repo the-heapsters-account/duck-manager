@@ -37,7 +37,12 @@
     "win": {
       "icon": "resources/imgs/logo.ico",
       "target": [
-        "nsis"
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
       ]
     }
   },
