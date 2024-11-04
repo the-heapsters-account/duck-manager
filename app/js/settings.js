@@ -3,7 +3,7 @@ const btnSettings = document.querySelector("header .btn-settings");
 const btnClose = document.querySelector("dialog .btn-close");
 const configsDB = document.querySelector("#db-configs");
 const configsDBColumns = document.querySelector("#db-configs-columns");
-const themesPresentation = document.querySelector("#themes-presentation");
+const configsSpreadsheetInfos = document.querySelector("#spreadsheet-infos");
 const inputquantidade_minima = document.querySelector("#input-quantidade-minima");
 
 btnSettings.addEventListener("click", () => {
