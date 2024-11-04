@@ -13,7 +13,7 @@ btnSettings.addEventListener("click", () => {
         configsDBColumns.innerHTML = "";
         configsSpreadsheetInfos.innerHTML = "";
 
-        for(const [dbConfigKey, dbConfigValue] of Object.entries(settings.db_configs)) {
+        for(const [dbConfigKey, dbConfigValue] of Object.entries(settings.db_configs.connection)) {
             const li = document.createElement("li");
             const label = document.createElement("label");
             const input = document.createElement("input");
@@ -34,7 +34,7 @@ btnSettings.addEventListener("click", () => {
             configsDB.appendChild(li);
         }
 
-        for(const [columnNamePresentation, columnName] of Object.entries(settings.dbColumns)) {
+        for(const [columnNamePresentation, columnName] of Object.entries(settings.db_columns)) {
             const li = document.createElement("li");
             const inputColumnNamePresentation = document.createElement("input");
             const inputColumnName = document.createElement("input");
