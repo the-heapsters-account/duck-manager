@@ -11,7 +11,7 @@ btnSettings.addEventListener("click", () => {
         inputquantidade_minima.value = settings.quantidade_minima;
         configsDB.innerHTML = "";
         configsDBColumns.innerHTML = "";
-        themesPresentation.innerHTML = "";
+        configsSpreadsheetInfos.innerHTML = "";
 
         for(const [dbConfigKey, dbConfigValue] of Object.entries(settings.db_configs)) {
             const li = document.createElement("li");
@@ -55,30 +55,25 @@ btnSettings.addEventListener("click", () => {
             configsDBColumns.appendChild(li);
         }
 
-        for(const theme of Object.getOwnPropertyNames(settings.themes)) {
+        for(const [spreadsheetInfo, spreadsheetInfoValue] of Object.entries(settings.spreadsheet_infos)) {
             const li = document.createElement("li");
-            const themeInput = document.createElement("input");
-            const labelTheme = document.createElement("label");
-            const idNames = {
-                themeNameInput: `tema-${theme}-input`,
-                themeNameID: `tema-${theme}`
-            };
-            const className = "tema";
+            const inputSpreadsheetInfo = document.createElement("input");
+            const inputSpreadsheetInfoValue = document.createElement("input");
 
-            themeInput.setAttribute("type", "radio");
-            themeInput.setAttribute("name", "theme-color");
-            themeInput.id = idNames.themeNameInput;
-            themeInput.value = theme;
+            inputSpreadsheetInfo.setAttribute("type", "text");
+            inputSpreadsheetInfo.setAttribute("minlength", "1");
+            inputSpreadsheetInfo.setAttribute("maxlength", "50");
+            inputSpreadsheetInfo.value = spreadsheetInfo;
 
-            if(themeInput.value === "tucupi") themeInput.setAttribute("checked", "checked");
+            inputSpreadsheetInfoValue.setAttribute("type", "text");
+            inputSpreadsheetInfoValue.setAttribute("minlength", "1");
+            inputSpreadsheetInfoValue.setAttribute("maxlength", "50");
+            inputSpreadsheetInfoValue.value = spreadsheetInfoValue;
 
-            labelTheme.setAttribute("for", idNames.themeNameInput);
-            labelTheme.innerHTML = `Tema <b class="${className}" id="${idNames.themeNameID}">${theme}</b>`;
+            li.appendChild(inputSpreadsheetInfo);
+            li.appendChild(inputSpreadsheetInfoValue);
 
-            li.appendChild(themeInput);
-            li.appendChild(labelTheme);
-
-            themesPresentation.appendChild(li);
+            configsSpreadsheetInfos.appendChild(li);
         }
     }).catch((error) => console.error(error));
 
