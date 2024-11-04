@@ -35,6 +35,7 @@
     ],
     "asar": true,
     "win": {
+      "icon": "resources/imgs/logo.ico",
       "target": [
         "nsis"
       ]
