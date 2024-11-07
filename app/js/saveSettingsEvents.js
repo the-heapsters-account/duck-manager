@@ -57,5 +57,5 @@ buttonSave.addEventListener("click", () => {
         } else {
             alert("Não foi possível salvar as configurações");
         }
-    }).catch((error) => console.error("Erro ao salvar o arquivo JSON: " + error));
+    }).catch((error) => alert("Erro ao salvar o arquivo JSON: " + error));
 });
