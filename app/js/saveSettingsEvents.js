@@ -25,6 +25,8 @@ buttonSave.addEventListener("click", () => {
                 user: userInput.value,
                 password: passwordInput.value,
                 database: databaseInput.value,
+            },
+            table_selected: tableSelectedInput.value,
         },
         themes: {
             claro: "tema_claro_path",
