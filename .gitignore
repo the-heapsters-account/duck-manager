@@ -5,3 +5,5 @@ app builded/
 *.class
 *.py
 package-lock.json
+*.txt
+*.zip
