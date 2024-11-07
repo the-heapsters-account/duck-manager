@@ -35,32 +35,32 @@ Pode-se usar o *VS Code* para desenvolvimento Java? Sim, nada lhe impede disso. 
 # Aplicações instaladas
 ## Dependências
 - Desenvolvimento
-1. *Nodemon*
+1. **Nodemon**
     - Atualiza a aplicação que está rodando sem ter a necessidade de fechar e abrir a aplicação a cada mudança no código
     - A cada alteração no código, após o código ser salvo, a aplicação reseta
     - Para mais informações: [nodemon - npm](https://www.npmjs.com/package/nodemon) (nodemon), [remy/nodemon](https://github.com/remy/nodemon#nodemon) (GitHub)
-2. *Electron*
+2. **Electron**
     - Roda a aplicação desktop
     - Para mais informações: [electron - npm](https://www.npmjs.com/package/electron) (npm), [Introdução | Electron](https://www.electronjs.org/pt/docs/latest/) (Electron)
 3.
 4.
 
 - Para o projeto
-2. *fs*
+2. **fs**
     - Permite a leitura, criação de diretórios, cópia de diretórios e afins
     - Para mais informações: [file-system](https://www.npmjs.com/package/file-system) (file-system), [fs](https://www.npmjs.com/package/fs) (fs)
-3. *mysql*
+3. **mysql**
     - Permite executar a conexão com o MySQL, executar queries e retornar valores
     - Para mais informações> [mysql](https://www.npmjs.com/package/mysql) (mysql);
-4. *ShellJs*
+4. **ShellJs**
     - Permite a execução de comandos shell em diferentes ambientes através de métodos ou, simplesmente, inserir manualmente
     - Para mais informações> [ShellJs](https://www.npmjs.com/package/shelljs) (ShellJs);
 
 ## Frameworks
-1. *Electron*
+1. **Electron**
     - Roda a aplicação desktop
     - Para mais informações: [electron - npm](https://www.npmjs.com/package/electron) (npm), [Introdução | Electron](https://www.electronjs.org/pt/docs/latest/) (Electron)
-2. *Apache POI*
+2. **Apache POI**
     - Permite a edição, criação e leitura de arquivos do Office
     - Para mais informações: [Apache POI](https://poi.apache.org/) (Apache POI)
 # Observação
