@@ -47,7 +47,7 @@ window.addEventListener("load", () => {
         }
 
         // Adiciona evento de busca
-        const searchInput = document.querySelector("#search");
+        const searchInput = document.querySelector(".input-search");
         searchInput.addEventListener("click", () => {
             const searchValue = searchInput.value.toLowerCase();
             const filteredProducts = produtos.filter(produto =>
