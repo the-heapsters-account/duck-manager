@@ -45,13 +45,13 @@ btnSettings.addEventListener("click", () => {
             inputColumnNamePresentation.setAttribute("type", "text");
             inputColumnNamePresentation.setAttribute("minlength", "1");
             inputColumnNamePresentation.setAttribute("maxlength", "50");
-            inputColumnNamePresentation.setAttribute("placeholder", "nome da coluna no banco de dados");
+            inputColumnNamePresentation.setAttribute("placeholder", "nome de apresentação");
             inputColumnNamePresentation.setAttribute("value", columnNamePresentation);
 
             inputColumnName.setAttribute("type", "text");
             inputColumnName.setAttribute("minlength", "1");
             inputColumnName.setAttribute("maxlength", "50");
-            inputColumnName.setAttribute("placeholder", "nome de apresentação");
+            inputColumnName.setAttribute("placeholder", "nome da coluna no banco de dados");
             inputColumnName.setAttribute("value", columnName);
 
             li.appendChild(inputColumnNamePresentation);
