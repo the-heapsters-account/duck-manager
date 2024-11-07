@@ -30,7 +30,6 @@ btnSettings.addEventListener("click", () => {
             dbConfigKey !== "password" ? input.setAttribute("required", "") : null;
             input.setAttribute("value", dbConfigValue);
             input.id = idName;
-            input.value = dbConfigValue;
 
             li.appendChild(label);
             li.appendChild(input);
