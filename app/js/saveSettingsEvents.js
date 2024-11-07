@@ -36,11 +36,11 @@ buttonSave.addEventListener("click", () => {
         }
     };
 
-    for(const inputColumn of configsDBColumns.children) {
-        const columnName = inputColumn.children[0].value;
-        const columnNameDB = inputColumn.children[1].value;
+    for(const inputsColumn of settingsDBColumns.children) {
+        const columnNameVerify = inputsColumn.children[0].value !== "+" && inputsColumn.children[0].getAttribute("type") === "text";
 
-        settings.db_columns[columnName] = columnNameDB;
+        if(columnNameVerify) settings.db_columns[inputsColumn.children[0].value] = inputsColumn.children[1].value;
+    }
     }
 
     window.api.saveConfigs(settings).then((response) => {
