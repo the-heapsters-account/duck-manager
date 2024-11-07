@@ -12,7 +12,7 @@ buttonSave.addEventListener("click", () => {
     const tableSelectedInput = document.querySelector("#input-table-selected");
 
     const settings = {
-        quantidade_minima: quantidadeMninimaInput.value,
+        quantidade_minima: parseInt(quantidadeMinimaInput.value),
         atalhos: {
             produtos: "F1",
             "lista de pedidos": "F2",
