@@ -42,8 +42,12 @@ Pode-se usar o *VS Code* para desenvolvimento Java? Sim, nada lhe impede disso. 
 2. **Electron**
     - Roda a aplicação desktop
     - Para mais informações: [electron - npm](https://www.npmjs.com/package/electron) (npm), [Introdução | Electron](https://www.electronjs.org/pt/docs/latest/) (Electron)
-3.
-4.
+3. **@electron/packager**
+    - Empacota a aplicação desktop criando um executável para distribuição para realização de demonstrações
+    - Para mais informações: [@electron/packager](https://github.com/electron/packager?tab=readme-ov-file#electronpackager)
+4. **electron-builder**
+    - Criação da aplicação desktop criando um executável para distribuição a para usuários finais
+    - Para mais informações: [electron-builder](https://github.com/electron-userland/electron-builder?tab=readme-ov-file#electron-builder---)
 
 - Para o projeto
 2. **fs**
