@@ -1,10 +1,15 @@
 const buttonSave = document.querySelector(".btn-save");
+const settingsDBColumns = document.querySelector("#db-settings-columns");
+const settingsSpreadsheetInfos = document.querySelector("ul#spreadsheet-infos");
+const dialogElement = document.querySelector("dialog#settings");
 
 buttonSave.addEventListener("click", () => {
     const hostInput = document.querySelector("#host-input");
     const userInput = document.querySelector("#user-input");
     const passwordInput = document.querySelector("#password-input");
     const databaseInput = document.querySelector("#database-input");
+    const tableSelectedInput = document.querySelector("#input-table-selected");
+
     const settings = {
         quantidadeMinima: inputQuantidadeMinima.value,
         atalhos: {
