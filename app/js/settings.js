@@ -78,13 +78,13 @@ btnSettings.addEventListener("click", () => {
             inputSpreadsheetInfo.setAttribute("type", "text");
             inputSpreadsheetInfo.setAttribute("minlength", "1");
             inputSpreadsheetInfo.setAttribute("maxlength", "50");
-            inputSpreadsheetInfo.value = spreadsheetInfo;
+            inputSpreadsheetInfo.setAttribute("required", "");
             inputSpreadsheetInfo.setAttribute("value", spreadsheetInfo);
 
             inputSpreadsheetInfoValue.setAttribute("type", "text");
             inputSpreadsheetInfoValue.setAttribute("minlength", "1");
             inputSpreadsheetInfoValue.setAttribute("maxlength", "50");
-            inputSpreadsheetInfoValue.value = spreadsheetInfoValue;
+            inputSpreadsheetInfoValue.setAttribute("required", "");
             inputSpreadsheetInfoValue.setAttribute("value", spreadsheetInfoValue);
 
             li.appendChild(inputSpreadsheetInfo);
