@@ -92,7 +92,7 @@ header nav .barra-pesquisa .btn-search {
     background-color: #737373;
 }
 
-main.principal {
+main {
     display: flex;
     justify-content: center;
     align-items: center;
