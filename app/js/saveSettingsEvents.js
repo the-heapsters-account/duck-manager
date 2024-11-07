@@ -1,6 +1,6 @@
 const buttonSave = document.querySelector(".btn-save");
 const settingsDBColumns = document.querySelector("#db-settings-columns");
-const settingsSpreadsheetInfos = document.querySelector("ul#spreadsheet-infos");
+const settingsSpreadsheetInfos = document.querySelector("#spreadsheet-infos");
 const dialogElement = document.querySelector("dialog#settings");
 
 buttonSave.addEventListener("click", () => {
