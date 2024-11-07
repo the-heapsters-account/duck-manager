@@ -16,7 +16,7 @@ buttonSave.addEventListener("click", () => {
         atalhos: {
             produtos: "F1",
             "lista de pedidos": "F2",
-            pesquisa: "CTRL + i",
+            pesquisa: "CTRL + I",
             menu: "CTRL + ,"
         },
         db_configs: {
