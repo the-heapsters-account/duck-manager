@@ -32,11 +32,11 @@ Pode-se usar o *VS Code* para desenvolvimento Java? Sim, nada lhe impede disso. 
 3. [Java](https://www.java.com/pt-BR/download/) - Java
 4. [JDK 23](https://www.oracle.com/br/java/technologies/downloads/) - JDK
 
-# Pacotes instalados
 1. *Electron*
     - Roda a aplicação desktop
     - Para mais informações: [electron - npm](https://www.npmjs.com/package/electron) (npm), [Introdução | Electron](https://www.electronjs.org/pt/docs/latest/) (Electron)
 2. *Nodemon*
+# Aplicações instaladas
     - Atualiza a aplicação que está rodando sem ter a necessidade de fechar e abrir a aplicação a cada mudança no código
     - A cada alteração no código, após o código ser salvo, a aplicação reseta
     - Para mais informações: [nodemon - npm](https://www.npmjs.com/package/nodemon) (nodemon), [remy/nodemon](https://github.com/remy/nodemon#nodemon) (GitHub)
