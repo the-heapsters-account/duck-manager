@@ -31,6 +31,12 @@ header nav .btn {
     font-family: 'Nunito', sans-serif;
     font-weight: 600;
 }
+header nav .btn:hover {
+    background-color: #545454;
+}
+header nav .btn:active {
+    background-color: #737373;
+}
 header nav .inputs {
     position: relative;
     padding-top: 50px;
@@ -83,12 +89,6 @@ header nav .barra-pesquisa .btn-search {
     border-bottom: 2px #fff solid;
 
     padding: 10px;
-    background-color: #737373;
-}
-header nav .btn:hover {
-    background-color: #545454;
-}
-header nav .btn:active {
     background-color: #737373;
 }
 
