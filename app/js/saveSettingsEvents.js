@@ -14,6 +14,8 @@ buttonSave.addEventListener("click", () => {
     const settings = {
         quantidade_minima: quantidadeMninimaInput.value,
         atalhos: {
+            produtos: "F1",
+            "lista de pedidos": "F2",
             pesquisa: "CTRL + i",
             menu: "CTRL + ,"
         },
