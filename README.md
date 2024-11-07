@@ -63,6 +63,11 @@ Pode-se usar o *VS Code* para desenvolvimento Java? Sim, nada lhe impede disso. 
 2. **Apache POI**
     - Permite a edição, criação e leitura de arquivos do Office
     - Para mais informações: [Apache POI](https://poi.apache.org/) (Apache POI)
+
+## Módulos
+1. **Child process**
+    - Realiza o processo de execução de arquivos e possibilita a execução de comandos no cmd (processo, este, intermediado pelo node) [Child process](https://nodejs.org/api/child_process.html#spawning-bat-and-cmd-files-on-windows) (módulo nativo do *Node*)
+
 # Observação
 É sempre bom **ATUALIZAR** o repositório constantemente para garantir que todos arquivos estão devidamente sincronizados com o repositório do projeto.
 
