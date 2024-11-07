@@ -41,6 +41,12 @@ buttonSave.addEventListener("click", () => {
 
         if(columnNameVerify) settings.db_columns[inputsColumn.children[0].value] = inputsColumn.children[1].value;
     }
+
+    for(const inputSpreadsheetInfo of settingsSpreadsheetInfos.children) {
+        const inputSpreadsheetInfoInsert = inputSpreadsheetInfo.children[0].value !== "+";
+        const inputSpreadsheetInfoValue = inputSpreadsheetInfo.children[1] !== undefined;
+
+        inputSpreadsheetInfoInsert && inputSpreadsheetInfoValue ? settings.spreadsheet_infos[inputSpreadsheetInfo.children[0].value] = inputSpreadsheetInfo.children[1].value : null;
     }
 
     window.api.saveConfigs(settings).then((response) => {
