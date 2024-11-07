@@ -1,8 +1,8 @@
 const settingsDialogElement = document.querySelector("dialog#settings");
 const btnSettings = document.querySelector("header .btn-settings");
 const btnClose = document.querySelector("dialog .btn-close");
-const configsDB = document.querySelector("#db-configs");
-const configsDBColumns = document.querySelector("#db-configs-columns");
+const configsDB = document.querySelector("#db-settings");
+const configsDBColumns = document.querySelector("#db-settings-columns");
 const configsSpreadsheetInfos = document.querySelector("#spreadsheet-infos");
 const inputquantidade_minima = document.querySelector("#input-quantidade-minima");
 
@@ -57,6 +57,16 @@ btnSettings.addEventListener("click", () => {
             configsDBColumns.appendChild(li);
         }
 
+        let li = document.createElement("li");
+        let inputAddColumn = document.createElement("input");
+        inputAddColumn.setAttribute("type", "button");
+        inputAddColumn.setAttribute("onclick", "addNewInputColumnDB('#db-settings-columns', 0)");
+        inputAddColumn.value = "+";
+        inputAddColumn.classList.add("add-new-input-column-db");
+
+        li.appendChild(inputAddColumn);
+        configsDBColumns.appendChild(li);
+
         for(const [spreadsheetInfo, spreadsheetInfoValue] of Object.entries(settings.spreadsheet_infos)) {
             const li = document.createElement("li");
             const inputSpreadsheetInfo = document.createElement("input");
@@ -77,6 +87,16 @@ btnSettings.addEventListener("click", () => {
 
             configsSpreadsheetInfos.appendChild(li);
         }
+
+        li = document.createElement("li");
+        inputAddColumn = document.createElement("input");
+        inputAddColumn.setAttribute("type", "button");
+        inputAddColumn.setAttribute("onclick", "addNewInputColumnDB('#spreadsheet-infos', 1)");
+        inputAddColumn.value = "+";
+        inputAddColumn.classList.add("add-new-input-column-db");
+
+        li.appendChild(inputAddColumn);
+        configsSpreadsheetInfos.appendChild(li);
     }).catch((error) => console.error(error));
 });
 
