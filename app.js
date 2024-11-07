@@ -50,7 +50,7 @@ app.whenReady().then(() => {
 });
 
 // handler de pegar as configurações
-ipcMain.handle("get-configs", async () => {
+ipcMain.handle("get-settings", async () => {
     const filePath = path.join(__dirname, paths.settingsJSON);
     const data = fs.readFileSync(filePath, 'utf-8');
 
@@ -58,7 +58,7 @@ ipcMain.handle("get-configs", async () => {
 });
 
 // handler de salvar as configurações
-ipcMain.handle("save-configs", async (event, config) => {
+ipcMain.handle("save-settings", async (event, config) => {
     const filePath = path.join(__dirname, paths.settingsJSON);
     fs.writeFileSync(filePath, JSON.stringify(config, null, 2));
 
