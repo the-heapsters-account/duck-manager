@@ -67,7 +67,7 @@ header nav .barra-pesquisa {
     display: flex;
     flex-direction: row;
 }
-header nav .barra-pesquisa #search {
+header nav .barra-pesquisa .input-search {
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
     border-top: 2px #fff solid;
