@@ -39,7 +39,14 @@ Pode-se usar o *VS Code* para desenvolvimento Java? Sim, nada lhe impede disso. 
     - Atualiza a aplicação que está rodando sem ter a necessidade de fechar e abrir a aplicação a cada mudança no código
     - A cada alteração no código, após o código ser salvo, a aplicação reseta
     - Para mais informações: [nodemon - npm](https://www.npmjs.com/package/nodemon) (nodemon), [remy/nodemon](https://github.com/remy/nodemon#nodemon) (GitHub)
-3. *File-system* & *FS*
+2. *Electron*
+    - Roda a aplicação desktop
+    - Para mais informações: [electron - npm](https://www.npmjs.com/package/electron) (npm), [Introdução | Electron](https://www.electronjs.org/pt/docs/latest/) (Electron)
+3.
+4.
+
+- Para o projeto
+2. *fs*
     - Permite a leitura, criação de diretórios, cópia de diretórios e afins
     - Para mais informações: [file-system](https://www.npmjs.com/package/file-system) (file-system), [fs](https://www.npmjs.com/package/fs) (fs)
 
