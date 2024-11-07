@@ -50,7 +50,7 @@ buttonSave.addEventListener("click", () => {
     }
 
     window.api.saveConfigs(settings).then((response) => {
-        if (response.status === "success") {
+        if(response.status === "success") {
             alert("Configurações salvas com sucesso!");
 
             dialogElement.close();
