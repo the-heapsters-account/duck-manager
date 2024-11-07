@@ -20,10 +20,11 @@ buttonSave.addEventListener("click", () => {
             menu: "CTRL + ,"
         },
         db_configs: {
-            host: hostInput.value,
-            user: userInput.value,
-            password: passwordInput.value,
-            database: databaseInput.value
+            connection: {
+                host: hostInput.value,
+                user: userInput.value,
+                password: passwordInput.value,
+                database: databaseInput.value,
         },
         themes: {
             claro: "tema_claro_path",
