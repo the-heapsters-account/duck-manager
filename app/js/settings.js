@@ -4,13 +4,13 @@ const btnClose = document.querySelector("dialog .btn-close");
 const configsDB = document.querySelector("#db-settings");
 const configsDBColumns = document.querySelector("#db-settings-columns");
 const configsSpreadsheetInfos = document.querySelector("#spreadsheet-infos");
-const inputquantidade_minima = document.querySelector("#input-quantidade-minima");
+const quantidadeMinimaInput = document.querySelector("#input-quantidade-minima");
 
 btnSettings.addEventListener("click", () => {
     settingsDialogElement.showModal();
 
     window.api.getConfigs().then(settings => {
-        inputquantidade_minima.value = settings.quantidade_minima;
+        quantidadeMinimaInput.value = settings.quantidade_minima;
         configsDB.innerHTML = "";
         configsDBColumns.innerHTML = "";
         configsSpreadsheetInfos.innerHTML = "";
@@ -27,6 +27,7 @@ btnSettings.addEventListener("click", () => {
             input.setAttribute("type", "text");
             input.setAttribute("minlength", "1");
             input.setAttribute("maxlength", "50");
+            input.setAttribute("value", dbConfigValue);
             input.id = idName;
             input.value = dbConfigValue;
 
@@ -45,11 +46,13 @@ btnSettings.addEventListener("click", () => {
             inputColumnNamePresentation.setAttribute("minlength", "1");
             inputColumnNamePresentation.setAttribute("maxlength", "50");
             inputColumnNamePresentation.value = columnNamePresentation;
+            inputColumnNamePresentation.setAttribute("value", columnNamePresentation);
 
             inputColumnName.setAttribute("type", "text");
             inputColumnName.setAttribute("minlength", "1");
             inputColumnName.setAttribute("maxlength", "50");
             inputColumnName.value = columnName;
+            inputColumnName.setAttribute("value", columnName);
 
             li.appendChild(inputColumnNamePresentation);
             li.appendChild(inputColumnName);
@@ -76,11 +79,13 @@ btnSettings.addEventListener("click", () => {
             inputSpreadsheetInfo.setAttribute("minlength", "1");
             inputSpreadsheetInfo.setAttribute("maxlength", "50");
             inputSpreadsheetInfo.value = spreadsheetInfo;
+            inputSpreadsheetInfo.setAttribute("value", spreadsheetInfo);
 
             inputSpreadsheetInfoValue.setAttribute("type", "text");
             inputSpreadsheetInfoValue.setAttribute("minlength", "1");
             inputSpreadsheetInfoValue.setAttribute("maxlength", "50");
             inputSpreadsheetInfoValue.value = spreadsheetInfoValue;
+            inputSpreadsheetInfoValue.setAttribute("value", spreadsheetInfoValue);
 
             li.appendChild(inputSpreadsheetInfo);
             li.appendChild(inputSpreadsheetInfoValue);
