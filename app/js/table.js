@@ -6,7 +6,7 @@ window.addEventListener("load", () => {
         const columnNames = settingsJSON.dbColumns;
         const produtos = []; // Array para armazenar os produtos
 
-        for (let i = 1; i <= 10; i++) {
+        for(let i = 1; i <= 10; i++) {
             const produto = {};
             columnNames.forEach(columnName => {
                 produto[columnName] = `linha ${i} da coluna ${columnName}`;

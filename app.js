@@ -14,10 +14,10 @@ const paths = {
 function execCommand(cmd, msgError) {
     return new Promise((resolve, reject) => {
         exec(cmd, (error, stdout, stderr) => {
-        if (error) {
+        if(error) {
             return reject(msgError + error.message);
         }
-        if (stderr) {
+        if(stderr) {
             return reject("error: " + stderr);
         }
         resolve(stdout);
@@ -90,16 +90,16 @@ ipcMain.handle('execute-query', async (event, query) => {
     } catch(error) {
         console.error('Erro durante a execução da query: ' + error.code);
 
-        if (error.code === 'ER_ACCESS_DENIED_ERROR') {
+        if(error.code === 'ER_ACCESS_DENIED_ERROR') {
             return 'Erro: Acesso negado. Verifique suas credenciais.';
-        } else if (error.code === 'ER_BAD_DB_ERROR') {
+        } else if(error.code === 'ER_BAD_DB_ERROR') {
             return 'Erro: Banco de dados não encontrado.';
         } else {
             return 'Erro ao conectar com o banco de dados: ' + error.message;
         }
     } finally {
-        if (connection) {
             console.log('Fechando conexão');
+        if(connection) {
             await connection.end();
         }
     }
@@ -124,7 +124,7 @@ app.on("window-all-closed", () => {
 
 // abrindo a aplicação no macOS
 app.on("activate", () => {
-    if (BrowserWindow.getAllWindows().length === 0) {
+    if(BrowserWindow.getAllWindows().length === 0) {
         createWindow();
     }
 });
