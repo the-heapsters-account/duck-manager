@@ -56,6 +56,13 @@ Pode-se usar o *VS Code* para desenvolvimento Java? Sim, nada lhe impede disso. 
     - Permite a execução de comandos shell em diferentes ambientes através de métodos ou, simplesmente, inserir manualmente
     - Para mais informações> [ShellJs](https://www.npmjs.com/package/shelljs) (ShellJs);
 
+## Frameworks
+1. *Electron*
+    - Roda a aplicação desktop
+    - Para mais informações: [electron - npm](https://www.npmjs.com/package/electron) (npm), [Introdução | Electron](https://www.electronjs.org/pt/docs/latest/) (Electron)
+2. *Apache POI*
+    - Permite a edição, criação e leitura de arquivos do Office
+    - Para mais informações: [Apache POI](https://poi.apache.org/) (Apache POI)
 # Observação
 É sempre bom **ATUALIZAR** o repositório constantemente para garantir que todos arquivos estão devidamente sincronizados com o repositório do projeto.
 
