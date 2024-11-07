@@ -24,10 +24,10 @@
     "quantidade": "estoque"
   },
   "spreadsheet_infos": {
-    "nome_empresa": "",
-    "nome_mascara": "",
+    "nome da empresa": "",
+    "nome mascara": "",
     "cnpj": "",
-    "inscricao_estatal": "",
+    "inscricao estatal": "",
     "endereço": ""
   }
 }
