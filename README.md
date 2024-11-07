@@ -29,8 +29,8 @@ Pode-se usar o *VS Code* para desenvolvimento Java? Sim, nada lhe impede disso. 
 # Recursos utilizados e necessários
 1. [npm](https://www.npmjs.com/) - JavaScript package manager
 2. [git](https://git-scm.com/downloads) - Git
-3. [Java](https://www.java.com/pt-BR/download/)
-4. [JDK 23](https://www.oracle.com/br/java/technologies/downloads/)
+3. [Java](https://www.java.com/pt-BR/download/) - Java
+4. [JDK 23](https://www.oracle.com/br/java/technologies/downloads/) - JDK
 
 # Pacotes instalados
 1. *Electron*
