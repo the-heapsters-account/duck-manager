@@ -75,7 +75,6 @@ ipcMain.handle('execute-query', async (event, query) => {
     let connection;
 
     try {
-        console.log('Conectando-se ao banco de dados com as seguintes credenciais: ' + connectionConfigs);
         connection = await mysql.createConnection({
             host: connectionConfigs.host,
             user: connectionConfigs.user,
@@ -83,12 +82,9 @@ ipcMain.handle('execute-query', async (event, query) => {
             database: connectionConfigs.database
         });
 
-        console.log('Executando a query: ' + query);
         const [rows, fields] = await connection.execute(query);
-        console.log('Resultado da query:\n' + rows);
         return rows;
     } catch(error) {
-        console.error('Erro durante a execução da query: ' + error.code);
 
         if(error.code === 'ER_ACCESS_DENIED_ERROR') {
             return 'Erro: Acesso negado. Verifique suas credenciais.';
@@ -98,7 +94,6 @@ ipcMain.handle('execute-query', async (event, query) => {
             return 'Erro ao conectar com o banco de dados: ' + error.message;
         }
     } finally {
-            console.log('Fechando conexão');
         if(connection) {
             await connection.end();
         }
