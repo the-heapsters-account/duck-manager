@@ -29,6 +29,10 @@ buttonSave.addEventListener("click", () => {
             table_selected: tableSelectedInput.value,
         },
         db_columns: {
+            // adição dinâmica
+        },
+        spreadsheet_infos: {
+            // adição dinâmica
         }
     };
 
