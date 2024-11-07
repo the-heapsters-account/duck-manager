@@ -108,6 +108,10 @@ dialog[open] {
     display: grid;
     place-self: center;
 }
+/* configurar depois */
+/* dialog[open]#settings .content #db-settings-columns input[value="+"] {
+    width: 100%;
+} */
 
 footer {
     background-color: #5e5e5e;
