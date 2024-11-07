@@ -11,7 +11,7 @@ buttonSave.addEventListener("click", () => {
     const tableSelectedInput = document.querySelector("#input-table-selected");
 
     const settings = {
-        quantidadeMinima: inputQuantidadeMinima.value,
+        quantidade_minima: quantidadeMninimaInput.value,
         atalhos: {
             pesquisa: "CTRL + i",
             menu: "CTRL + ,"
@@ -22,11 +22,11 @@ buttonSave.addEventListener("click", () => {
             password: passwordInput.value,
             database: databaseInput.value
         },
-        dbColumns: {},
         themes: {
             claro: "tema_claro_path",
             escuro: "tema_escuro_path",
             tucupi: "tema_tucupi_path"
+        db_columns: {
         }
     };
 
@@ -34,7 +34,7 @@ buttonSave.addEventListener("click", () => {
         const columnName = inputColumn.children[0].value;
         const columnNameDB = inputColumn.children[1].value;
 
-        settings.dbColumns[columnName] = columnNameDB;
+        settings.db_columns[columnName] = columnNameDB;
     }
 
     window.api.saveConfigs(settings).then((response) => {
