@@ -28,10 +28,6 @@ buttonSave.addEventListener("click", () => {
             },
             table_selected: tableSelectedInput.value,
         },
-        themes: {
-            claro: "tema_claro_path",
-            escuro: "tema_escuro_path",
-            tucupi: "tema_tucupi_path"
         db_columns: {
         }
     };
