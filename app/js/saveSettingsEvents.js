@@ -8,8 +8,8 @@ buttonSave.addEventListener("click", () => {
     const userInput = document.querySelector("#user-input");
     const passwordInput = document.querySelector("#password-input");
     const databaseInput = document.querySelector("#database-input");
+    const quantidadeMinimaInput = document.querySelector("#input-quantidade-minima");
     const tableSelectedInput = document.querySelector("#input-table-selected");
-    const quantidadeMninimaInput = document.querySelector("#input-quantidade-minima");
 
     const settings = {
         quantidade_minima: quantidadeMninimaInput.value,
