@@ -109,7 +109,7 @@ dialog[open] {
     place-self: center;
     padding: 10px;
 }
-dialog[open] h1, dialog[open] h2{text-align: center;} 
+dialog[open] h1, dialog[open] h2 {text-align: center;}
 
 /* configurar depois */
 /* dialog[open]#settings .content #db-settings-columns input[value="+"] {
