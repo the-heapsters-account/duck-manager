@@ -85,7 +85,6 @@ ipcMain.handle('execute-query', async (event, query) => {
         const [rows, fields] = await connection.execute(query);
         return rows;
     } catch(error) {
-
         if(error.code === 'ER_ACCESS_DENIED_ERROR') {
             return 'Erro: Acesso negado. Verifique suas credenciais.';
         } else if(error.code === 'ER_BAD_DB_ERROR') {
