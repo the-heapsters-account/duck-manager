@@ -93,9 +93,7 @@ ipcMain.handle('execute-query', async (event, query) => {
             return 'Erro ao conectar com o banco de dados: ' + error.message;
         }
     } finally {
-        if(connection) {
-            await connection.end();
-        }
+        if(connection) await connection.end();
     }
 });
 
