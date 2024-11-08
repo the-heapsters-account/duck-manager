@@ -107,6 +107,18 @@ ipcMain.handle('execute-java-class', (event, dir, classJava) => {
     return execCommand(`cd java/${dir}/bin && java ${classJava}`, `erro ao executar a classe Java "${classJava}": `);
 });
 
+// handler pra pegar as colunas do banco de dados que serão usadas
+ipcMain.handle('get-columns-db', () => {
+    const filePath = path.join(__dirname, paths.settingsJSON);
+    const settings = fs.readFileSync(filePath, "utf-8");
+    const settingsJSON = JSON.parse(settings);
+    const columns = settingsJSON.db_columns;
+
+    return {
+        columnsPresentation: Object.keys(columns),
+        columnsDB: Object.values(columns)
+    };
+});
 // fechando a janela do app em no windows e linux
 app.on("window-all-closed", () => {
     if(process.platform != "darwin") {
