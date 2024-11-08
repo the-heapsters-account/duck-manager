@@ -7,7 +7,7 @@ const { exec } = require('child_process');
 const paths = {
     settingsJSON: 'settings/settings.json',
     icon: 'resources/imgs/logo.png',
-    filesJava: 'app/resources/lista de pedidos/java/',
+    filesJava: 'lista de pedidos/src/java/',
     app: 'app/app.html'
 }
 
