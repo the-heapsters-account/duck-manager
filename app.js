@@ -119,6 +119,17 @@ ipcMain.handle('get-columns-db', () => {
         columnsDB: Object.values(columns)
     };
 });
+
+// handler pra pegar a tabela do banco de dados que será usada
+ipcMain.handle('get-table-db', () => {
+    const filePath = path.join(__dirname, paths.settingsJSON);
+    const settings = fs.readFileSync(filePath, "utf-8");
+    const settingsJSON = JSON.parse(settings);
+    const tableSelected = settingsJSON.db_configs.table_selected;
+
+    return tableSelected;
+});
+
 // fechando a janela do app em no windows e linux
 app.on("window-all-closed", () => {
     if(process.platform != "darwin") {
