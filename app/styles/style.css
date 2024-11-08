@@ -70,9 +70,9 @@ header nav .barra-pesquisa {
 header nav .barra-pesquisa .input-search {
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
-    border-top: 2px #fff solid;
-    border-left: 2px #fff solid;
-    border-bottom: 2px #fff solid;
+    border-top: 1px #fff solid;
+    border-left: 1px #fff solid;
+    border-bottom: 1px #fff solid;
     border-right: none;
 
     font-size: 20px;
@@ -84,9 +84,9 @@ header nav .barra-pesquisa .input-search {
 header nav .barra-pesquisa .btn-search {
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
-    border-top: 2px #fff solid;
-    border-right: 2px #fff solid;
-    border-bottom: 2px #fff solid;
+    border-top: 1px #fff solid;
+    border-right: 1px #fff solid;
+    border-bottom: 1px #fff solid;
 
     padding: 10px;
     background-color: #737373;
