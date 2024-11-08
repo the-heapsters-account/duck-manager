@@ -60,15 +60,15 @@ ipcMain.handle("get-settings", () => {
 // handler de salvar as configurações
 ipcMain.handle("save-settings", (event, settings) => {
     const filePath = path.join(__dirname, paths.settingsJSON);
-    fs.writeFileSync(filePath, JSON.stringify(config, null, 2));
+    fs.writeFileSync(filePath, JSON.stringify(settings, null, 2));
 
     return { status: "success" };
 });
 
 // handler de execução de queries
 ipcMain.handle('execute-query', async (event, query) => {
-    const configPath = path.join(__dirname, paths.settingsJSON);
-    const rawConfig = fs.readFileSync(configPath);
+    const settingsPath = path.join(__dirname, paths.settingsJSON);
+    const rawConfig = fs.readFileSync(settingsPath);
     const json = JSON.parse(rawConfig);
     const connectionConfigs = json.db_configs.connection;
 
