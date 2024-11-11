@@ -33,8 +33,8 @@ productButton.addEventListener("click", () => {
                         tBodyRow.insertCell().textContent = row.estoque;
                     });
                 });
-                table.appendChild(tBody);
 
+                table.appendChild(tBody);
                 productSection.appendChild(table);
             } catch(error) {
                 alert(error);
