@@ -11,6 +11,12 @@ inputGerarList.addEventListener("click", async () => {
         const arrays = [];
         const quantidadeMinima = await window.api.getQuantidadeMinima();
         const compileResponse = await window.api.compileJavaFile(prepareEntriesInfos.dir, prepareEntriesInfos.file);
+        const prepareEntriesInfos = {
+            dir: "test",
+            file: "Main.java",
+            class: "Main"
+        };
+
         console.log("gerando lista de pedidos...");
         const compileResponse = await window.api.compileJavaFile('readXML', 'Main.java');
         console.log(compileResponse === "" ? "código compilado com sucesso!" : null);
