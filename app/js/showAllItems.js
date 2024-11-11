@@ -3,6 +3,7 @@ const productSection = document.querySelector('.product-container');
 
 productButton.addEventListener("click", () => {
     productSection.innerHTML = '';
+
     window.api.getTableDB().then(tableSelected => {
         window.api.getColumnsDB().then(columnsObject => {
             try {
