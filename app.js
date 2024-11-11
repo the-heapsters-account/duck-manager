@@ -86,6 +86,7 @@ ipcMain.handle('execute-query', async (event, query) => {
         });
 
         const [rows, fields] = await connection.execute(query);
+
         return rows;
     } catch(error) {
         if(error.code === 'ER_ACCESS_DENIED_ERROR') {
