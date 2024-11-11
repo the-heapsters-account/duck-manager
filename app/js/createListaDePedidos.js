@@ -47,6 +47,8 @@ inputGerarList.addEventListener("click", async () => {
             console.error("Erro na compilação do código.");
         }
     } catch(error) {
+        loadingDialogElement.close();
+
         alert("Não foi possível gerar a lista de pedidos.\n" + error);
         console.error("Não foi possível gerar a lista de pedidos: ", error);
 
