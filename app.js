@@ -59,10 +59,7 @@ app.whenReady().then(() => {
 
 // handler de pegar as configurações
 ipcMain.handle("get-settings", () => {
-    const filePath = path.join(__dirname, paths.settingsJSON);
-    const data = fs.readFileSync(filePath, 'utf-8');
-
-    return JSON.parse(data);
+    return readSettingsJSON();
 });
 
 // handler de salvar as configurações
@@ -75,10 +72,8 @@ ipcMain.handle("save-settings", (event, settings) => {
 
 // handler de execução de queries
 ipcMain.handle('execute-query', async (event, query) => {
-    const settingsPath = path.join(__dirname, paths.settingsJSON);
-    const rawConfig = fs.readFileSync(settingsPath);
-    const json = JSON.parse(rawConfig);
-    const connectionConfigs = json.db_configs.connection;
+    const settings = readSettingsJSON();
+    const connectionConfigs = settings.db_configs.connection;
 
     let connection;
 
@@ -117,10 +112,8 @@ ipcMain.handle('execute-java-class', (event, dir, classJava) => {
 
 // handler pra pegar as colunas do banco de dados que serão usadas
 ipcMain.handle('get-columns-db', () => {
-    const filePath = path.join(__dirname, paths.settingsJSON);
-    const settings = fs.readFileSync(filePath, "utf-8");
-    const settingsJSON = JSON.parse(settings);
-    const columns = settingsJSON.db_columns;
+    const settings = readSettingsJSON();
+    const columns = settings.db_columns;
 
     return {
         columnsPresentation: Object.keys(columns),
@@ -130,10 +123,8 @@ ipcMain.handle('get-columns-db', () => {
 
 // handler pra pegar a tabela do banco de dados que será usada
 ipcMain.handle('get-table-db', () => {
-    const filePath = path.join(__dirname, paths.settingsJSON);
-    const settings = fs.readFileSync(filePath, "utf-8");
-    const settingsJSON = JSON.parse(settings);
-    const tableSelected = settingsJSON.db_configs.table_selected;
+    const settings = readSettingsJSON();
+    const tableSelected = settings.db_configs.table_selected;
 
     return tableSelected;
 });
