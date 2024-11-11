@@ -14,9 +14,8 @@ inputGerarList.addEventListener("click", async () => {
         const executeResponse = await window.api.executeJavaClass('readXML', 'readXML.Main');
         console.log(executeResponse);
     } catch(error) {
-        alert("não foi possível gerar a lista de pedidos \n" + error);
-        console.error("não foi possível gerar a lista de pedidos");
-        console.error(error);
+        alert("Não foi possível gerar a lista de pedidos.\n" + error);
+        console.error("Não foi possível gerar a lista de pedidos: ", error);
     } finally {
         loadingDialogElement.close();
     }
