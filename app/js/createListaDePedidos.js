@@ -20,3 +20,20 @@ inputGerarList.addEventListener("click", async () => {
         loadingDialogElement.close();
     }
 });
+
+async function prepareEntries(arrays, dir, file, className) {
+    for(const array of arrays) {
+        try {
+            const compileResponse = await window.api.compileJavaFile(dir, file);
+
+            if(compileResponse === "") {
+                console.log("Código compilado com sucesso!");
+
+                window.api.executeJavaClass(dir, `${className} ${array.join(', ')}`).then(executeResponse => console.log(executeResponse));
+            }
+        } catch (error) {
+            alert('Erro durante compilação/execução:', error);
+            console.error('Erro durante compilação/execução:', error);
+        }
+    }
+}
