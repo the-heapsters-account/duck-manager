@@ -18,10 +18,32 @@ inputGerarList.addEventListener("click", async () => {
         };
 
         console.log("gerando lista de pedidos...");
-        const compileResponse = await window.api.compileJavaFile('readXML', 'Main.java');
-        console.log(compileResponse === "" ? "código compilado com sucesso!" : null);
-        const executeResponse = await window.api.executeJavaClass('readXML', 'readXML.Main');
-        console.log(executeResponse);
+
+        if(compileResponse === "") {
+            const table = await window.api.getTableDB();
+            const columnsObject = await window.api.getColumnsDB();
+            const query = `SELECT ${columnsObject.columnsDB} FROM ${table}`;
+            const rows = await window.api.executeQuery(query);
+
+            console.log('código compilado...');
+
+            rows.forEach(row => {
+                if (row.estoque <= quantidadeMinima) {
+                    arrays.push([
+                        `"${row.codigo}`,
+                        row.referencia,
+                        row.codigo_barras,
+                        row.nome,
+                        row.preco_venda,
+                        `${row.estoque}"`
+                    ]);
+                }
+            });
+
+            await prepareEntries(arrays, prepareEntriesInfos.dir, prepareEntriesInfos.file, prepareEntriesInfos.class);
+        } else {
+            console.error("Erro na compilação do código.");
+        }
     } catch(error) {
         alert("Não foi possível gerar a lista de pedidos.\n" + error);
         console.error("Não foi possível gerar a lista de pedidos: ", error);
