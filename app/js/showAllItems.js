@@ -7,7 +7,7 @@ productButton.addEventListener("click", () => {
     window.api.getTableDB().then(tableSelected => {
         window.api.getColumnsDB().then(columnsObject => {
             try {
-                const columns = columnsObject.columnsDB
+                const columns = columnsObject.columnsDB;
                 const columnsOrganized = columns.join(', ');
                 const query = `SELECT ${columnsOrganized} FROM ${tableSelected}`;
 
