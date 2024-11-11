@@ -1,11 +1,3 @@
-body {
-    font-family: 'Montserrat', 'JetBrains Mono', 'Nunito', sans-serif;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    background-color: #545454; /* para preencher a área branca com cinza escuro */
-}
-
 header {
     background-color: #737373;
     padding: 20px 5px;
