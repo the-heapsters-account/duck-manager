@@ -16,6 +16,8 @@ inputGerarList.addEventListener("click", async () => {
             file: "Main.java",
             class: "Main"
         };
+        btnGerarDoc.setAttribute('disabled', '');
+        inputGerarList.setAttribute('disabled', '');
 
         console.log("gerando lista de pedidos...");
 
@@ -47,8 +49,14 @@ inputGerarList.addEventListener("click", async () => {
     } catch(error) {
         alert("Não foi possível gerar a lista de pedidos.\n" + error);
         console.error("Não foi possível gerar a lista de pedidos: ", error);
+
+        btnGerarDoc.removeAttribute('disabled');
+        inputGerarList.removeAttribute('disabled');
     } finally {
         loadingDialogElement.close();
+
+        btnGerarDoc.removeAttribute("disabled");
+        inputGerarList.removeAttribute("disabled");
     }
 });
 

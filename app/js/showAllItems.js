@@ -11,6 +11,8 @@ productButton.addEventListener("click", () => {
                 const columnsOrganized = columns.join(', ');
                 const query = `SELECT ${columnsOrganized} FROM ${tableSelected}`;
 
+                productButton.setAttribute("disabled", "");
+
                 const table = document.createElement("table");
                 const tHead = document.createElement("thead");
                 const tBody = document.createElement("tbody");
@@ -39,6 +41,10 @@ productButton.addEventListener("click", () => {
             } catch(error) {
                 alert(error);
                 console.error(error);
+
+                productButton.removeAttribute("disabled", "");
+            } finally {
+                productButton.removeAttribute("disabled", "");
             }
         });
     });
