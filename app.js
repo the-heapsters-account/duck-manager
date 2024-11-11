@@ -130,6 +130,13 @@ ipcMain.handle('get-table-db', () => {
     return tableSelected;
 });
 
+// handler pra pegar a quantidade mínima das configurações
+ipcMain.handle('get-quantidade-minima', () => {
+    const settings = readSettingsJSON();
+    const quantidadeMinimaValue = settings.quantidade_minima;
+    return quantidadeMinimaValue;
+})
+
 // fechando a janela do app em no windows e linux
 app.on("window-all-closed", () => {
     if(process.platform != "darwin") {
