@@ -41,7 +41,7 @@ public class Main {
             nome.appendChild(documentoXML.createTextNode("Cadeira de rodas"));
             produto.appendChild(nome);
 
-            //adiciona "18" em <quantidade> 
+            //adiciona "18" em <quantidade>
             Element quantidade = documentoXML.createElement("quantidade");
             quantidade.appendChild(documentoXML.createTextNode("18"));
             produto.appendChild(quantidade);
@@ -57,13 +57,13 @@ public class Main {
             //exibindo o xml no terminal
             StreamResult consoleResult = new StreamResult(System.out);
             transformer.transform(documentoFonte, consoleResult);
-            
+
             //transforma o documento num arquivo xml
             transformer.transform(documentoFonte, documentoFinal);
 
             System.out.println("XML criado com sucesso!");
 
-        } catch (ParserConfigurationException | TransformerException ex) {
+        } catch(ParserConfigurationException | TransformerException ex) {
             ex.printStackTrace();
         }
     }

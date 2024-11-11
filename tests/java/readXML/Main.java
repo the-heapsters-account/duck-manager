@@ -28,7 +28,7 @@ public class Main {
 
             // Lendo caminho da imagem copiada
             NodeList pathImageCopiedList = document.getElementsByTagName("pathImageCopied");
-            if (pathImageCopiedList.getLength() > 0) {
+            if(pathImageCopiedList.getLength() > 0) {
                 String pathImageCopied = pathImageCopiedList.item(0).getTextContent();
                 System.out.println("Caminho da imagem copiada: " + pathImageCopied);
             } else {
@@ -37,11 +37,11 @@ public class Main {
 
             // Lendo atalhos
             NodeList atalhosList = document.getElementsByTagName("atalhos");
-            if (atalhosList.getLength() > 0) {
+            if(atalhosList.getLength() > 0) {
                 Element atalhos = (Element) atalhosList.item(0);
                 //lendo atalho de 'pesquisa'
                 NodeList pesquisaList = atalhos.getElementsByTagName("pesquisa");
-                if (pesquisaList.getLength() > 0) {
+                if(pesquisaList.getLength() > 0) {
                     String pesquisa = pesquisaList.item(0).getTextContent();
                     System.out.println("Atalhos:");
                     System.out.println("    Pesquisa: " + pesquisa);
@@ -51,7 +51,7 @@ public class Main {
 
                 //atalho de menu
                 NodeList menuList = atalhos.getElementsByTagName("menu");
-                if (menuList.getLength() > 0) {
+                if(menuList.getLength() > 0) {
                     String menu = menuList.item(0).getTextContent();
                     System.out.println("    Menu: " + menu);
                 } else {
@@ -61,7 +61,7 @@ public class Main {
 
             // Lendo atalhos que não podem(exemplos)
             NodeList atalhosNaoPodemList = document.getElementsByTagName("atalhosNaoPodem");
-            if (atalhosNaoPodemList.getLength() > 0) {
+            if(atalhosNaoPodemList.getLength() > 0) {
                 Element atalhosNaoPodem = (Element) atalhosNaoPodemList.item(0);
                 String exemplo = atalhosNaoPodem.getElementsByTagName("exemplo").item(0).getTextContent();
                 String outroExemplo = atalhosNaoPodem.getElementsByTagName("outroExemplo").item(0).getTextContent();
@@ -72,7 +72,7 @@ public class Main {
 
                 // Lendo atalhos definidos
                 NodeList atalhosDefinidosList = atalhosNaoPodem.getElementsByTagName("atalhosDefinidos");
-                if (atalhosDefinidosList.getLength() > 0) {
+                if(atalhosDefinidosList.getLength() > 0) {
                     Element atalhosDefinidos = (Element) atalhosDefinidosList.item(0);
                     String pesquisaAtalho = atalhosDefinidos.getElementsByTagName("pesquisaAtalho").item(0).getTextContent();
                     String menuAtalho = atalhosDefinidos.getElementsByTagName("menuAtalho").item(0).getTextContent();
@@ -86,7 +86,7 @@ public class Main {
             } else {
                 System.out.println("Tag 'atalhosNaoPodem' não encontrada.");
             }
-        } catch (Exception e) {
+        } catch(Exception e) {
             e.printStackTrace();
         }
     }

@@ -28,7 +28,7 @@ inputGerarList.addEventListener("click", async () => {
             console.log('código compilado...');
 
             rows.forEach(row => {
-                if (row.estoque <= quantidadeMinima) {
+                if(row.estoque <= quantidadeMinima) {
                     arrays.push([
                         `"${row.codigo}`,
                         row.referencia,
@@ -62,7 +62,7 @@ async function prepareEntries(arrays, dir, file, className) {
 
                 window.api.executeJavaClass(dir, `${className} ${array.join(', ')}`).then(executeResponse => console.log(executeResponse));
             }
-        } catch (error) {
+        } catch(error) {
             alert('Erro durante compilação/execução:', error);
             console.error('Erro durante compilação/execução:', error);
         }
