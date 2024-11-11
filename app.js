@@ -25,6 +25,14 @@ function execCommand(cmd, msgError) {
     });
 }
 
+function readSettingsJSON() {
+    const filePath = path.join(__dirname, paths.settingsJSON);
+    const settings = fs.readFileSync(filePath, 'utf-8');
+    const settingsJSON = JSON.parse(settings);
+
+    return settingsJSON;
+}
+
 app.whenReady().then(() => {
     widthSize = 800;
     heightSize = 600;
