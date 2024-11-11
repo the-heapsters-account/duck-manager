@@ -22,16 +22,15 @@ productButton.addEventListener("click", () => {
                 });
                 table.appendChild(tHead);
 
-                window.api.executeQuery(query).then(queryResults => {
-                    queryResults.forEach(queryResult => {
+                window.api.executeQuery(query).then(rows => {
+                    rows.forEach(row => {
                         const tBodyRow = tBody.insertRow();
-
-                        tBodyRow.insertCell().textContent = queryResult.codigo;
-                        tBodyRow.insertCell().textContent = queryResult.referencia;
-                        tBodyRow.insertCell().textContent = queryResult.codigo_barras;
-                        tBodyRow.insertCell().textContent = queryResult.nome;
-                        tBodyRow.insertCell().textContent = `R$${queryResult.preco_venda.toString().padStart(2, "0")},00`;
-                        tBodyRow.insertCell().textContent = queryResult.estoque;
+                        tBodyRow.insertCell().textContent = row.codigo;
+                        tBodyRow.insertCell().textContent = row.referencia;
+                        tBodyRow.insertCell().textContent = row.codigo_barras;
+                        tBodyRow.insertCell().textContent = row.nome;
+                        tBodyRow.insertCell().textContent = `R$${row.preco_venda.toFixed(2).replace('.', ',')}`;
+                        tBodyRow.insertCell().textContent = row.estoque;
                     });
                 });
                 table.appendChild(tBody);
