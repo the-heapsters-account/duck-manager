@@ -89,7 +89,7 @@ main {
     justify-content: center;
     align-items: center;
     flex-grow: 1;
-    color: white;
+    color: rgb(15, 14, 14);
     text-align: center;
 
     background: url('../imgs/logo.png') no-repeat center;
@@ -103,10 +103,6 @@ dialog[open] {
 }
 dialog[open] h1, dialog[open] h2 {text-align: center;}
 
-/* configurar depois */
-/* dialog[open]#settings .content #db-settings-columns input[value="+"] {
-    width: 100%;
-} */
 
 footer {
     background-color: #5e5e5e;
@@ -120,4 +116,59 @@ footer a {
 }
 footer a:hover {
     text-decoration: underline;
+}
+.product-container {
+    padding: 20px;
+    background-color: #2095c4c0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(7, 7, 7, 0.1);
+}
+
+.product-table {
+    width: 100%;
+    border-collapse: separate; 
+    border-spacing: 0; 
+    margin-top: 10px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-table th,
+.product-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 2px solid #ddd; 
+    font-family: 'Montserrat', sans-serif;
+}
+
+.product-table th {
+    background-color: #1f4a7c;
+    color: #021a4e;
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.product-table td {
+    font-size: 14px;
+    color: #333;
+    font-weight: bold; 
+}
+
+.product-table tr:hover {
+    background-color: #e6f2ff;
+}
+
+.product-table td:first-child {
+    font-weight: bold;
+    color: #1f4a7c;
+}
+
+@media (max-width: 768px) {
+    .product-table th,
+    .product-table td {
+        padding: 8px;
+        font-size: 12px;
+    }
 }
