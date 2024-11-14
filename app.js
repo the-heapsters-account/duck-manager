@@ -48,7 +48,7 @@ app.whenReady().then(() => {
         }
     });
 
-    // win.webContents.openDevTools();
+    win.webContents.openDevTools();
     win.loadFile(paths.app);
     win.maximize();
     // win.removeMenu();
