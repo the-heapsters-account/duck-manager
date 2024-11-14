@@ -145,11 +145,12 @@ table {
     overflow: hidden;
 }
 table thead {
+    border-spacing: 2px;
+}
 table th, table td {
     padding: 12px;
-    text-align: left;
-    border-bottom: 2px solid #ddd; 
-    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    /* font-family: ; */
 }
 table th {
     background-color: #1f4a7c;
