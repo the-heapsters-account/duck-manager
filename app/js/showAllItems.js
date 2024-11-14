@@ -5,7 +5,7 @@ productButton.addEventListener("click", () => {
     productSection.innerHTML = '';
 
     window.api.getTableDB().then(tableSelected => {
-        window.api.getColumnsDB().then(columnsObject => {
+        window.api.getColumnsDB().then(async columnsObject => {
             try {
                 const columns = columnsObject.columnsDB;
                 const columnsOrganized = columns.join(', ');
@@ -24,7 +24,7 @@ productButton.addEventListener("click", () => {
                 });
                 table.appendChild(tHead);
 
-                window.api.executeQuery(query).then(rows => {
+                await window.api.executeQuery(query).then(rows => {
                     rows.forEach(row => {
                         const tBodyRow = tBody.insertRow();
                         tBodyRow.insertCell().textContent = row.codigo;
