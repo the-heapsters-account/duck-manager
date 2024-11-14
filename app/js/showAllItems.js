@@ -10,6 +10,12 @@ productButton.addEventListener("click", () => {
                 const columns = columnsObject.columnsDB;
                 const columnsOrganized = columns.join(', ');
                 const query = `SELECT ${columnsOrganized} FROM ${tableSelected}`;
+                const tableElements = {
+                    table: document.createElement("table"),
+                    tHead: document.createElement("thead"),
+                    tBody: document.createElement("tbody")
+                }
+                const tHeadRow = tableElements.tHead.insertRow();
 
                 productButton.setAttribute("disabled", "");
 
