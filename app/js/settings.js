@@ -24,7 +24,7 @@ btnSettings.addEventListener("click", () => {
             label.setAttribute("for", idName);
             label.textContent = dbConfigKey;
 
-            input.setAttribute("type", "text");
+            dbConfigKey === "password" ? input.setAttribute("type", "password") : input.setAttribute("type", "text");
             input.setAttribute("minlength", "1");
             input.setAttribute("maxlength", "50");
             dbConfigKey !== "password" ? input.setAttribute("required", "") : null;
