@@ -13,11 +13,6 @@ productButton.addEventListener("click", () => {
 
                 productButton.setAttribute("disabled", "");
 
-                const table = document.createElement("table");
-                const tHead = document.createElement("thead");
-                const tBody = document.createElement("tbody");
-                const tHeadRow = tHead.insertRow();
-
                 columnsObject.columnsPresentation.forEach(column => {
                     const th = document.createElement("th");
                     tHeadRow.appendChild(th).textContent = column;
