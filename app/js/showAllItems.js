@@ -23,7 +23,7 @@ productButton.addEventListener("click", () => {
                     const th = document.createElement("th");
                     tHeadRow.appendChild(th).textContent = column;
                 });
-                table.appendChild(tHead);
+                tableElements.table.appendChild(tableElements.tHead);
 
                 await window.api.executeQuery(query).then(rows => {
                     rows.forEach(row => {
@@ -33,8 +33,8 @@ productButton.addEventListener("click", () => {
                     });
                 });
 
-                table.appendChild(tBody);
-                productSection.appendChild(table);
+                tableElements.table.appendChild(tableElements.tBody);
+                productSection.appendChild(tableElements.table);
             } catch(error) {
                 alert(error);
                 console.error(error);
