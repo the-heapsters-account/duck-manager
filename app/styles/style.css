@@ -1,5 +1,5 @@
 header {
-    background-color: #737373;
+    background-color: var(--color01);
     padding: 20px 5px;
     display: flex;
     justify-content: space-between;
@@ -14,16 +14,16 @@ header nav {
 header nav .btn {
     font-size: 20px;
     padding: 8px 16px;
-    background-color: #737373;
-    color: black;
-    font-family: 'Nunito', sans-serif;
+    background-color: var(--color01);
+    color: var(--color04);
+    font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
 }
 header nav .btn:hover {
-    background-color: #545454;
+    background-color: var(--color03);
 }
 header nav .btn:active {
-    background-color: #737373;
+    background-color: var(--color01);
 }
 header nav .inputs {
     position: relative;
@@ -82,7 +82,8 @@ header nav .barra-pesquisa .input-search {
 
     padding: 10px;
     width: 700px;
-    background-color: #545454;
+
+    background-color: var(--color02);
 }
 header nav .barra-pesquisa .btn-search {
     border-top-right-radius: 15px;
