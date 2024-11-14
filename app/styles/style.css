@@ -39,17 +39,36 @@ header nav .inputs .icon {
     height: 50px;
     width: 50px;
 }
-header nav .inputs #icon-carrinho {
-    background: url('../imgs/carrinho.png') no-repeat center;
-    background-size: 100%;
+header nav .inputs #icon-table-list {
+    background: var(--icon-url-table-list) var(--background-configs);
+    background-size: var(--background-size);
 }
-header nav .inputs #icon-lista-pedidos {
-    background: url('../imgs/doc.png') no-repeat center;
-    background-size: 100%;
+header nav .inputs #icon-clipboard {
+    background: var(--icon-url-clipboard) var(--background-configs);
+    background-size: var(--background-size);
 }
-header nav .inputs #icon-configuracoes {
-    background: url('../imgs/config.png') no-repeat center;
-    background-size: 100%;
+header nav #icon-lupe {
+    background: var(--icon-url-lupe) var(--background-configs);
+    background-size: var(--background-size);
+
+    height: var(--input-size);
+    width: var(--input-size);
+
+    top: 50%;
+    right: 8px;
+    transform: translateY(-50%);
+
+    cursor: pointer;
+
+    position: absolute;
+}
+header nav .inputs #icon-guidebook {
+    background: var(--icon-url-guidebook) var(--background-configs);
+    background-size: var(--background-size);
+}
+header nav .inputs #icon-settings {
+    background: var(--icon-url-settings) var(--background-configs);
+    background-size: var(--background-size);
 }
 header nav .barra-pesquisa {
     display: flex;
@@ -81,7 +100,7 @@ main {
     color: rgb(15, 14, 14);
     text-align: center;
 
-    background: url('../imgs/logo.png') no-repeat center;
+    background: var(--icon-url-logo) var(--background-configs);
     background-size: 380px;
 }
 
