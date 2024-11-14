@@ -144,34 +144,29 @@ table {
     border-collapse: separate;
     overflow: hidden;
 }
-
-.product-table th,
-.product-table td {
+table thead {
+table th, table td {
     padding: 12px;
     text-align: left;
     border-bottom: 2px solid #ddd; 
     font-family: 'Montserrat', sans-serif;
 }
-
-.product-table th {
+table th {
     background-color: #1f4a7c;
     color: #021a4e;
     font-weight: bold;
     font-size: 16px;
     text-transform: uppercase;
 }
-
-.product-table td {
+table td {
     font-size: 14px;
     color: #333;
     font-weight: bold;
 }
-
-.product-table tr:hover {
+table tbody tr:hover {
     background-color: #e6f2ff;
 }
-
-.product-table td:first-child {
+table td:first-child {
     font-weight: bold;
     color: #1f4a7c;
 }
