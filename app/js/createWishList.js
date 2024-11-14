@@ -11,7 +11,10 @@ inputGerarList.addEventListener("click", async () => {
         const arrays = [];
         const prepareEntriesInfos = {
             dir: "test",
-            file: "Main.java",
+            files: {
+                main: "Main.java",
+                dataEntry: "DataEntry.java"
+            },
             class: "Main"
         };
         const quantidadeMinima = await window.api.getQuantidadeMinima();
@@ -42,7 +45,7 @@ inputGerarList.addEventListener("click", async () => {
                 }
             });
 
-            await prepareEntries(arrays, prepareEntriesInfos.dir, prepareEntriesInfos.file, prepareEntriesInfos.class);
+            await prepareEntries(arrays, prepareEntriesInfos.dir, prepareEntriesInfos.files.main, prepareEntriesInfos.class);
         } else {
             console.error("Erro na compilação do código.");
         }
