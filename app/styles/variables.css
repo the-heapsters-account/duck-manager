@@ -1,2 +1,35 @@
 :root {
+    /* colors */
+    --color01: #737373;
+    --color02: #9b9b9b;
+    --color03: #545454;
+    --color04: #221f1f;
+    --color05: #e7e7e7;
+
+    /* fonts */
+    --arial-font: Arial, Helvetica, sans-serif;
+
+    /* urls */
+        /* icons */
+        /* criado por Flaticon */
+        --icon-url-table-list: url('../imgs/icons/table-list.png');
+        /* criado por Freepik */
+        --icon-url-clipboard: url('../imgs/icons/clipboard.png');
+        /* criado por Flaticon */
+        /* --icon-url-x: url('../imgs/icons/x.png'); */
+        --icon-url-x: url('../imgs/icons/new-x.png');
+        /* criador por Freepik */
+        --icon-url-lupe: url('../imgs/icons/lupe.png');
+        /* criado por Anggara */
+        --icon-url-guidebook: url('../imgs/icons/guidebook.png');
+        /* criador por Freepik */
+        --icon-url-settings: url('../imgs/icons/setting.png');
+
+        /* logo */
+        --icon-url-logo: url('../imgs/logo/logo.png');
+
+    /* extras */
+    --background-configs: no-repeat center;
+    --background-size: 100%;
+    --input-size: 25px;
 }
