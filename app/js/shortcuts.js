@@ -11,7 +11,7 @@ document.addEventListener('keydown', event => {
 
     if(eventKey === 'F2') clickElement(".btn-gerar-doc");
 
-    if(ctrlPressed && keys['KeyI']) {
+    if(eventKey === 'F3') {
         event.preventDefault();
         document.querySelector('.input-search').focus();
     }
@@ -23,8 +23,7 @@ document.addEventListener('keydown', event => {
         document.querySelector(classElementName).click();
     }
 });
+document.addEventListener('keyup', event => keys[event.code] = false);
 
-document.addEventListener('keyup', event => {
-    const eventCode = event.code;
-    keys[eventCode] = false;
-});
+inputSearch.addEventListener('keydown', event => { if(event.key === "Enter") btnSearch.click() });
+inputSearch.addEventListener("keyup", (event) => (keys[event.code] = false));
