@@ -9,13 +9,13 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    background-color: #545454; /* para preencher a área branca com cinza escuro */
+    background-color: var(--color03); /* para preencher a área branca com cinza escuro */
 }
 
-input[type="button"] {
+input {
     outline: none;
-    cursor: pointer;
+    border: none;
 }
-input:not(type="number"), input:not(type="text") {
+input[type="button"] {
     cursor: pointer;
 }
