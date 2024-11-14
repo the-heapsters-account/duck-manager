@@ -73,6 +73,9 @@ header nav .inputs #icon-settings {
 header nav .barra-pesquisa {
     display: flex;
     flex-direction: row;
+    border-radius: 17px;
+
+    position: relative;
 }
 header nav .barra-pesquisa .input-search {
     border-top-left-radius: 15px;
@@ -85,21 +88,37 @@ header nav .barra-pesquisa .input-search {
 
     background-color: var(--color02);
 }
+header nav .barra-pesquisa .input-search::-webkit-search-cancel-button {
+    --size: 16px;
+
+    /* Remove default */
+    -webkit-appearance: none;
+    appearance: none;
+
+    /* Now your own custom styles */
+    background: var(--icon-url-x) var(--background-configs);
+    background-size: var(--size);
+
+    /* Dimensions */
+    width: var(--size);  /* Adjust as needed */
+    height: var(--size); /* Adjust as needed */
+
+    /* Ensuring it's properly positioned */
+    cursor: pointer;
+}
+header nav .barra-pesquisa .input-search, header nav .barra-pesquisa .input-search::placeholder {
+    color: var(--color03);
+}
 header nav .barra-pesquisa .btn-search {
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
 
-    padding: 10px;
-    background-color: #737373;
+    padding: 0 20px;
+    background-color: var(--color03);
 }
 
 main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 1;
-    color: rgb(15, 14, 14);
-    text-align: center;
+    height: 100%;
 
     background: var(--icon-url-logo) var(--background-configs);
     background-size: 380px;
@@ -110,15 +129,19 @@ dialog[open] {
     place-self: center;
     padding: 10px;
 }
-dialog[open] h1, dialog[open] h2 {text-align: center;}
+dialog[open] h1, dialog[open] h2 {
     text-align: center;
 }
 
-.product-table {
+/* configurar depois */
+/* dialog[open]#settings .content #db-settings-columns input[value="+"] {
     width: 100%;
-    border-collapse: separate; 
-    border-spacing: 0; 
-    margin-top: 10px;
+} */
+
+table {
+    background-color: #2095c4c0;
+    width: 100%;
+    border-collapse: separate;
     overflow: hidden;
 }
 
