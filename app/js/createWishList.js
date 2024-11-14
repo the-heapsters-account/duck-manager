@@ -25,7 +25,7 @@ inputGerarList.addEventListener("click", async () => {
 
         console.log("gerando lista de pedidos...");
 
-        if(compileResponse === "") {
+        if(compileResponseMain === "" && compileResponseDataEntry === "") {
             const table = await window.api.getTableDB();
             const columnsObject = await window.api.getColumnsDB();
             const query = `SELECT ${columnsObject.columnsDB} FROM ${table}`;
