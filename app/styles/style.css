@@ -1,12 +1,9 @@
 header {
     background-color: #737373;
     padding: 20px 5px;
-    border-bottom: 1px solid #505050;
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    border-bottom: 1px solid #fff;
 }
 header nav {
     display: flex;
@@ -16,7 +13,6 @@ header nav {
 }
 header nav .btn {
     font-size: 20px;
-    border: none;
     padding: 8px 16px;
     background-color: #737373;
     color: black;
@@ -62,10 +58,6 @@ header nav .barra-pesquisa {
 header nav .barra-pesquisa .input-search {
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
-    border-top: 1px #fff solid;
-    border-left: 1px #fff solid;
-    border-bottom: 1px #fff solid;
-    border-right: none;
 
     font-size: 20px;
 
@@ -76,9 +68,6 @@ header nav .barra-pesquisa .input-search {
 header nav .barra-pesquisa .btn-search {
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
-    border-top: 1px #fff solid;
-    border-right: 1px #fff solid;
-    border-bottom: 1px #fff solid;
 
     padding: 10px;
     background-color: #737373;
@@ -102,26 +91,7 @@ dialog[open] {
     padding: 10px;
 }
 dialog[open] h1, dialog[open] h2 {text-align: center;}
-
-
-footer {
-    background-color: #5e5e5e;
-    padding: 10px 5px;
-    color: white;
     text-align: center;
-}
-footer a {
-    color: white;
-    text-decoration: none;
-}
-footer a:hover {
-    text-decoration: underline;
-}
-.product-container {
-    padding: 20px;
-    background-color: #2095c4c0;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(7, 7, 7, 0.1);
 }
 
 .product-table {
@@ -130,8 +100,6 @@ footer a:hover {
     border-spacing: 0; 
     margin-top: 10px;
     overflow: hidden;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .product-table th,
@@ -153,7 +121,7 @@ footer a:hover {
 .product-table td {
     font-size: 14px;
     color: #333;
-    font-weight: bold; 
+    font-weight: bold;
 }
 
 .product-table tr:hover {
@@ -163,12 +131,4 @@ footer a:hover {
 .product-table td:first-child {
     font-weight: bold;
     color: #1f4a7c;
-}
-
-@media (max-width: 768px) {
-    .product-table th,
-    .product-table td {
-        padding: 8px;
-        font-size: 12px;
-    }
 }

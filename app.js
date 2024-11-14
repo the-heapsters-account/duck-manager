@@ -14,12 +14,9 @@ const paths = {
 function execCommand(cmd, msgError) {
     return new Promise((resolve, reject) => {
         exec(cmd, (error, stdout, stderr) => {
-        if(error) {
-            return reject(msgError + error.message);
-        }
-        if(stderr) {
-            return reject("error: " + stderr);
-        }
+        if(error) return reject(msgError + error.message);
+        if(stderr) return reject("error: " + stderr);
+
         resolve(stdout);
         });
     });
@@ -53,14 +50,12 @@ app.whenReady().then(() => {
 
     // win.webContents.openDevTools();
     win.loadFile(paths.app);
-
     win.maximize();
+    // win.removeMenu();
 });
 
 // handler de pegar as configurações
-ipcMain.handle("get-settings", () => {
-    return readSettingsJSON();
-});
+ipcMain.handle("get-settings", () => { return readSettingsJSON() });
 
 // handler de salvar as configurações
 ipcMain.handle("save-settings", (event, settings) => {
@@ -102,14 +97,10 @@ ipcMain.handle('execute-query', async (event, query) => {
 });
 
 // handler de execução de arquivos Java
-ipcMain.handle('compile-java-file', (event, dir, fileJava) => {
-    return execCommand(`cd ${paths.dirJava}/${dir} && javac -d bin ${fileJava}`, `erro ao compilar o arquivo Java "${fileJava}": `);
-});
+ipcMain.handle('compile-java-file', (event, dir, fileJava) => { return execCommand(`cd ${paths.dirJava}/${dir} && javac -d bin ${fileJava}`, `erro ao compilar o arquivo Java "${fileJava}": `) });
 
 // handler de execução de classes Java
-ipcMain.handle('execute-java-class', (event, dir, classJava) => {
-    return execCommand(`cd ${paths.dirJava}/${dir} && java -cp bin ${classJava}`, `erro ao executar a classe Java "${classJava}": `);
-});
+ipcMain.handle('execute-java-class', (event, dir, classJava) => { return execCommand(`cd ${paths.dirJava}/${dir} && java -cp bin ${classJava}`, `erro ao executar a classe Java "${classJava}": `) });
 
 // handler pra pegar as colunas do banco de dados que serão usadas
 ipcMain.handle('get-columns-db', () => {
@@ -134,19 +125,12 @@ ipcMain.handle('get-table-db', () => {
 ipcMain.handle('get-quantidade-minima', () => {
     const settings = readSettingsJSON();
     const quantidadeMinimaValue = settings.quantidade_minima;
+
     return quantidadeMinimaValue;
 })
 
 // fechando a janela do app em no windows e linux
-app.on("window-all-closed", () => {
-    if(process.platform != "darwin") {
-        app.quit();
-    }
-});
+app.on("window-all-closed", () => { if(process.platform != "darwin") app.quit() });
 
 // abrindo a aplicação no macOS
-app.on("activate", () => {
-    if(BrowserWindow.getAllWindows().length === 0) {
-        createWindow();
-    }
-});
+app.on("activate", () => { if(BrowserWindow.getAllWindows().length === 0)  createWindow() });
