@@ -18,7 +18,8 @@ inputGerarList.addEventListener("click", async () => {
             class: "Main"
         };
         const quantidadeMinima = await window.api.getQuantidadeMinima();
-        const compileResponse = await window.api.compileJavaFile(prepareEntriesInfos.dir, prepareEntriesInfos.file);
+        const compileResponseMain = await window.api.compileJavaFile(prepareEntriesInfos.dir, prepareEntriesInfos.files.main);
+        const compileResponseDataEntry = await window.api.compileJavaFile(prepareEntriesInfos.dir, prepareEntriesInfos.files.dataEntry);
         btnGerarDoc.setAttribute('disabled', '');
         inputGerarList.setAttribute('disabled', '');
 
