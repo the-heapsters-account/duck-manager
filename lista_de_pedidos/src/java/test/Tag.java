@@ -13,6 +13,7 @@ public class Tag {
         this.valuesTag = valuesTag;
     }
 
+    // getters
     public String getFileName() {
         return this.fileName;
     }
@@ -26,6 +27,7 @@ public class Tag {
         return this.valuesTag;
     }
 
+    // output
     public void printDates() {
         System.out.println("file name: " + this.fileName);
         System.out.println("attributes values: " + this.attributesValuesTag);
