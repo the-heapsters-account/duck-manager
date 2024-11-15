@@ -35,14 +35,11 @@ inputGerarList.addEventListener("click", async () => {
 
             rows.forEach(row => {
                 if(row.estoque <= quantidadeMinima) {
-                    arrays.push([
-                        `"${row.codigo}`,
-                        row.referencia,
-                        row.codigo_barras,
-                        row.nome,
-                        row.preco_venda,
-                        `${row.estoque}"`
-                    ]);
+                    const arrayToAdd = []
+
+                    for(const column of columnsObject.columnsDB) arrayToAdd.push(row[column]);
+
+                    arrays.push([`"${arrayToAdd.toString()}"`]);
                 }
             });
 
