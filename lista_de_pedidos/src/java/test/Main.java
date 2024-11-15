@@ -7,8 +7,9 @@ public class Main {
         Tag tagInfos = new Tag(args[0], Arrays.asList(args[1]), Arrays.asList(args[2]), Arrays.asList(args[3]));
 
         String fileName = tagInfos.getFileName();
-        List<String> attributesList = tagInfos.getAttributes();
-        List<String> valuesList = tagInfos.getValues();
+        List<String> attributesValuesTag = tagInfos.getAttributesValuesTag();
+        List<String> valuesAttributesTag = tagInfos.getValuesAttributesTag();
+        List<String> valuesTag = tagInfos.getValuesTag();
 
         // [0] -> nome arquivo
         // [1] -> valor das colunas dentro da tag (<description>)
