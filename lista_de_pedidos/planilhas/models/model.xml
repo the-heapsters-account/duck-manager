@@ -1,30 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE xml>
-<columns>
-    <column-description>
-        <description codigo="código"></description>
-        <description referencia="referência"></description>
-        <description codigo_barras="código de barras"></description>
-        <description nome="nome"></description>
-        <description preco="preco_venda"></description>
-        <description quantidade="estoque"></description>
-    </column-description>
-    <column-description>
-        <description codigo="código"></description>
-        <description referencia="referência"></description>
-        <description codigo_barras="código de barras"></description>
-        <description nome="nome"></description>
-        <description preco="preco_venda"></description>
-        <description quantidade="estoque"></description>
-    </column-description>
-</columns>
+<lista-de-pedidos>
+    <items>
+        <columns>
+            <column codigo="código"></column>
+            <column referencia="referência"></column>
+            <column codigo_barras="código de barras"></column>
+            <column nome="nome"></column>
+            <column preco="preco_venda"></column>
+            <column quantidade="estoque"></column>
+        </columns>
+
+        <columns>
+            <column codigo="código"></column>
+            <column referencia="referência"></column>
+            <column codigo_barras="código de barras"></column>
+            <column nome="nome"></column>
+            <column preco="preco_venda"></column>
+            <column quantidade="estoque"></column>
+        </columns>
+    </items>
+
+    <infos-lista>
+        <nome-da-empresa></nome-da-empresa>
+        <nome-mascara></nome-mascara>
+        <cnpj></cnpj>
+        <inscricao-estatal></inscricao-estatal>
+        <endereco></endereco>
+    </infos-lista>
+</lista-de-pedidos>
 
 <!--
     MODELO:
 
-    <columns>
-        <column-description>
-            <description %NOME DA COLUNA NO DB%="%EXIBIÇÃO NO MENU%"></description>
-        </column-description>
-    </columns>
+    <lista-de-pedidos>
+        <item>
+            <columns>
+                <column %NOME DA COLUNA NO DB%="%NOME DE EXIBIÇÃO NO MENU%"></column>
+            </columns>
+
+            <columns>
+                <column %NOME DA COLUNA NO DB%="%NOME DE EXIBIÇÃO NO MENU%"></column>
+            </columns>
+        </item>
+
+        <infos-lista>
+            <%TOPICO INSERIDO%>%VALOR DO TOPICO INSERIDO%</%TOPICO INSERIDO%>
+        </infos-lista>
+    </lista-de-pedidos>
 -->
