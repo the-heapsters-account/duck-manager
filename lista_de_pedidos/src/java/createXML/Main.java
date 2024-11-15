@@ -1,70 +1,121 @@
-import java.io.File;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.OutputKeys;
 import javax.xml.transform.Transformer;
-import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
-import org.w3c.dom.Attr;
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
+
     public static void main(String[] args) {
+        // lista de produtos - 'fantasia' - depois tem que alterar a fonte dos produtos
+        List<Produto> produtos = new ArrayList<>();
+        produtos.add(new Produto("001", "REFERENCIA01", "785448784", "cadeira de rodas", "599.99", "9"));
+        produtos.add(new Produto("002", "REFERENCIA02", "1684618984", "par de muletas", "150.00", "10"));
+        
+        // gera o XML com o método
+        gerarXML(produtos);
+    }
+
+    public static void gerarXML(List<Produto> produtos) {
         try {
-            //criando o documento
-            DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
-            DocumentBuilder documentBuilder = documentBuilderFactory.newDocumentBuilder();
+            // Criando o DocumentBuilder
+            DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+            DocumentBuilder builder = factory.newDocumentBuilder();
+            Document doc = builder.newDocument();
 
-            //novo documento em branco
-            Document documentoXML = documentBuilder.newDocument();
+            // Raiz do XML
+            Element raiz = doc.createElement("columns");
+            doc.appendChild(raiz);
 
-            //cria a raiz(ListaProdutos) e adiciona no documento
-            Element ListaProdutos = documentoXML.createElement("ListaProdutos");
-            documentoXML.appendChild(ListaProdutos);
+            // Adicionando produtos
+            for(Produto p : produtos) {
+                Element colDesc = doc.createElement("column-description");
 
-            //cria o elemento <produto> e o atributo "id"
-            Element produto = documentoXML.createElement("produto");
-            Attr id = documentoXML.createAttribute("id");
-            id.setValue("1");
+                // criando elements description
+                Element descricaoCodigo = doc.createElement("description");
+                descricaoCodigo.setAttribute("codigo", "código");
+                descricaoCodigo.appendChild(doc.createTextNode(p.getCodigo()));
+                colDesc.appendChild(descricaoCodigo);
 
-            //adiciona o "id" em produto
-            produto.setAttributeNode(id);
+                Element descricaoReferencia = doc.createElement("description");
+                descricaoReferencia.setAttribute("referencia", "referência");
+                descricaoReferencia.appendChild(doc.createTextNode(p.getReferencia()));
+                colDesc.appendChild(descricaoReferencia);
 
-            //adiciona produto ao ListaProdutos
-            ListaProdutos.appendChild(produto);
+                Element descricaoCodigoBarras = doc.createElement("description");
+                descricaoCodigoBarras.setAttribute("codigo_barras", "código de barras");
+                descricaoCodigoBarras.appendChild(doc.createTextNode(p.getCodigoBarras()));
+                colDesc.appendChild(descricaoCodigoBarras);
 
-            //adiciona o texto "Murylo" ao <nome>
-            Element nome = documentoXML.createElement("nome");
-            nome.appendChild(documentoXML.createTextNode("Cadeira de rodas"));
-            produto.appendChild(nome);
+                Element descricaoNome = doc.createElement("description");
+                descricaoNome.setAttribute("nome", "nome");
+                descricaoNome.appendChild(doc.createTextNode(p.getNome()));
+                colDesc.appendChild(descricaoNome);
 
-            //adiciona "18" em <quantidade>
-            Element quantidade = documentoXML.createElement("quantidade");
-            quantidade.appendChild(documentoXML.createTextNode("18"));
-            produto.appendChild(quantidade);
+                Element descricaoPreco = doc.createElement("description");
+                descricaoPreco.setAttribute("preco", "preco_venda");
+                descricaoPreco.appendChild(doc.createTextNode(p.getPreco()));
+                colDesc.appendChild(descricaoPreco);
 
-            //transformando o documento em XML
+                Element descricaoQuantidade = doc.createElement("description");
+                descricaoQuantidade.setAttribute("quantidade", "estoque");
+                descricaoQuantidade.appendChild(doc.createTextNode(p.getQuantidade()));
+                colDesc.appendChild(descricaoQuantidade);
+                // adicionando o produto no XML
+                raiz.appendChild(colDesc);
+            }
+
+            // criando o arquivo XML no diretório
+            File file = new File("../xml/ListaProdutos.xml");
+            file.getParentFile().mkdirs(); 
+
+            // transformer para o print
             TransformerFactory transformerFactory = TransformerFactory.newInstance();
-            Transformer transformer = transformerFactory.newTransformer();//transformador doc. -> XML
+            Transformer transformer = transformerFactory.newTransformer();
+            transformer.setOutputProperty(OutputKeys.INDENT, "yes");
 
-            DOMSource documentoFonte = new DOMSource(documentoXML);
-            //salva o resultado final em um arquivo
-            StreamResult documentoFinal = new StreamResult(new File("../xml/ListaProdutos.xml"));
+            // print do xml no terminal(1)
+            DOMSource source = new DOMSource(doc);
+            StreamResult result = new StreamResult(System.out);
+            transformer.transform(source, result);
 
-            //exibindo o xml no terminal
-            StreamResult consoleResult = new StreamResult(System.out);
-            transformer.transform(documentoFonte, consoleResult);
+            // salvando o arquivo(2)
+            StreamResult fileResult = new StreamResult(file);
+            transformer.transform(source, fileResult);
 
-            //transforma o documento num arquivo xml
-            transformer.transform(documentoFonte, documentoFinal);
+            System.out.println("\nXML criado com sucesso em: " + file.getAbsolutePath());
 
-            System.out.println("XML criado com sucesso!");
-
-        } catch(ParserConfigurationException | TransformerException ex) {
-            ex.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
         }
+    }
+
+    // Classe Produto de referencia
+    static class Produto {
+        private String codigo, referencia, codigoBarras, nome, preco, quantidade;
+
+        public Produto(String codigo, String referencia, String codigoBarras, String nome, String preco, String quantidade) {
+            this.codigo = codigo;
+            this.referencia = referencia;
+            this.codigoBarras = codigoBarras;
+            this.nome = nome;
+            this.preco = preco;
+            this.quantidade = quantidade;
+        }
+
+        public String getCodigo() { return codigo; }
+        public String getReferencia() { return referencia; }
+        public String getCodigoBarras() { return codigoBarras; }
+        public String getNome() { return nome; }
+        public String getPreco() { return preco; }
+        public String getQuantidade() { return quantidade; }
     }
 }
