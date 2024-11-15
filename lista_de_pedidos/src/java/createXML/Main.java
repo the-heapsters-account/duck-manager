@@ -19,6 +19,11 @@ public class Main {
         List<Produto> produtos = new ArrayList<>();
         produtos.add(new Produto("001", "REFERENCIA01", "785448784", "cadeira de rodas", "599.99", "9"));
         produtos.add(new Produto("002", "REFERENCIA02", "1684618984", "par de muletas", "150.00", "10"));
+
+        // verificação da lista de produtos
+        if (produtos == null || produtos.isEmpty()) {
+            System.out.println("A lista de produtos está vazia ou é null!");
+            return;  // se a çista estiver vazia encerra ela
         
         // gera o XML com o método
         gerarXML(produtos);
@@ -37,6 +42,19 @@ public class Main {
 
             // Adicionando produtos
             for(Produto p : produtos) {
+
+                // vendo atributo ou produto nulo
+                if (p == null) {
+                    System.out.println("Produto nulo localizado!");
+                    continue;
+                }
+
+                if (p.getCodigo() == null || p.getNome() == null || p.getReferencia() == null || p.getCodigoBarras()== null || p.getPreco() == null || p.getQuantidade() == null) {
+                    System.out.println("Valor 'nulo' encontrado em algum campo" + p);
+                    continue;
+                }
+
+                // criação do <column-description>
                 Element colDesc = doc.createElement("column-description");
 
                 // criando elements description
@@ -103,6 +121,9 @@ public class Main {
         private String codigo, referencia, codigoBarras, nome, preco, quantidade;
 
         public Produto(String codigo, String referencia, String codigoBarras, String nome, String preco, String quantidade) {
+            if (codigo == null || referencia == null || codigoBarras == null || nome == null || preco == null || quantidade == null) {
+                throw new IllegalArgumentException("Todos os parâmetros devem ser não nulos");
+            }
             this.codigo = codigo;
             this.referencia = referencia;
             this.codigoBarras = codigoBarras;
