@@ -31,19 +31,24 @@ inputGerarList.addEventListener("click", async () => {
             const query = `SELECT ${columnsObject.columnsDB} FROM ${table}`;
             const rows = await window.api.executeQuery(query);
 
-            console.log('código compilado...');
+            if (Array.isArray(rows)) {
+                console.log('código compilado...');
 
-            rows.forEach(row => {
-                if(row.estoque <= quantidadeMinima) {
-                    const arrayToAdd = []
+                rows.forEach(row => {
+                    if(row.estoque <= quantidadeMinima) {
+                        const arrayToAdd = []
 
-                    for(const column of columnsObject.columnsDB) arrayToAdd.push(row[column]);
+                        for(const column of columnsObject.columnsDB) arrayToAdd.push(row[column]);
 
-                    arrays.push([`"${arrayToAdd.toString()}"`]);
-                }
-            });
+                        arrays.push([`"${arrayToAdd.toString()}"`]);
+                    }
+                });
 
-            await prepareEntries(arrays, prepareEntriesInfos.dir, prepareEntriesInfos.files.main, prepareEntriesInfos.class);
+                await prepareEntries(arrays, prepareEntriesInfos.dir, prepareEntriesInfos.files.main, prepareEntriesInfos.class);
+            } else {
+                console.error("O resultado da consulta não é um array.", rows);
+                alert("Erro ao buscar os dados: resultado da consulta não é um array.");
+            }
         } else {
             console.error("Erro na compilação do código.");
         }
