@@ -12,18 +12,20 @@ header nav {
     justify-content: space-between;
 }
 header nav .btn {
-    font-size: 20px;
+    font-size: 1.2em;
     padding: 8px 16px;
-    background-color: var(--color01);
-    color: var(--color04);
+    background-color: transparent;
+    color: var(--color06);
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
+
+    transition: all .4s ease;
 }
 header nav .btn:hover {
-    background-color: var(--color03);
+    color: var(--color07);
 }
 header nav .btn:active {
-    background-color: var(--color01);
+    font-size: 1.4em;
 }
 header nav .inputs {
     position: relative;
@@ -34,10 +36,12 @@ header nav .inputs .icon {
 
     top: 10%;
     left: 50%;
-    transform: translate(-50%);
+    transform: translateX(-50%);
 
     height: 50px;
     width: 50px;
+
+    cursor: pointer;
 }
 header nav .inputs #icon-table-list {
     background: var(--icon-url-table-list) var(--background-configs);
