@@ -74,7 +74,7 @@ public class Main {
             }
 
             // criando o arquivo XML no diretório
-            File file = new File("../xml/ListaProdutos.xml");
+            File file = new File("file_destiny_temporary.xml");
             file.getParentFile().mkdirs(); 
 
             // transformer para o print
