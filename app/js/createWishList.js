@@ -69,6 +69,7 @@ inputGerarList.addEventListener("click", async () => {
 
                         const argsItemsDB = `${attributesNamesDB} ${attributesValuesDB} "${arrayToAdd.join(',')}"`;
                         const argsSInfoSpreadsheet = `${attributesNamesSpreadsheet.trimStart().trimEnd().replaceAll(' ', '-')} ${attributesValuesSpreadsheet}`;
+                        const args = `${fileName} ${argsItemsDB} ${argsSInfoSpreadsheet}`;
                         const executeResponse = await window.api.executeJavaClass(prepareEntriesInfos.dir, `${prepareEntriesInfos.class} ${args}`);
                         console.log(executeResponse);
                     } catch (error) {
