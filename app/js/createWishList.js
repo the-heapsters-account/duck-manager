@@ -10,7 +10,7 @@ inputGerarList.addEventListener("click", async () => {
     try {
         const prepareEntriesInfos = {
             dir: "test",
-            files: files: "*.java",
+            files: "*.java",
             class: "Main"
         };
         const quantidadeMinima = await window.api.getQuantidadeMinima();
