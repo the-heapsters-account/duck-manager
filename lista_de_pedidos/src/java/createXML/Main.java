@@ -21,10 +21,10 @@ public class Main {
         produtos.add(new Produto("002", "REFERENCIA02", "1684618984", "par de muletas", "150.00", "10"));
 
         // verificação da lista de produtos
-        if (produtos == null || produtos.isEmpty()) {
+        if(produtos == null || produtos.isEmpty()) {
             System.out.println("A lista de produtos está vazia ou é null!");
             return;  // se a çista estiver vazia encerra ela
-        
+
         // gera o XML com o método
         gerarXML(produtos);
     }
@@ -44,12 +44,12 @@ public class Main {
             for(Produto p : produtos) {
 
                 // vendo atributo ou produto nulo
-                if (p == null) {
+                if(p == null) {
                     System.out.println("Produto nulo localizado!");
                     continue;
                 }
 
-                if (p.getCodigo() == null || p.getNome() == null || p.getReferencia() == null || p.getCodigoBarras()== null || p.getPreco() == null || p.getQuantidade() == null) {
+                if(p.getCodigo() == null || p.getNome() == null || p.getReferencia() == null || p.getCodigoBarras()== null || p.getPreco() == null || p.getQuantidade() == null) {
                     System.out.println("Valor 'nulo' encontrado em algum campo" + p);
                     continue;
                 }
@@ -93,7 +93,7 @@ public class Main {
 
             // criando o arquivo XML no diretório
             File file = new File("file_destiny_temporary.xml");
-            file.getParentFile().mkdirs(); 
+            file.getParentFile().mkdirs();
 
             // transformer para o print
             TransformerFactory transformerFactory = TransformerFactory.newInstance();
@@ -121,7 +121,7 @@ public class Main {
         private String codigo, referencia, codigoBarras, nome, preco, quantidade;
 
         public Produto(String codigo, String referencia, String codigoBarras, String nome, String preco, String quantidade) {
-            if (codigo == null || referencia == null || codigoBarras == null || nome == null || preco == null || quantidade == null) {
+            if(codigo == null || referencia == null || codigoBarras == null || nome == null || preco == null || quantidade == null) {
                 throw new IllegalArgumentException("Todos os parâmetros devem ser não nulos");
             }
             this.codigo = codigo;
