@@ -24,6 +24,17 @@ inputGerarList.addEventListener("click", async () => {
         if(compilesResponseVerify) console.log('código compilado...');
 
         if(compilesResponseVerify) {
+            const argsObj = {
+                fileName: null,
+                attributesNames: {
+                    db: null,
+                    spreadsheet: null
+                },
+                attributesValues: {
+                    db: null,
+                    spreadsheet: null
+                }
+            }
             const table = await window.api.getTableDB();
             const columnsObject = await window.api.getColumnsDB();
             const query = `SELECT ${columnsObject.columnsDB} FROM ${table}`;
