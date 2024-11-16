@@ -8,5 +8,6 @@ contextBridge.exposeInMainWorld("api", {
     executeJavaClass: (dir, classJava) => ipcRenderer.invoke('execute-java-class', dir, classJava),
     getColumnsDB: () => ipcRenderer.invoke('get-columns-db'),
     getTableDB: () => ipcRenderer.invoke('get-table-db'),
-    getQuantidadeMinima: () => ipcRenderer.invoke('get-quantidade-minima')
+    getQuantidadeMinima: () => ipcRenderer.invoke('get-quantidade-minima'),
+    getInfosListaPedidos: () => ipcRenderer.invoke('get-infos-lista-pedidos')
 });
