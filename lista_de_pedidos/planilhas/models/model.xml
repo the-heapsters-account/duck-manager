@@ -36,7 +36,7 @@
     <lista-de-pedidos>
         <item>
             <columns>
-                <column %NOME DA COLUNA NO DB%="%NOME DE EXIBIÇÃO NO MENU%"></column>
+                <column %NOME DA COLUNA NO DB%="%NOME DE EXIBIÇÃO NO MENU%">%VALOR DA COLUNA%</column>
             </columns>
 
             <columns>
