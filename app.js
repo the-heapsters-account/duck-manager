@@ -30,6 +30,14 @@ function readSettingsJSON() {
     return settingsJSON;
 }
 
+function getObjectKeys(object) {
+    return Object.keys(object)
+}
+
+function getObjectValues(object) {
+    return Object.values(object)
+}
+
 app.whenReady().then(() => {
     widthSize = 800;
     heightSize = 600;
