@@ -8,7 +8,6 @@ inputGerarList.addEventListener("click", async () => {
     loadingDialogElement.showModal();
 
     try {
-        const arrays = [];
         const prepareEntriesInfos = {
             dir: "test",
             files: files: "*.java",
