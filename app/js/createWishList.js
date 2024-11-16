@@ -49,8 +49,8 @@ inputGerarList.addEventListener("click", async () => {
                 db: getInfos.dbColumns.dbColumnsNames,
                 spreadsheet: getInfos.spreadsheetInfos.namesInfo
             };
-            const attributesNamesDB = argsObj.attributesNames.db = `"${attributesNames.db.join(", ")}"`;
-            const attributesNamesSpreadsheet = argsObj.attributesNames.spreadsheet = `"${attributesNames.spreadsheet.join(", ")}"`;
+            const attributesNamesDB = argsObj.attributesNames.db = `"${attributesNames.db.join(",")}"`;
+            const attributesNamesSpreadsheet = argsObj.attributesNames.spreadsheet = `"${attributesNames.spreadsheet.join(",")}"`;
 
             // valores dos atributos
             const attributesValues = {
@@ -67,7 +67,8 @@ inputGerarList.addEventListener("click", async () => {
                     try {
                         for(const column of columnsObject.columnsDB) arrayToAdd.push(row[column]);
 
-                        const args = `${fileName} ${attributesNamesDB} ${attributesNamesSpreadsheet} ${attributesValuesDB} ${attributesValuesSpreadsheet} "${arrayToAdd.join(', ')}"`;
+                        const argsItemsDB = `${attributesNamesDB} ${attributesValuesDB} "${arrayToAdd.join(',')}"`;
+                        const argsSInfoSpreadsheet = `${attributesNamesSpreadsheet.trimStart().trimEnd().replaceAll(' ', '-')} ${attributesValuesSpreadsheet}`;
                         const executeResponse = await window.api.executeJavaClass(prepareEntriesInfos.dir, `${prepareEntriesInfos.class} ${args}`);
                         console.log(executeResponse);
                     } catch (error) {
