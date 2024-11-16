@@ -4,61 +4,47 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        List<DataEntry> entries = new ArrayList<>();
+        String fileName = args[0];
+        Tag tagItems = new Tag(
+            Arrays.asList(args[1]),
+            Arrays.asList(args[2]),
+            null,
+            Arrays.asList(args[3])
+        );
+        List<String> attributesValuesTagItemsList = tagItems.getAttributesNames();
+        List<String> valuesAttributesTagItemsList = tagItems.getAttributesValues();
+        List<String> tagValuesItemsList = tagItems.getTagValues();
 
-        for(String arg : args) {
-            String[] values = arg.split(",");
+        Tag tagSpreadsheet = new Tag(
+            null,
+            null,
+            Arrays.asList(args[4]),
+            Arrays.asList(args[5])
+        );
+        List<String> tagNamesSpreadsheettagValuesSpreadsheeList = tagSpreadsheet.getTagNames();
+        List<String> tagValuesSpreadsheeList = tagSpreadsheet.getTagValues();
 
-            if(values.length == 0) {
-                System.out.println("Linha de dados inválida: " + arg);
-                continue;
-            }
+        tagItems.printDates();
+        System.out.println();
+        tagSpreadsheet.printDates();
 
-            DataEntry entry = new DataEntry(values);
-            entries.add(entry);
-        }
+        // List<DataEntry> entries = new ArrayList<>();
 
-        System.out.println("Entradas processadas:");
-        for(DataEntry entry : entries) {
-            System.out.println(entry);
-        }
+        // for(String arg : args) {
+        //     String[] values = arg.split(",");
+
+        //     if(values.length == 0) {
+        //         System.out.println("Linha de dados inválida: " + arg);
+        //         continue;
+        //     }
+
+        //     DataEntry entry = new DataEntry(values);
+        //     entries.add(entry);
+        // }
+
+        // System.out.println("Entradas processadas:");
+        // for(DataEntry entry : entries) {
+        //     System.out.println(entry);
+        // }
     }
 }
-
-// import java.util.List;
-// import java.util.ArrayList;
-
-// public class Main {
-//     public static void main(String[] args) {
-//         Tag tagInfos = new Tag(args[0], Arrays.asList(args[1]), Arrays.asList(args[2]), Arrays.asList(args[3]));
-
-//         String fileName = tagInfos.getFileName();
-//         List<String> attributesValuesTag = tagInfos.getAttributesValuesTag();
-//         List<String> valuesAttributesTag = tagInfos.getValuesAttributesTag();
-//         List<String> valuesTag = tagInfos.getValuesTag();
-
-//         // [0] -> nome arquivo
-//         // [1] -> valor das colunas dentro da tag (<description>)
-//         // [2] -> valor dos atributos das colunas de  apresentação na tag
-//         // [3] -> valor dos atributos das colunas do banco de dados na tag
-
-//         List<DataEntry> entries = new ArrayList<>();
-
-//         for(String arg : args) {
-//             String[] values = arg.split(",");
-
-//             if(values.length == 0) {
-//                 System.out.println("Linha de dados inválida: " + arg);
-//                 continue;
-//             }
-
-//             DataEntry entry = new DataEntry(values);
-//             entries.add(entry);
-//         }
-
-//         System.out.println("Entradas processadas:");
-//         for(DataEntry entry : entries) {
-//             System.out.println(entry);
-//         }
-//     }
-// }

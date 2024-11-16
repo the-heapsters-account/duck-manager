@@ -1,37 +1,37 @@
 import java.util.List;
 
 public class Tag {
-    private String fileName;
-    private List<String> attributesValuesTag;
-    private List<String> valuesAttributesTag;
-    private List<String> valuesTag;
+    private List<String> attributesNames;
+    private List<String> attributesValues;
+    private List<String> tagNames;
+    private List<String> tagValues;
 
-    public Tag(String fileName, List<String> attributesValuesTag, List<String> valuesAttributesTag, List<String> valuesTag) {
-        this.fileName = fileName;
-        this.attributesValuesTag = attributesValuesTag;
-        this.valuesAttributesTag = valuesAttributesTag;
-        this.valuesTag = valuesTag;
+    public Tag(List<String> attributesNames, List<String> attributesValues, List<String> tagNames, List<String> tagValues) {
+        this.attributesNames = attributesNames;
+        this.attributesValues = attributesValues;
+        this.tagNames = tagNames;
+        this.tagValues = tagValues;
     }
 
     // getters
-    public String getFileName() {
-        return this.fileName;
+    public List<String> getAttributesNames() {
+        return this.attributesNames;
     }
-    public List<String> getAttributesValuesTag() {
-        return this.attributesValuesTag;
+    public List<String> getAttributesValues() {
+        return this.attributesValues;
     }
-    public List<String> getValuesAttributesTag() {
-        return this.valuesAttributesTag;
+    public List<String> getTagNames() {
+        return this.tagNames;
     }
-    public List<String> getValuesTag() {
-        return this.valuesTag;
+    public List<String> getTagValues() {
+        return this.tagValues;
     }
 
     // output
     public void printDates() {
-        System.out.println("file name: " + this.fileName);
-        System.out.println("attributes values: " + this.attributesValuesTag);
-        System.out.println("values attributes: " + this.valuesAttributesTag);
-        System.out.println("values tag: " + this.valuesTag);
+        System.out.println("attributes: " + this.attributesNames);
+        System.out.println("attributes values: " + this.attributesValues);
+        System.out.println("tag names: " + this.tagNames);
+        System.out.println("tag values: " + this.tagValues);
     }
 }
