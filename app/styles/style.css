@@ -41,7 +41,7 @@ header nav .inputs .icon {
     height: 50px;
     width: 50px;
 
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 header nav .inputs #icon-table-list {
     background: var(--icon-url-table-list) var(--background-configs);
