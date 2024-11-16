@@ -137,6 +137,24 @@ ipcMain.handle('get-quantidade-minima', () => {
     return quantidadeMinimaValue;
 });
 
+// handler pra pegar informações da lista de pedidos
+ipcMain.handle('get-infos-lista-pedidos', () => {
+    const settings = readSettingsJSON();
+    const dbColumns = settings.db_columns;
+    const spreadsheetInfos = settings.spreadsheet_infos;
+
+    return {
+        dbColumns: {
+            dbColumnsNames: getObjectKeys(dbColumns),
+            dbColumnsNamesPresentation: getObjectValues(dbColumns)
+        },
+        spreadsheetInfos: {
+            namesInfo: getObjectKeys(spreadsheetInfos),
+            namesInfoPresentation: getObjectValues(spreadsheetInfos)
+        }
+    }
+});
+
 // fechando a janela do app em no windows e linux
 app.on("window-all-closed", () => { if(process.platform != "darwin") app.quit() });
 
