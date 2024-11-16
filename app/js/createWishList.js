@@ -37,6 +37,18 @@ inputGerarList.addEventListener("click", async () => {
 
             rows.forEach(row => {
             const getInfos = await window.api.getInfosListaPedidos();
+            const attributesNames = {
+                db: getInfos.dbColumns.dbColumnsNames,
+                spreadsheet: getInfos.spreadsheetInfos.namesInfo
+            };
+            const attributesNamesDB = attributesNames.db;
+            const attributesNamesSpreadsheet = attributesNames.spreadsheet;
+            const attributesNamesValues = {
+                db: getInfos.dbColumns.dbColumnsNamesPresentation,
+                spreadsheet: getInfos.spreadsheetInfos.namesInfoPresentation
+            };
+            const attributesNamesValuesDB = attributesNamesValues.db;
+            const attributesNamesValuesSpreadsheet = attributesNamesValues.spreadsheet;
                 if(row.estoque <= quantidadeMinima) {
                     const arrayToAdd = []
 
