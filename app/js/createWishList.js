@@ -14,7 +14,7 @@ inputGerarList.addEventListener("click", async () => {
             class: "Main"
         };
         const quantidadeMinima = await window.api.getQuantidadeMinima();
-        const compilesResponse = await window.api.compileJavaFile(prepareEntriesInfos.dir, prepareEntriesInfos.files.files);
+        const compilesResponse = await window.api.compileJavaFile(prepareEntriesInfos.dir, prepareEntriesInfos.files);
         const compilesResponseVerify = compilesResponse === '';
         btnGerarDoc.setAttribute('disabled', '');
         inputGerarList.setAttribute('disabled', '');
@@ -28,63 +28,65 @@ inputGerarList.addEventListener("click", async () => {
             const columnsObject = await window.api.getColumnsDB();
             const query = `SELECT ${columnsObject.columnsDB} FROM ${table}`;
             const rows = await window.api.executeQuery(query);
-
-            console.log('código compilado...');
-
-            rows.forEach(row => {
             const getInfos = await window.api.getInfosListaPedidos();
+
+            // nome do arquivo
+            const fileName = argsObj.fileName = '"file-destiny"';
+
+            // nomes dos atributos
             const attributesNames = {
                 db: getInfos.dbColumns.dbColumnsNames,
                 spreadsheet: getInfos.spreadsheetInfos.namesInfo
             };
-            const attributesNamesDB = attributesNames.db;
-            const attributesNamesSpreadsheet = attributesNames.spreadsheet;
-            const attributesNamesValues = {
+            const attributesNamesDB = argsObj.attributesNames.db = `"${attributesNames.db.join(", ")}"`;
+            const attributesNamesSpreadsheet = argsObj.attributesNames.spreadsheet = `"${attributesNames.spreadsheet.join(", ")}"`;
+
+            // valores dos atributos
+            const attributesValues = {
                 db: getInfos.dbColumns.dbColumnsNamesPresentation,
                 spreadsheet: getInfos.spreadsheetInfos.namesInfoPresentation
             };
-            const attributesNamesValuesDB = attributesNamesValues.db;
-            const attributesNamesValuesSpreadsheet = attributesNamesValues.spreadsheet;
+            const attributesValuesDB = argsObj.attributesValues.db = attributesValues.db;
+            const attributesValuesSpreadsheet = argsObj.attributesValues.spreadsheet = attributesValues.spreadsheet;
+
+            for(const row of rows) {
                 if(row.estoque <= quantidadeMinima) {
-                    const arrayToAdd = []
+                    const arrayToAdd = [];
 
-                    for(const column of columnsObject.columnsDB) arrayToAdd.push(row[column]);
+                    try {
+                        for(const column of columnsObject.columnsDB) arrayToAdd.push(row[column]);
 
-                    arrays.push([`"${arrayToAdd.toString()}"`]);
+                        const args = `${fileName} ${attributesNamesDB} ${attributesNamesSpreadsheet} ${attributesValuesDB} ${attributesValuesSpreadsheet} "${arrayToAdd.join(', ')}"`;
+                        const executeResponse = await window.api.executeJavaClass(prepareEntriesInfos.dir, `${prepareEntriesInfos.class} ${args}`);
+                        console.log(executeResponse);
+                    } catch (error) {
+                        alert('Erro durante compilação/execução: ' + error.message);
+                        console.error('Erro durante compilação/execução: ', error);
+                    }
                 }
-            });
-
-            await prepareEntries(arrays, prepareEntriesInfos.dir, prepareEntriesInfos.files.main, prepareEntriesInfos.class);
+            }
         } else {
             console.error("Erro na compilação do código.");
         }
     } catch (error) {
         alert("Não foi possível gerar a lista de pedidos.\n" + error.message);
         console.error("Não foi possível gerar a lista de pedidos: ", error);
-
-        btnGerarDoc.removeAttribute('disabled');
-        inputGerarList.removeAttribute('disabled');
     } finally {
         loadingDialogElement.close();
-
         btnGerarDoc.removeAttribute("disabled");
         inputGerarList.removeAttribute("disabled");
     }
 });
 
-async function prepareEntries(arrays, dir, file, className) {
-    for(const array of arrays) {
-        try {
-            const compileResponse = await window.api.compileJavaFile(dir, file);
+async function prepareEntries(args, dir, file, className) {
+    try {
+        const compileResponse = await window.api.compileJavaFile(dir, file);
+        const compileResponseVerify = compileResponse === '';
+        if(compileResponseVerify) console.log("Código compilado com sucesso!");
 
-            if(compileResponse === "") {
-                console.log("Código compilado com sucesso!");
-
-                window.api.executeJavaClass(dir, `${className} ${array.join(', ')}`).then(executeResponse => console.log(executeResponse));
-            }
-        } catch(error) {
-            alert('Erro durante compilação/execução:', error);
-            console.error('Erro durante compilação/execução:', error);
+        if(compileResponseVerify) {
+            const executeResponse = await window.api.executeJavaClass(dir, `${className} ${args}`);
+            console.log(executeResponse);
         }
     } catch (error) {
         alert('Erro durante compilação/execução: ' + error.message);
