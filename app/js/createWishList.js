@@ -25,7 +25,9 @@ inputGerarList.addEventListener("click", async () => {
 
         console.log("gerando lista de pedidos...");
 
-        if(compileResponseMain === "" && compileResponseDataEntry === "") {
+        if(compilesResponseVerify) console.log('código compilado...');
+
+        if(compilesResponseVerify) {
             const table = await window.api.getTableDB();
             const columnsObject = await window.api.getColumnsDB();
             const query = `SELECT ${columnsObject.columnsDB} FROM ${table}`;
@@ -47,10 +49,8 @@ inputGerarList.addEventListener("click", async () => {
         } else {
             console.error("Erro na compilação do código.");
         }
-    } catch(error) {
-        loadingDialogElement.close();
-
-        alert("Não foi possível gerar a lista de pedidos.\n" + error);
+    } catch (error) {
+        alert("Não foi possível gerar a lista de pedidos.\n" + error.message);
         console.error("Não foi possível gerar a lista de pedidos: ", error);
 
         btnGerarDoc.removeAttribute('disabled');
@@ -77,5 +77,8 @@ async function prepareEntries(arrays, dir, file, className) {
             alert('Erro durante compilação/execução:', error);
             console.error('Erro durante compilação/execução:', error);
         }
+    } catch (error) {
+        alert('Erro durante compilação/execução: ' + error.message);
+        console.error('Erro durante compilação/execução: ', error);
     }
 }
