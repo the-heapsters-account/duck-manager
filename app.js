@@ -116,8 +116,8 @@ ipcMain.handle('get-columns-db', () => {
     const columns = settings.db_columns;
 
     return {
-        columnsPresentation: Object.keys(columns),
-        columnsDB: Object.values(columns)
+        columnsPresentation: getObjectKeys(columns),
+        columnsDB: getObjectValues(columns)
     };
 });
 
