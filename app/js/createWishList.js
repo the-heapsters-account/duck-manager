@@ -36,6 +36,7 @@ inputGerarList.addEventListener("click", async () => {
             console.log('código compilado...');
 
             rows.forEach(row => {
+            const getInfos = await window.api.getInfosListaPedidos();
                 if(row.estoque <= quantidadeMinima) {
                     const arrayToAdd = []
 
