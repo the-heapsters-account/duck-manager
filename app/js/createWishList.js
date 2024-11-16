@@ -11,10 +11,7 @@ inputGerarList.addEventListener("click", async () => {
         const arrays = [];
         const prepareEntriesInfos = {
             dir: "test",
-            files: {
-                files: "*.java",
-                dataEntry: "DataEntry.java"
-            },
+            files: files: "*.java",
             class: "Main"
         };
         const quantidadeMinima = await window.api.getQuantidadeMinima();
