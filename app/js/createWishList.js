@@ -12,7 +12,7 @@ inputGerarList.addEventListener("click", async () => {
         const prepareEntriesInfos = {
             dir: "test",
             files: {
-                main: "Main.java",
+                files: "*.java",
                 dataEntry: "DataEntry.java"
             },
             class: "Main"
