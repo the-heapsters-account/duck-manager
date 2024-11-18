@@ -95,6 +95,23 @@ inputGerarList.addEventListener("click", async () => {
     }
 });
 
+function createArgsObject() {
+    return {
+        fileName: '"file-destiny"',
+        attributesNames: {
+            db: null,
+            spreadsheet: null
+        },
+        attributesValues: {
+            db: null,
+            spreadsheet: null
+        },
+        columnsImportants: {
+            columnProduct: null,
+            columnQuantity: null
+        }
+    };
+}
 async function prepareEntries(args, dir, file, className) {
     try {
         const compileResponse = await window.api.compileJavaFile(dir, file);
