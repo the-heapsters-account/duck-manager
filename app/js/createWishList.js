@@ -47,9 +47,13 @@ inputGerarList.addEventListener("click", async () => {
                     i++;
                     console.log(`linha ${i} de ${rows.length}`);
                 }
+            } catch(error) {
+                handleError(error, "Erro durante a execução da linha: ");
             }
         } else {
             console.error("Erro na compilação do código.");
+        } catch(error) {
+            handleError(error, "Erro durante a formatação do documento: ");
         }
     } catch(error) {
         handleError(error, "Não foi possível gerar a lista de pedidos: ");
@@ -117,5 +121,7 @@ async function prepareEntries(args, dir, file, className) {
     } catch (error) {
         alert('Erro durante compilação/execução: ' + error.message);
         console.error('Erro durante compilação/execução: ', error);
+    } catch(error) {
+        handleError(error, 'Erro durante compilação/execução:');
     }
 }
