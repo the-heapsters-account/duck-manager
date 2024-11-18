@@ -11,7 +11,10 @@ inputGerarList.addEventListener("click", async () => {
         const prepareEntriesInfos = {
             dir: "createXML",
             files: "*.java",
-            class: "Main"
+            classes: {
+                main: "CreateXML",
+                formatter: "MakeXMLFormatter"
+            }
         };
         const quantidadeMinima = await window.api.getQuantidadeMinima();
         const compilesResponse = await window.api.compileJavaFile(prepareEntriesInfos.dir, prepareEntriesInfos.files);
