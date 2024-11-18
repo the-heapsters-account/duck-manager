@@ -9,14 +9,10 @@ inputGerarList.addEventListener("click", async () => {
     inputGerarList.setAttribute('disabled', '');
 
     try {
-        const prepareEntriesInfos = {
-            dir: "createXML",
-            files: "*.java",
-            classes: {
-                main: "CreateXML",
-                formatter: "MakeXMLFormatter"
-            }
-        };
+        const classesExecute = {
+            main: "CreateXML",
+            formatter: "MakeXMLFormatter"
+        }
         const quantidadeMinima = await window.api.getQuantidadeMinima();
         const compilesResponse = await window.api.compileJavaFile(prepareEntriesInfos.dir, prepareEntriesInfos.files);
         const compilesResponseVerify = compilesResponse === '';
