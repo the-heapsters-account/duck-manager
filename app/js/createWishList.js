@@ -20,6 +20,32 @@ inputGerarList.addEventListener("click", async () => {
         const quantidadeMinima = await window.api.getQuantidadeMinima();
         const compilesResponse = await window.api.compileJavaFile(prepareEntriesInfos.dir, prepareEntriesInfos.files);
         const compilesResponseVerify = compilesResponse === '';
+        const table = await window.api.getTableDB();
+        const columnsObject = await window.api.getColumnsDB();
+        const columnQuantity = await window.api.getNameColumnQuantity();
+
+        const argsObj = createArgsObject();
+        argsObj.fileName = "file_destiny";
+        const getInfos = await window.api.getInfosListaPedidos();
+
+        const query = `SELECT ${columnsObject.columnsDB.toString().replace(`${columnQuantity},`, '')}  FROM ${table} WHERE ${columnQuantity} <= 0`;
+        const rows = await window.api.executeQuery(query);
+
+        if(!compilesResponseVerify) throw new Error('Erro na compilação do código');
+        console.log('Código compilado com sucesso!');
+
+        setArgs(argsObj, getInfos);
+        let i = 0;
+
+            try {
+                for(const row of rows) {
+                    const rowItems = Object.values(row).toString().trimStart().trimEnd();
+                    const args = createArgs(argsObj, rowItems);
+
+                    const executeResponse = await window.api.executeJavaClass(prepareEntriesInfos.dir, `${prepareEntriesInfos.classes.main} ${args}`);
+                    console.log(executeResponse);
+                    i++;
+                    console.log(`linha ${i} de ${rows.length}`);
                 }
             }
         } else {
