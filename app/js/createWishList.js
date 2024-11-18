@@ -135,6 +135,13 @@ function handleError(error, message) {
     alert(`${message} ${error.message}`);
     console.error(`${message} `, error);
 }
+
+function closeDialog() {
+    loadingDialogElement.close();
+    btnGerarDoc.removeAttribute("disabled");
+    inputGerarList.removeAttribute("disabled");
+}
+
 async function prepareEntries(args, dir, file, className) {
     try {
         const compileResponse = await window.api.compileJavaFile(dir, file);
