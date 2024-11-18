@@ -1,5 +1,5 @@
 {
-  "quantidade_minima": 10,
+  "quantidade_minima": 0,
   "atalhos": {
     "produtos": "F1",
     "lista de pedidos": "F2",
