@@ -107,9 +107,9 @@ function closeDialog() {
     inputGerarList.removeAttribute("disabled");
 }
 
-async function prepareEntries(args, dir, file, className) {
+async function prepareEntries(args, className) {
     try {
-        const compileResponse = await window.api.compileJavaFile(dir, file);
+        const compileResponse = await window.api.compileJavaFile();
         if(compileResponse !== '') throw new Error('Erro na compilação do código');
 
         console.log("Código compilado com sucesso!");
