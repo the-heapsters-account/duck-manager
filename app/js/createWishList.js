@@ -112,6 +112,17 @@ function createArgsObject() {
         }
     };
 }
+
+function setArgs(argsObj, getInfos) {
+    argsObj.attributesNames.db = `"${getInfos.dbColumns.dbColumnsNamesPresentation}"`;
+    argsObj.attributesValues.db = `"${getInfos.dbColumns.dbColumnsNames.join(",")}"`;
+
+    argsObj.attributesNames.spreadsheet = `"${getInfos.spreadsheetInfos.namesInfo.join(",")}"`;
+    argsObj.attributesValues.spreadsheet = `"${getInfos.spreadsheetInfos.namesInfoPresentation}"`;
+
+    argsObj.columnsImportants.columnProduct = `"${getInfos.columnsImportants.columnProduct}"`;
+    argsObj.columnsImportants.columnQuantity = `"${getInfos.columnsImportants.columnQuantity}"`;
+}
 async function prepareEntries(args, dir, file, className) {
     try {
         const compileResponse = await window.api.compileJavaFile(dir, file);
