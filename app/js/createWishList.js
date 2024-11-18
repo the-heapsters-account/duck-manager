@@ -6,6 +6,7 @@ btnGerarDoc.addEventListener("click", () => loadingDialogElement.showModal());
 
 inputGerarList.addEventListener("click", async () => {
     loadingDialogElement.showModal();
+    inputGerarList.setAttribute('disabled', '');
 
     try {
         const prepareEntriesInfos = {
