@@ -158,6 +158,14 @@ ipcMain.handle('get-infos-lista-pedidos', () => {
     }
 });
 
+//handler pra pegar a coluna que contém a quantidade dos produtos pra pegar o nome selecionado
+ipcMain.handle('get-name-column-quantity', () => {
+    const settings = readSettingsJSON();
+    const columnSelectedName = settings.columns_importants.column_quantity;
+
+    return columnSelectedName;
+});
+
 // fechando a janela do app em no windows e linux
 app.on("window-all-closed", () => { if(process.platform != "darwin") app.quit() });
 
