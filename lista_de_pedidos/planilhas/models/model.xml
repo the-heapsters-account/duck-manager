@@ -21,13 +21,13 @@
         </columns>
     </items>
 
-    <infos-lista>
-        <nome-da-empresa></nome-da-empresa>
-        <nome-mascara></nome-mascara>
-        <cnpj></cnpj>
-        <inscricao-estatal></inscricao-estatal>
-        <endereco></endereco>
-    </infos-lista>
+    <infos-list>
+        <info nome-da-empresa=""></info>
+        <info nome-mascara=""></info>
+        <info cnpj=""></info>
+        <info inscricao-estatal=""></info>
+        <info endereco=""></info>
+    </infos-list>
 </lista-de-pedidos>
 
 <!--
@@ -45,7 +45,7 @@
         </item>
 
         <infos-lista>
-            <%TOPICO INSERIDO%>%VALOR DO TOPICO INSERIDO%</%TOPICO INSERIDO%>
+            <info %atrubuto%="%nome de apresenatação%">%VALOR%</info>
         </infos-lista>
     </lista-de-pedidos>
 -->
