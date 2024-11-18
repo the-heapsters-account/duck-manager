@@ -3,7 +3,9 @@ const settingsDBColumns = document.querySelector("#db-settings-columns");
 const settingsSpreadsheetInfos = document.querySelector("#spreadsheet-infos");
 const dialogElement = document.querySelector("dialog#settings");
 
-buttonSave.addEventListener("click", () => {
+buttonSave.addEventListener("click", event => {
+    event.preventDefault();
+
     const hostInput = document.querySelector("#host-input");
     const userInput = document.querySelector("#user-input");
     const passwordInput = document.querySelector("#password-input");
