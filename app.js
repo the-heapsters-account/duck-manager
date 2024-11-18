@@ -151,6 +151,9 @@ ipcMain.handle('get-infos-lista-pedidos', () => {
         spreadsheetInfos: {
             namesInfo: getObjectKeys(spreadsheetInfos),
             namesInfoPresentation: getObjectValues(spreadsheetInfos)
+        },
+        columnsImportants: {
+            columnQuantity: settings.columns_importants.column_quantity
         }
     }
 });
