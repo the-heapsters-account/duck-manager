@@ -108,8 +108,7 @@ function closeDialog() {
 async function prepareEntries(args, dir, file, className) {
     try {
         const compileResponse = await window.api.compileJavaFile(dir, file);
-        const compileResponseVerify = compileResponse === '';
-        if(compileResponseVerify) console.log("Código compilado com sucesso!");
+        if(compileResponse !== '') throw new Error('Erro na compilação do código');
 
         if(compileResponseVerify) {
             const executeResponse = await window.api.executeJavaClass(dir, `${className} ${args}`);
