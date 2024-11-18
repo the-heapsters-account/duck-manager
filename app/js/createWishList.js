@@ -123,6 +123,13 @@ function setArgs(argsObj, getInfos) {
     argsObj.columnsImportants.columnProduct = `"${getInfos.columnsImportants.columnProduct}"`;
     argsObj.columnsImportants.columnQuantity = `"${getInfos.columnsImportants.columnQuantity}"`;
 }
+
+function createArgs(argsObj, row) {
+    const argsItemsDB = `${argsObj.attributesNames.db} ${argsObj.attributesValues.db}`;
+    const argsSInfoSpreadsheet = `${argsObj.attributesNames.spreadsheet.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replaceAll(' ', '-')} ${argsObj.attributesValues.spreadsheet}`;
+
+    return `"${argsObj.fileName}" ${argsItemsDB} "${row}" ${argsSInfoSpreadsheet}`;
+}
 async function prepareEntries(args, dir, file, className) {
     try {
         const compileResponse = await window.api.compileJavaFile(dir, file);
