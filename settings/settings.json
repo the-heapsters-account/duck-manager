@@ -29,5 +29,8 @@
     "cnpj": "seila",
     "inscricao estatal": "tambem naosei",
     "endereço": "naoexiste"
+  },
+  "columns_importants": {
+    "column_quantity": "estoque"
   }
 }
