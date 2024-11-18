@@ -116,13 +116,10 @@ async function prepareEntries(args, dir, file, className) {
         const compileResponse = await window.api.compileJavaFile(dir, file);
         if(compileResponse !== '') throw new Error('Erro na compilação do código');
 
-        if(compileResponseVerify) {
-            const executeResponse = await window.api.executeJavaClass(dir, `${className} ${args}`);
-            console.log(executeResponse);
-        }
-    } catch (error) {
-        alert('Erro durante compilação/execução: ' + error.message);
-        console.error('Erro durante compilação/execução: ', error);
+        console.log("Código compilado com sucesso!");
+
+        const executeResponse = await window.api.executeJavaClass(dir, `${className} ${args}`);
+        console.log(executeResponse);
     } catch(error) {
         handleError(error, 'Erro durante compilação/execução:');
     }
