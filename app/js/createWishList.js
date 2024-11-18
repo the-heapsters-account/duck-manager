@@ -9,7 +9,7 @@ inputGerarList.addEventListener("click", async () => {
 
     try {
         const prepareEntriesInfos = {
-            dir: "test",
+            dir: "createXML",
             files: "*.java",
             class: "Main"
         };
