@@ -5,7 +5,7 @@ contextBridge.exposeInMainWorld("api", {
     saveConfigs: data => ipcRenderer.invoke('save-settings', data),
     executeQuery: query => ipcRenderer.invoke('execute-query', query),
     compileJavaFile: (dir, fileJava) => ipcRenderer.invoke('compile-java-file'),
-    executeJavaClass: (dir, classJava) => ipcRenderer.invoke('execute-java-class', classJava),
+    executeJavaClass: (dir, classJava) => ipcRenderer.invoke('execute-java-class', classJava, args),
     getColumnsDB: () => ipcRenderer.invoke('get-columns-db'),
     getTableDB: () => ipcRenderer.invoke('get-table-db'),
     getQuantidadeMinima: () => ipcRenderer.invoke('get-quantidade-minima'),
