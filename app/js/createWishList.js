@@ -24,7 +24,7 @@ inputGerarList.addEventListener("click", async () => {
         argsObj.fileName = "file_destiny";
         const getInfos = await window.api.getInfosListaPedidos();
 
-        const query = `SELECT ${columnsObject.columnsDB.toString().replace(`${columnQuantity},`, '')}  FROM ${table} WHERE ${columnQuantity} <= 0`;
+        const query = `SELECT ${columnsObject.columnsDB.toString().replace(`${columnQuantity},`, '')}  FROM ${table} WHERE ${columnQuantity} <= ${quantidadeMinima}`;
         const rows = await window.api.executeQuery(query);
 
         if(!compilesResponseVerify) throw new Error('Erro na compilação do código');
