@@ -5,12 +5,16 @@ const configsDB = document.querySelector("#db-settings");
 const configsDBColumns = document.querySelector("#db-settings-columns");
 const configsSpreadsheetInfos = document.querySelector("#spreadsheet-infos");
 const quantidadeMinimaInput = document.querySelector("#input-quantidade-minima");
+const tableSelected = document.querySelector("#input-table-selected");
+const columnQuantitySelected = document.querySelector("#input-column-quantity");
 
 btnSettings.addEventListener("click", () => {
     settingsDialogElement.showModal();
 
     window.api.getConfigs().then(settings => {
         quantidadeMinimaInput.value = settings.quantidade_minima;
+        tableSelected.value = settings.db_configs.table_selected;
+        columnQuantitySelected.value = settings.columns_importants.column_quantity;
         configsDB.innerHTML = "";
         configsDBColumns.innerHTML = "";
         configsSpreadsheetInfos.innerHTML = "";
