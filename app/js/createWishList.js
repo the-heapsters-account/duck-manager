@@ -89,9 +89,7 @@ inputGerarList.addEventListener("click", async () => {
         alert("Não foi possível gerar a lista de pedidos.\n" + error.message);
         console.error("Não foi possível gerar a lista de pedidos: ", error);
     } finally {
-        loadingDialogElement.close();
-        btnGerarDoc.removeAttribute("disabled");
-        inputGerarList.removeAttribute("disabled");
+        closeDialog();
     }
 });
 
