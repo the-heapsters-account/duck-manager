@@ -1,0 +1,1332 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wish-list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="model.xsd">
+    <items>
+        <columns>
+            <column codigo="código">0000000288</column>
+            <column referencia="referência">F1-BA</column>
+            <column codigo_barras="código de barras">7898578456649</column>
+            <column nome="nome">MEIA DE COMPRESSAO BRANCO COM AZUL ACTE</column>
+            <column preco_venda="preço">89</column>
+            <column estoque="quantidade">1</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000288</column>
+            <column referencia="referência">F1-BA</column>
+            <column codigo_barras="código de barras">7898578456649</column>
+            <column nome="nome">MEIA DE COMPRESSAO BRANCO COM AZUL ACTE</column>
+            <column preco_venda="preço">89</column>
+            <column estoque="quantidade">1</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000001</column>
+            <column referencia="referência">0000000001</column>
+            <column codigo_barras="código de barras">7896342452712</column>
+            <column nome="nome">BOLSA PARA AGUA QUENTE MEDIA BORDO BC0013-BO MERCUR</column>
+            <column preco_venda="preço">83</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000004</column>
+            <column referencia="referência">B060035-AS</column>
+            <column codigo_barras="código de barras">7896342450282</column>
+            <column nome="nome">JOELHEIRA ESPORTE P  BC0035-AS MERCUR</column>
+            <column preco_venda="preço">58</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000008</column>
+            <column referencia="referência">B060045-AAS</column>
+            <column codigo_barras="código de barras">7896342912117</column>
+            <column nome="nome">TORNOZELEIRA ESPORTE PP BC0045-AAS MERCUR</column>
+            <column preco_venda="preço">56</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000009</column>
+            <column referencia="referência">B060045-AS</column>
+            <column codigo_barras="código de barras">7896342450374</column>
+            <column nome="nome">TORNOZELEIRA ESPORTE P BC0045-AS MERCUR</column>
+            <column preco_venda="preço">56</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000012</column>
+            <column referencia="referência">B060069-REC</column>
+            <column codigo_barras="código de barras">7896342452224</column>
+            <column nome="nome">TIPOIA ESTABILIZADORA ESTOFADA G BC0069-REC MERCUR </column>
+            <column preco_venda="preço">75</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000017</column>
+            <column referencia="referência">B060069-SIB</column>
+            <column codigo_barras="código de barras">7896342452255</column>
+            <column nome="nome">TIPOIA ORTOP M BC0069-SIB MERCUR</column>
+            <column preco_venda="preço">59</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000021</column>
+            <column referencia="referência">B060075-BS</column>
+            <column codigo_barras="código de barras">7896342450459</column>
+            <column nome="nome">COXAL ESPORTE M BC0075-BS MERCUR</column>
+            <column preco_venda="preço">70</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000028</column>
+            <column referencia="referência">B060104</column>
+            <column codigo_barras="código de barras">7896342450787</column>
+            <column nome="nome">CALEIRA PRO BC0104  MERCUR</column>
+            <column preco_venda="preço">60</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000031</column>
+            <column referencia="referência">B060162-AZ</column>
+            <column codigo_barras="código de barras">7896342452569</column>
+            <column nome="nome">COLAR CERVICAL LEVE AZUL P BC0162-AZ  MERCUR </column>
+            <column preco_venda="preço">50</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000033</column>
+            <column referencia="referência">B060162-CZ</column>
+            <column codigo_barras="código de barras">7896342452583</column>
+            <column nome="nome">COLAR CERVICAL LEVE AZUL G BC0162-CZ  MERCUR </column>
+            <column preco_venda="preço">50</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000035</column>
+            <column referencia="referência">B060400</column>
+            <column codigo_barras="código de barras">7896342412365</column>
+            <column nome="nome">DUCHA PARA HIGIENE INTIMA N10 BC0400 MERCUR </column>
+            <column preco_venda="preço">61</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000038</column>
+            <column referencia="referência">B060633-AP</column>
+            <column codigo_barras="código de barras">7896342452859</column>
+            <column nome="nome">JOELHEIRA ELASTICA PRETA P PAR BC0633-AP MERCUR</column>
+            <column preco_venda="preço">48</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000040</column>
+            <column referencia="referência">B060647-AP</column>
+            <column codigo_barras="código de barras">7896342452941</column>
+            <column nome="nome">TORNOZELEIRA ELASTICA P PRETA BC0647-AP MERCUR</column>
+            <column preco_venda="preço">45</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000044</column>
+            <column referencia="referência">B060656-A</column>
+            <column codigo_barras="código de barras">7896342452286</column>
+            <column nome="nome">ORTESE CURTA P/PUNHO C/TALA BEGE BILATERAL P BC0656 MERCUR</column>
+            <column preco_venda="preço">79</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000051</column>
+            <column referencia="referência">B060656-DP</column>
+            <column codigo_barras="código de barras">7896342911943</column>
+            <column nome="nome">ORTESE CURTA P/PUNHO C/TALA PRETO BILATERAL GG BC0656-DP MERCUR</column>
+            <column preco_venda="preço">79</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000052</column>
+            <column referencia="referência">B060660-AP</column>
+            <column codigo_barras="código de barras">7896342453092</column>
+            <column nome="nome">COTOVELEIRA ELASTICA PRETA P BC0660-AP MERCUR </column>
+            <column preco_venda="preço">45</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000053</column>
+            <column referencia="referência">B060660-BP</column>
+            <column codigo_barras="código de barras">7896342453108</column>
+            <column nome="nome">COTOVELEIRA ELASTICA PRETA M BC0660-BP MERCUR</column>
+            <column preco_venda="preço">45</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000063</column>
+            <column referencia="referência">B061001250001202</column>
+            <column codigo_barras="código de barras">7896342414123</column>
+            <column nome="nome">ORTESE P/JOELHO AJUSTAVEL  BC0031  MERCUR </column>
+            <column preco_venda="preço">145</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000064</column>
+            <column referencia="referência">B0610021522037</column>
+            <column codigo_barras="código de barras">7896342415922</column>
+            <column nome="nome">TORNOZELEIRA C/REFORCO M BC0047-B MERCUR</column>
+            <column preco_venda="preço">73</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000066</column>
+            <column referencia="referência">B061003150001</column>
+            <column codigo_barras="código de barras">7896342416189</column>
+            <column nome="nome">ORTESE PUNHO COM TALA PARA POLEGAR BC0055 MERCUR</column>
+            <column preco_venda="preço">96</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000068</column>
+            <column referencia="referência">B061507-IAM</column>
+            <column codigo_barras="código de barras">7896342908738</column>
+            <column nome="nome">MULETA CANADENSE FIXA INFANTIL AMARELA BC1507-IAM  MERCUR </column>
+            <column preco_venda="preço">136</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000069</column>
+            <column referencia="referência">B061507-IAZ</column>
+            <column codigo_barras="código de barras">7896342908721</column>
+            <column nome="nome">MULETA CANADENSE FIXA INFANTIL AZUL BC1507-IAZ  MERCUR </column>
+            <column preco_venda="preço">136</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000073</column>
+            <column referencia="referência">B061516</column>
+            <column codigo_barras="código de barras">7896342452484</column>
+            <column nome="nome">BENGALA DE ALUMINIO 4 PONTAS BC1516  MERCUR </column>
+            <column preco_venda="preço">146</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000076</column>
+            <column referencia="referência">B061560-AE</column>
+            <column codigo_barras="código de barras">7896342916290</column>
+            <column nome="nome">MULETA CANADENSE FIXA AZUL ESCURO BC1560-AE MERCUR</column>
+            <column preco_venda="preço">156</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000078</column>
+            <column referencia="referência">B061560-LE</column>
+            <column codigo_barras="código de barras">7896342916283</column>
+            <column nome="nome">MULETA CANADENSE FIXA LILAS ESCURO BC1560-LE MERCUR </column>
+            <column preco_venda="preço">156</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000086</column>
+            <column referencia="referência">1003</column>
+            <column codigo_barras="código de barras"/>
+            <column nome="nome">AGULHA DE ACUPUNTURA 0</column>
+            <column preco_venda="preço">25X30MM CARTELA - 100 UNIDADES FIEZA</column>
+            <column estoque="quantidade">40</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000089</column>
+            <column referencia="referência">1001</column>
+            <column codigo_barras="código de barras"/>
+            <column nome="nome">BOLA TACO LISA MINI FIEZA</column>
+            <column preco_venda="preço">6</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000093</column>
+            <column referencia="referência">1009</column>
+            <column codigo_barras="código de barras"/>
+            <column nome="nome">CANETA / MARCA TEXTO SERINGA AMARELO FIEZA</column>
+            <column preco_venda="preço">9</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000094</column>
+            <column referencia="referência">1010</column>
+            <column codigo_barras="código de barras"/>
+            <column nome="nome">CANETA / MARCA TEXTO SERINGA ROSA FIEZA</column>
+            <column preco_venda="preço">9</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000096</column>
+            <column referencia="referência">1012</column>
+            <column codigo_barras="código de barras"/>
+            <column nome="nome">CANETA / MARCA TEXTO SERINGA LARANJA FIEZA</column>
+            <column preco_venda="preço">9</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000097</column>
+            <column referencia="referência">1013</column>
+            <column codigo_barras="código de barras"/>
+            <column nome="nome">CANETA / MARCA TEXTO SERINGA ROXO FIEZA</column>
+            <column preco_venda="preço">9</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000098</column>
+            <column referencia="referência">1014</column>
+            <column codigo_barras="código de barras"/>
+            <column nome="nome">CANETA / MARCA TEXTO SERINGA VERMELHO FIEZA</column>
+            <column preco_venda="preço">9</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000099</column>
+            <column referencia="referência">1015</column>
+            <column codigo_barras="código de barras"/>
+            <column nome="nome">CANETA OSSO FIEZA</column>
+            <column preco_venda="preço">11</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000101</column>
+            <column referencia="referência">1016</column>
+            <column codigo_barras="código de barras"/>
+            <column nome="nome">GARROTE AZUL FIEZA</column>
+            <column preco_venda="preço">20</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000104</column>
+            <column referencia="referência">1019</column>
+            <column codigo_barras="código de barras">7898693440226</column>
+            <column nome="nome">DISPENSER CHAVEIRO PARA BOLSA FIEZA</column>
+            <column preco_venda="preço">15</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000107</column>
+            <column referencia="referência">1022</column>
+            <column codigo_barras="código de barras"/>
+            <column nome="nome">HAND ROLLER MASSAGE ROXO FIEZA</column>
+            <column preco_venda="preço">66</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000112</column>
+            <column referencia="referência">1027</column>
+            <column codigo_barras="código de barras"/>
+            <column nome="nome">LANTERNA CLINICA VERMELHA FIEZA</column>
+            <column preco_venda="preço">35</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000113</column>
+            <column referencia="referência">1028</column>
+            <column codigo_barras="código de barras"/>
+            <column nome="nome">LANTERNA CLINICA LILAS FIEZA</column>
+            <column preco_venda="preço">35</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000114</column>
+            <column referencia="referência">1029</column>
+            <column codigo_barras="código de barras"/>
+            <column nome="nome">LANTERNA CLINICA PRETA FIEZA</column>
+            <column preco_venda="preço">35</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000117</column>
+            <column referencia="referência">1032</column>
+            <column codigo_barras="código de barras"/>
+            <column nome="nome">MASSAGEADOR 3D FIEZA</column>
+            <column preco_venda="preço">65</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000118</column>
+            <column referencia="referência">1033</column>
+            <column codigo_barras="código de barras"/>
+            <column nome="nome">OCULOS DE PROTECAO</column>
+            <column preco_venda="preço">11</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000119</column>
+            <column referencia="referência">1034</column>
+            <column codigo_barras="código de barras"/>
+            <column nome="nome">RELOGIO CONFIANCE AZUL  FIEZA</column>
+            <column preco_venda="preço">39</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000120</column>
+            <column referencia="referência">1035</column>
+            <column codigo_barras="código de barras"/>
+            <column nome="nome">RELOGIO CONFIANCE BRANCO  FIEZA</column>
+            <column preco_venda="preço">39</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000121</column>
+            <column referencia="referência">1036</column>
+            <column codigo_barras="código de barras"/>
+            <column nome="nome">RELOGIO CONFIANCE LILAS  FIEZA</column>
+            <column preco_venda="preço">39</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000122</column>
+            <column referencia="referência">1037</column>
+            <column codigo_barras="código de barras"/>
+            <column nome="nome">RELOGIO CONFIANCE PRETO  FIEZA</column>
+            <column preco_venda="preço">39</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000123</column>
+            <column referencia="referência">1038</column>
+            <column codigo_barras="código de barras"/>
+            <column nome="nome">RELOGIO CONFIANCE ROSA  FIEZA</column>
+            <column preco_venda="preço">39</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000124</column>
+            <column referencia="referência">1039</column>
+            <column codigo_barras="código de barras"/>
+            <column nome="nome">RELOGIO CONFIANCE VERDE FIEZA</column>
+            <column preco_venda="preço">39</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000125</column>
+            <column referencia="referência">1040</column>
+            <column codigo_barras="código de barras"/>
+            <column nome="nome">RELOGIO CONFIANCE VERMELHO FIEZA</column>
+            <column preco_venda="preço">39</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000126</column>
+            <column referencia="referência">1076</column>
+            <column codigo_barras="código de barras"/>
+            <column nome="nome">OXIMETRO CMS 50 DL AZUL ESCURO|NS: 20071700219 / 20071700095 / 20071700213 / 20071700093 / |=| 20071700088 / 20071700217</column>
+            <column preco_venda="preço">192</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000136</column>
+            <column referencia="referência">1203</column>
+            <column codigo_barras="código de barras"/>
+            <column nome="nome">BENGALA 4 PONTAS DE ALUMINIO JL924L MONTSERRAT</column>
+            <column preco_venda="preço">149</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000137</column>
+            <column referencia="referência">1204</column>
+            <column codigo_barras="código de barras"/>
+            <column nome="nome">BENGALA DE ALUMINIO DOBRAVEL BRONZE JL927L MONTSERRAT</column>
+            <column preco_venda="preço">123</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000138</column>
+            <column referencia="referência">1205</column>
+            <column codigo_barras="código de barras"/>
+            <column nome="nome">CADEIRA HIGIENICA EM ALUMINIO C/RODIZIOS JL696L MONTSERRAT</column>
+            <column preco_venda="preço">839</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000142</column>
+            <column referencia="referência">1042</column>
+            <column codigo_barras="código de barras"/>
+            <column nome="nome">CALCANHEIRA C/ PONTO AZUL - GG CASTELLANE</column>
+            <column preco_venda="preço">79</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000143</column>
+            <column referencia="referência">1043</column>
+            <column codigo_barras="código de barras"/>
+            <column nome="nome">CALCANHEIRA C/ PONTO AZUL - M CASTELLANE</column>
+            <column preco_venda="preço">79</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000145</column>
+            <column referencia="referência">1045</column>
+            <column codigo_barras="código de barras"/>
+            <column nome="nome">CALCANHEIRA LISA - G CASTELLANE</column>
+            <column preco_venda="preço">79</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000149</column>
+            <column referencia="referência">1049</column>
+            <column codigo_barras="código de barras"/>
+            <column nome="nome">CHINELO ANABELA 33/34 CASTELLANE</column>
+            <column preco_venda="preço">80</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000152</column>
+            <column referencia="referência">1052</column>
+            <column codigo_barras="código de barras"/>
+            <column nome="nome">CHINELO ANABELA 39/40 CASTELLANE</column>
+            <column preco_venda="preço">66</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000153</column>
+            <column referencia="referência">1054</column>
+            <column codigo_barras="código de barras"/>
+            <column nome="nome">CHINELO CONFORT 33/34 - FEMININO</column>
+            <column preco_venda="preço">62</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000154</column>
+            <column referencia="referência">1055</column>
+            <column codigo_barras="código de barras"/>
+            <column nome="nome">CHINELO CONFORT 35/36 - FEMININO</column>
+            <column preco_venda="preço">62</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000155</column>
+            <column referencia="referência">1056</column>
+            <column codigo_barras="código de barras"/>
+            <column nome="nome">CHINELO CONFORT 37/38 - FEMININO</column>
+            <column preco_venda="preço">62</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000157</column>
+            <column referencia="referência">1058</column>
+            <column codigo_barras="código de barras"/>
+            <column nome="nome">CHINELO CONFORT 39/40 - FEMININO</column>
+            <column preco_venda="preço">53</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000160</column>
+            <column referencia="referência">1061</column>
+            <column codigo_barras="código de barras"/>
+            <column nome="nome">CHINELO CONFORT 43/44  MASCULINO CASTELLANE</column>
+            <column preco_venda="preço">62</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000161</column>
+            <column referencia="referência">1062</column>
+            <column codigo_barras="código de barras"/>
+            <column nome="nome">CHINELO STREET 33/34 - FEMININO CASTELLANE</column>
+            <column preco_venda="preço">86</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000162</column>
+            <column referencia="referência">1063</column>
+            <column codigo_barras="código de barras"/>
+            <column nome="nome">CHINELO STREET 35/36 - FEMININO</column>
+            <column preco_venda="preço">64</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000163</column>
+            <column referencia="referência">1064</column>
+            <column codigo_barras="código de barras"/>
+            <column nome="nome">CHINELO STREET 37/38 - FEMININO</column>
+            <column preco_venda="preço">64</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000164</column>
+            <column referencia="referência">1065</column>
+            <column codigo_barras="código de barras"/>
+            <column nome="nome">CHINELO STREET 39/40 - FEMININO</column>
+            <column preco_venda="preço">64</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000169</column>
+            <column referencia="referência">1077</column>
+            <column codigo_barras="código de barras"/>
+            <column nome="nome">PALMILHA C/ PONTO AZUL - 34/35  CASTELLANE</column>
+            <column preco_venda="preço">90</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000170</column>
+            <column referencia="referência">1078</column>
+            <column codigo_barras="código de barras"/>
+            <column nome="nome">PALMILHA C/ PONTO AZUL - 36/37  CASTELLANE</column>
+            <column preco_venda="preço">90</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000171</column>
+            <column referencia="referência">1079</column>
+            <column codigo_barras="código de barras"/>
+            <column nome="nome">PALMILHA C/ PONTO AZUL - 38/39  CASTELLANE</column>
+            <column preco_venda="preço">90</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000173</column>
+            <column referencia="referência">1081</column>
+            <column codigo_barras="código de barras"/>
+            <column nome="nome">PALMILHA C/ PONTO AZUL - 42  CASTELLANE</column>
+            <column preco_venda="preço">90</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000181</column>
+            <column referencia="referência">1089</column>
+            <column codigo_barras="código de barras"/>
+            <column nome="nome">TAPETE PARA EXERCICIO AZUL CASTELLANE</column>
+            <column preco_venda="preço">92</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000183</column>
+            <column referencia="referência">1091</column>
+            <column codigo_barras="código de barras"/>
+            <column nome="nome">TAPETE PARA EXERCICIO PRETO CASTELLANE</column>
+            <column preco_venda="preço">92</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000184</column>
+            <column referencia="referência">1092</column>
+            <column codigo_barras="código de barras"/>
+            <column nome="nome">TAPETE PARA EXERCICIO ROXO CASTELLANE</column>
+            <column preco_venda="preço">92</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000186</column>
+            <column referencia="referência">PA1604</column>
+            <column codigo_barras="código de barras">7898530738370</column>
+            <column nome="nome">BALANÇA INTELIGENTE ANALISE CORPORAL C/ APP MOD MYFIT CAP 180KG BALMAK</column>
+            <column preco_venda="preço">299</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000193</column>
+            <column referencia="referência">PA1605</column>
+            <column codigo_barras="código de barras">7898530738387</column>
+            <column nome="nome">ADIPOMETRO/PLICOMETRO CLINICO MOD CLINIC-PRO AMPLITUDE - 80MM BALMAK</column>
+            <column preco_venda="preço">204</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000195</column>
+            <column referencia="referência">PA1350</column>
+            <column codigo_barras="código de barras">7898530738295</column>
+            <column nome="nome">FITA MEDICAO DE CIRCUNFERENCIA ERGONOMICA FM-150 BALMAK</column>
+            <column preco_venda="preço">25</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000196</column>
+            <column referencia="referência">PA1869</column>
+            <column codigo_barras="código de barras">7898530739308</column>
+            <column nome="nome">GONIOMETRO MOD GONIO-360 BALMAK</column>
+            <column preco_venda="preço">35</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000198</column>
+            <column referencia="referência">T6-AZ</column>
+            <column codigo_barras="código de barras">7898578450029</column>
+            <column nome="nome">DISCO DE EQUILIBRIO AZUL ACTE</column>
+            <column preco_venda="preço">154</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000202</column>
+            <column referencia="referência">T62</column>
+            <column codigo_barras="código de barras">7898578450326</column>
+            <column nome="nome">DISPLAY COM BOLAS PARA MASSAGEM ACTE</column>
+            <column preco_venda="preço">15</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000204</column>
+            <column referencia="referência">T72</column>
+            <column codigo_barras="código de barras">7898578450425</column>
+            <column nome="nome">BOLA OVERBALL  ACTE</column>
+            <column preco_venda="preço">40</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000205</column>
+            <column referencia="referência">T73</column>
+            <column codigo_barras="código de barras">7898578450432</column>
+            <column nome="nome">Cone de Agilidade 23 cm Flexivel - Verde ALUX</column>
+            <column preco_venda="preço">13</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000206</column>
+            <column referencia="referência">T74</column>
+            <column codigo_barras="código de barras">7898578450449</column>
+            <column nome="nome">CONE-CHAPEU CHINES ACTE</column>
+            <column preco_venda="preço">80</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000208</column>
+            <column referencia="referência">T86</column>
+            <column codigo_barras="código de barras">7898578451163</column>
+            <column nome="nome">EXTENSOR TRANCADO POWER ACTE</column>
+            <column preco_venda="preço">140</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000209</column>
+            <column referencia="referência">T94</column>
+            <column codigo_barras="código de barras">7898578451248</column>
+            <column nome="nome">CORDA DE PULAR NO TUBO - LARANJA ACTE</column>
+            <column preco_venda="preço">37</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000210</column>
+            <column referencia="referência">T95</column>
+            <column codigo_barras="código de barras">7898578451255</column>
+            <column nome="nome">CORDA DE PULAR NO TUBO - PRETA  ACTE</column>
+            <column preco_venda="preço">37</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000211</column>
+            <column referencia="referência">T97</column>
+            <column codigo_barras="código de barras">7898578451279</column>
+            <column nome="nome">CORDA DE PULAR NO TUBO - ROSA ACTE</column>
+            <column preco_venda="preço">37</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000212</column>
+            <column referencia="referência">E14</column>
+            <column codigo_barras="código de barras">7898578452146</column>
+            <column nome="nome">MINI BIKE COMPACT</column>
+            <column preco_venda="preço">493</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000214</column>
+            <column referencia="referência">T146</column>
+            <column codigo_barras="código de barras">7898578452320</column>
+            <column nome="nome">RODA ABDOMINAL POWER  ACTE</column>
+            <column preco_venda="preço">174</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000215</column>
+            <column referencia="referência">T151</column>
+            <column codigo_barras="código de barras">7898578452375</column>
+            <column nome="nome">MASSAGEADOR MANUAL ROLLER AZUL ACTE</column>
+            <column preco_venda="preço">33</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000217</column>
+            <column referencia="referência">C22</column>
+            <column codigo_barras="código de barras">7898578452412</column>
+            <column nome="nome">SQUEEZE TERMICO EMBORRACHADO 500ML - AZU ACTE</column>
+            <column preco_venda="preço">115</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000218</column>
+            <column referencia="referência">C23</column>
+            <column codigo_barras="código de barras">7898578452429</column>
+            <column nome="nome">SQUEEZE TERMICO EMBORRACHADO 500ML - ROS ACTE</column>
+            <column preco_venda="preço">138</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000219</column>
+            <column referencia="referência">T155</column>
+            <column codigo_barras="código de barras">7898578452443</column>
+            <column nome="nome">CANELEIRA PROFISSIONAL EMBORRACHADA 0</column>
+            <column preco_venda="preço">5K ACTE</column>
+            <column estoque="quantidade">72</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000223</column>
+            <column referencia="referência">T150-RS</column>
+            <column codigo_barras="código de barras">7898578452504</column>
+            <column nome="nome">MINI MASSAGEADOR CORPORAL ROSA ACTE</column>
+            <column preco_venda="preço">52</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000224</column>
+            <column referencia="referência">T150-VR</column>
+            <column codigo_barras="código de barras">7898578452511</column>
+            <column nome="nome">MINI MASSAGEADOR CORPORAL VERDE ACTE</column>
+            <column preco_venda="preço">52</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000225</column>
+            <column referencia="referência">T162</column>
+            <column codigo_barras="código de barras">7898578452863</column>
+            <column nome="nome">BASTAO DE LIBERACAO MIOFASCIAL AJUSTAVEL ACTE</column>
+            <column preco_venda="preço">132</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000226</column>
+            <column referencia="referência">T166</column>
+            <column codigo_barras="código de barras">7898578452900</column>
+            <column nome="nome">ROLO DE MASSAGEM PARA MAOS E PES EM EVA ACTE</column>
+            <column preco_venda="preço">64</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000230</column>
+            <column referencia="referência">R3</column>
+            <column codigo_barras="código de barras">7898578453105</column>
+            <column nome="nome">MASCARA FACIAL EM GEL ROSA ACTE</column>
+            <column preco_venda="preço">75</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000231</column>
+            <column referencia="referência">R4</column>
+            <column codigo_barras="código de barras">7898578453112</column>
+            <column nome="nome">FAIXA PARA RELAXAMENTO ACTE</column>
+            <column preco_venda="preço">63</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000232</column>
+            <column referencia="referência">R5</column>
+            <column codigo_barras="código de barras">7898578453129</column>
+            <column nome="nome">BOLSA MULTIUSO PARA RELAXAMENTO M ACTE</column>
+            <column preco_venda="preço">38</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000233</column>
+            <column referencia="referência">R6</column>
+            <column codigo_barras="código de barras">7898578453136</column>
+            <column nome="nome">BOLSA MULTIUSO PARA RELAXAMENTO  G ACTE</column>
+            <column preco_venda="preço">50</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000234</column>
+            <column referencia="referência">R7</column>
+            <column codigo_barras="código de barras">7898578453143</column>
+            <column nome="nome">BOLSA EM GEL PARA TORNOZELO/ PUNHO ACTE</column>
+            <column preco_venda="preço">80</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000235</column>
+            <column referencia="referência">R8</column>
+            <column codigo_barras="código de barras">7898578453150</column>
+            <column nome="nome">BOLSA EM GEL PARA JOELHO/ COTOVELO ACTE</column>
+            <column preco_venda="preço">87</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000237</column>
+            <column referencia="referência">P7-T</column>
+            <column codigo_barras="código de barras">7898578453365</column>
+            <column nome="nome">PROTETOR BUCAL - TRANSPARENTE ACTE</column>
+            <column preco_venda="preço">29</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000238</column>
+            <column referencia="referência">P8-V</column>
+            <column codigo_barras="código de barras">7898578453396</column>
+            <column nome="nome">BANDAGEM 3</column>
+            <column preco_venda="preço">5M - VERMELHO ACTE</column>
+            <column estoque="quantidade">45</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000246</column>
+            <column referencia="referência">R12</column>
+            <column codigo_barras="código de barras">7898578454232</column>
+            <column nome="nome">BOLSA EM GEL PARA LOMBAR ACTE</column>
+            <column preco_venda="preço">145</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000247</column>
+            <column referencia="referência">R3-A</column>
+            <column codigo_barras="código de barras">7898578454263</column>
+            <column nome="nome">MASCARA FACIAL EM GEL AZUL ACTE</column>
+            <column preco_venda="preço">75</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000250</column>
+            <column referencia="referência">T225</column>
+            <column codigo_barras="código de barras">7898578454379</column>
+            <column nome="nome">MASSAGEADOR PARA PES E MAOS ACTE</column>
+            <column preco_venda="preço">75</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000251</column>
+            <column referencia="referência">R14</column>
+            <column codigo_barras="código de barras">7898578454522</column>
+            <column nome="nome">BOLSA DE GELO FLEXIVEL  G ACTE</column>
+            <column preco_venda="preço">95</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000254</column>
+            <column referencia="referência">F3-PRX</column>
+            <column codigo_barras="código de barras">7898578454799</column>
+            <column nome="nome">MEIA PARA PILATES PRETO/ ROXO ACTE</column>
+            <column preco_venda="preço">51</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000255</column>
+            <column referencia="referência">T6-R</column>
+            <column codigo_barras="código de barras">7898578454973</column>
+            <column nome="nome">DISCO DE EQUILIBRIO ROSA ACTE</column>
+            <column preco_venda="preço">154</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000256</column>
+            <column referencia="referência">E22</column>
+            <column codigo_barras="código de barras">7898578455192</column>
+            <column nome="nome">MINI BIKE PORTATIL</column>
+            <column preco_venda="preço">344</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000258</column>
+            <column referencia="referência">T258</column>
+            <column codigo_barras="código de barras">7898578455567</column>
+            <column nome="nome">ROLO DE POSICIONAMENTO 15X60CM - D23  ACTE</column>
+            <column preco_venda="preço">170</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000259</column>
+            <column referencia="referência">R24</column>
+            <column codigo_barras="código de barras">7898578455697</column>
+            <column nome="nome">MASSAGEADOR ROLLER PARA OS PES ACTE</column>
+            <column preco_venda="preço">62</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000260</column>
+            <column referencia="referência">R23</column>
+            <column codigo_barras="código de barras">7898578455703</column>
+            <column nome="nome">LUVA MASSAGEADORA CORPORAL ESFERAS ACTE</column>
+            <column preco_venda="preço">68</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000261</column>
+            <column referencia="referência">R25</column>
+            <column codigo_barras="código de barras">7898578455727</column>
+            <column nome="nome">MASSAGEADOR MANUAL PARA CABECA ACTE</column>
+            <column preco_venda="preço">35</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000262</column>
+            <column referencia="referência">R21</column>
+            <column codigo_barras="código de barras">7898578455796</column>
+            <column nome="nome">KIT EXTENSOR PARA DEDOS 3 INTENSIDADES ACTE</column>
+            <column preco_venda="preço">56</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000264</column>
+            <column referencia="referência">T262</column>
+            <column codigo_barras="código de barras">7898578455840</column>
+            <column nome="nome">FAIXA ELASTICA PARA ALONGAMENTO ACTE</column>
+            <column preco_venda="preço">94</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000267</column>
+            <column referencia="referência">A79-P</column>
+            <column codigo_barras="código de barras">7898578456175</column>
+            <column nome="nome">POCHETE PARA CORRIDA E TREINO ACTE</column>
+            <column preco_venda="preço">77</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000268</column>
+            <column referencia="referência">T271</column>
+            <column codigo_barras="código de barras">7898578456199</column>
+            <column nome="nome">MINI BAND LEVE ACTE</column>
+            <column preco_venda="preço">31</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000269</column>
+            <column referencia="referência">T272</column>
+            <column codigo_barras="código de barras">7898578456205</column>
+            <column nome="nome">MINI BAND MEDIO ACTE</column>
+            <column preco_venda="preço">37</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000273</column>
+            <column referencia="referência">R29-A</column>
+            <column codigo_barras="código de barras">7898578456410</column>
+            <column nome="nome">MASCARA FASCIAL TOTAL EM GEL AZUL ACTE</column>
+            <column preco_venda="preço">75</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000274</column>
+            <column referencia="referência">T71-N</column>
+            <column codigo_barras="código de barras">7898578456465</column>
+            <column nome="nome">KIT MINI BAND ACTE</column>
+            <column preco_venda="preço">100</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000275</column>
+            <column referencia="referência">T95-N</column>
+            <column codigo_barras="código de barras">7898578456496</column>
+            <column nome="nome">CORDA DE PULAR PRETA ACTE</column>
+            <column preco_venda="preço">28</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000277</column>
+            <column referencia="referência">T28-L</column>
+            <column codigo_barras="código de barras">7898578456519</column>
+            <column nome="nome">EXTENSOR LATEX LEVE ACTE</column>
+            <column preco_venda="preço">116</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000278</column>
+            <column referencia="referência">T28-M</column>
+            <column codigo_barras="código de barras">7898578456526</column>
+            <column nome="nome">EXTENSOR LATEX MEDIO ACTE</column>
+            <column preco_venda="preço">166</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000279</column>
+            <column referencia="referência">T28-F</column>
+            <column codigo_barras="código de barras">7898578456533</column>
+            <column nome="nome">EXTENSOR LATEX FORTE ACTE</column>
+            <column preco_venda="preço">141</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000284</column>
+            <column referencia="referência">T11NA</column>
+            <column codigo_barras="código de barras">17898578456585</column>
+            <column nome="nome">YOGA MAT EM EVA AZUL ROYAL</column>
+            <column preco_venda="preço">118</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000287</column>
+            <column referencia="referência">F1-PA</column>
+            <column codigo_barras="código de barras">7898578456632</column>
+            <column nome="nome">MEIA DE COMPRESSAO PRETO COM AZUL ACTE</column>
+            <column preco_venda="preço">89</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000289</column>
+            <column referencia="referência">F2-PA</column>
+            <column codigo_barras="código de barras">7898578456663</column>
+            <column nome="nome">MEIA DE COMPRESSAO PRETO COM AZUL ACTE</column>
+            <column preco_venda="preço">89</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000290</column>
+            <column referencia="referência">F3-PR</column>
+            <column codigo_barras="código de barras">7898578456694</column>
+            <column nome="nome">MEIA PARA PILATES PRETA/ TURQUESA CLARO ACTE</column>
+            <column preco_venda="preço">51</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000291</column>
+            <column referencia="referência">F3-PA</column>
+            <column codigo_barras="código de barras">7898578456717</column>
+            <column nome="nome">MEIA PARA PILATES PRETA/ ROSA 33 AO 38 ACTE</column>
+            <column preco_venda="preço">51</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000292</column>
+            <column referencia="referência">F10-PA</column>
+            <column codigo_barras="código de barras">7898578456724</column>
+            <column nome="nome">MEIA PARA PILATES PRETO COM AZUL ACTE</column>
+            <column preco_venda="preço">51</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000293</column>
+            <column referencia="referência">F10-PC</column>
+            <column codigo_barras="código de barras">7898578456731</column>
+            <column nome="nome">MEIA PARA PILATES PRETA COM CINZA ACTE</column>
+            <column preco_venda="preço">51</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000294</column>
+            <column referencia="referência">T95-NV</column>
+            <column codigo_barras="código de barras">7898578456809</column>
+            <column nome="nome">CORDA DE PULAR VERMELHA</column>
+            <column preco_venda="preço">28</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000295</column>
+            <column referencia="referência">T95-NA</column>
+            <column codigo_barras="código de barras">7898578456816</column>
+            <column nome="nome">CORDA DE PULAR AMARELA ACTE</column>
+            <column preco_venda="preço">28</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000297</column>
+            <column referencia="referência">T95-NVE</column>
+            <column codigo_barras="código de barras">7898578456830</column>
+            <column nome="nome">CORDA DE PULAR VERDE ACTE</column>
+            <column preco_venda="preço">28</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000298</column>
+            <column referencia="referência">T95-NR</column>
+            <column codigo_barras="código de barras">7898578456847</column>
+            <column nome="nome">CORDA DE PULAR ROSA</column>
+            <column preco_venda="preço">28</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000299</column>
+            <column referencia="referência">T287-L</column>
+            <column codigo_barras="código de barras">7898578456939</column>
+            <column nome="nome">EXTENSOR FUNCIONAL LEVE ACTE</column>
+            <column preco_venda="preço">99</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000300</column>
+            <column referencia="referência">T287-M</column>
+            <column codigo_barras="código de barras">7898578456946</column>
+            <column nome="nome">EXTENSOR FUNCIONAL MEDIO ACTE</column>
+            <column preco_venda="preço">109</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000301</column>
+            <column referencia="referência">T287-F</column>
+            <column codigo_barras="código de barras">7898578456953</column>
+            <column nome="nome">EXTENSOR FUNCIONAL FORTE ACTE</column>
+            <column preco_venda="preço">120</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000302</column>
+            <column referencia="referência">T288-L</column>
+            <column codigo_barras="código de barras">7898578456960</column>
+            <column nome="nome">EXTENSOR PRO LEVE ACTE</column>
+            <column preco_venda="preço">261</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000303</column>
+            <column referencia="referência">T288-M</column>
+            <column codigo_barras="código de barras">7898578456977</column>
+            <column nome="nome">EXTENSOR PRO MEDIO ACTE</column>
+            <column preco_venda="preço">287</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000304</column>
+            <column referencia="referência">T288-F</column>
+            <column codigo_barras="código de barras">7898578456984</column>
+            <column nome="nome">EXTENSOR PRO FORTE ACTE</column>
+            <column preco_venda="preço">300</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000305</column>
+            <column referencia="referência">T29</column>
+            <column codigo_barras="código de barras">7898941859015</column>
+            <column nome="nome">EXTENSOR BICEPS E TRICEPS MASTER ACTE</column>
+            <column preco_venda="preço">65</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000306</column>
+            <column referencia="referência">C4</column>
+            <column codigo_barras="código de barras">7898941859138</column>
+            <column nome="nome">SQUEEZE 500ML C4 ACTE SPORTS</column>
+            <column preco_venda="preço">34</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000307</column>
+            <column referencia="referência">C5</column>
+            <column codigo_barras="código de barras">7898941859145</column>
+            <column nome="nome">SQUEEZE 500 ML ACTE</column>
+            <column preco_venda="preço">34</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000308</column>
+            <column referencia="referência">C6</column>
+            <column codigo_barras="código de barras">7898941859152</column>
+            <column nome="nome">SQUEEZE 750ML C6 ACTE SPORTS</column>
+            <column preco_venda="preço">37</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000309</column>
+            <column referencia="referência">T6</column>
+            <column codigo_barras="código de barras">7898941859251</column>
+            <column nome="nome">DISCO DE EQUILIBRIO ACTE</column>
+            <column preco_venda="preço">154</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000311</column>
+            <column referencia="referência">T14</column>
+            <column codigo_barras="código de barras">7898941859404</column>
+            <column nome="nome">RODA PARA EXERCICIOS  ACTE</column>
+            <column preco_venda="preço">107</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000312</column>
+            <column referencia="referência">T9-55</column>
+            <column codigo_barras="código de barras">7898941859497</column>
+            <column nome="nome">GYM BALL 55 CM ACTE</column>
+            <column preco_venda="preço">133</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000315</column>
+            <column referencia="referência">T28</column>
+            <column codigo_barras="código de barras">7898941859992</column>
+            <column nome="nome">EXTENSOR BRACOS E PERNAS MASTER M ACTE</column>
+            <column preco_venda="preço">89</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000319</column>
+            <column referencia="referência">1105</column>
+            <column codigo_barras="código de barras"/>
+            <column nome="nome">CADEIRA DE RODAS TABUBA CD18 CARONE</column>
+            <column preco_venda="preço">1144</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000323</column>
+            <column referencia="referência">1097</column>
+            <column codigo_barras="código de barras"/>
+            <column nome="nome">CADEIRA HIGIENICA RODAS CH01 CINZA CARONE</column>
+            <column preco_venda="preço">554</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000324</column>
+            <column referencia="referência">1098</column>
+            <column codigo_barras="código de barras"/>
+            <column nome="nome">CADEIRA HIGIENICA RODAS CH02 CARONE</column>
+            <column preco_venda="preço">534</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000325</column>
+            <column referencia="referência">1096</column>
+            <column codigo_barras="código de barras"/>
+            <column nome="nome">CAD DE RODAS HIGIENICA DOBRAVEL CH04 CZ|RASTREABILIDADE OF 120335</column>
+            <column preco_venda="preço">652</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000328</column>
+            <column referencia="referência">1159</column>
+            <column codigo_barras="código de barras"/>
+            <column nome="nome">SAPATO REF STICKY SHOES WOMAN COR PRETA CA 39.848|NUM. 34</column>
+            <column preco_venda="preço">107</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000329</column>
+            <column referencia="referência">1161</column>
+            <column codigo_barras="código de barras"/>
+            <column nome="nome">SAPATO REF STICKY SHOES WOMAN COR PRETA CA 39.848|NUM. 35</column>
+            <column preco_venda="preço">107</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000330</column>
+            <column referencia="referência">1162</column>
+            <column codigo_barras="código de barras"/>
+            <column nome="nome">SAPATO REF STICKY SHOES WOMAN COR PRETA CA 39.848|NUM. 36</column>
+            <column preco_venda="preço">107</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000331</column>
+            <column referencia="referência">1163</column>
+            <column codigo_barras="código de barras"/>
+            <column nome="nome">SAPATO REF STICKY SHOES WOMAN COR PRETA CA 39.848|NUM. 37</column>
+            <column preco_venda="preço">107</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000335</column>
+            <column referencia="referência">1155</column>
+            <column codigo_barras="código de barras"/>
+            <column nome="nome">STICK SHOES WOMAN BRANCO CA 39.848|NUM. 36 STICKY SHOES</column>
+            <column preco_venda="preço">107</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000337</column>
+            <column referencia="referência">1157</column>
+            <column codigo_barras="código de barras"/>
+            <column nome="nome">SAPATO REF STICKY SHOES WOMAN COR BRANCA CA 39.848|NUM. 38</column>
+            <column preco_venda="preço">107</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000338</column>
+            <column referencia="referência">1146</column>
+            <column codigo_barras="código de barras"/>
+            <column nome="nome">SAPATO REF STICKY SHOES MAN COR PRETA CA 39.674|NUM. 38</column>
+            <column preco_venda="preço">107</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+        <columns>
+            <column codigo="código">0000000339</column>
+            <column referencia="referência">1148</column>
+            <column codigo_barras="código de barras"/>
+            <column nome="nome">SAPATO REF STICKY SHOES MAN COR PRETA CA 39.674|NUM. 39</column>
+            <column preco_venda="preço">107</column>
+            <column estoque="quantidade">0</column>
+        </columns>
+    </items>
+    <infos-list>
+        <info nome-da-empresa="">nome empresa</info>
+        <info nome-mascara="">nome empresa mascara</info>
+        <info cnpj="">seila</info>
+        <info inscricao-estatal="">tambem naosei</info>
+        <info endereco="">naoexiste</info>
+    </infos-list>
+</wish-list>
