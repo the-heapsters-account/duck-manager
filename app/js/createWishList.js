@@ -50,8 +50,10 @@ inputGerarList.addEventListener("click", async () => {
             } catch(error) {
                 handleError(error, "Erro durante a execução da linha: ");
             }
-        } else {
-            console.error("Erro na compilação do código.");
+
+        try {
+            const formatterResponse = await window.api.executeJavaClass(prepareEntriesInfos.dir, `${prepareEntriesInfos.classes.formatter} ${argsObj.fileName}`);
+            console.log(formatterResponse);
         } catch(error) {
             handleError(error, "Erro durante a formatação do documento: ");
         }
