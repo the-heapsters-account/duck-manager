@@ -14,7 +14,7 @@ inputGerarList.addEventListener("click", async () => {
             formatter: "MakeXMLFormatter"
         }
         const quantidadeMinima = await window.api.getQuantidadeMinima();
-        const compilesResponse = await window.api.compileJavaFile(prepareEntriesInfos.dir, prepareEntriesInfos.files);
+        const compilesResponse = await window.api.compileJavaFile();
         const compilesResponseVerify = compilesResponse === '';
         const table = await window.api.getTableDB();
         const columnsObject = await window.api.getColumnsDB();
@@ -38,7 +38,7 @@ inputGerarList.addEventListener("click", async () => {
                     const rowItems = Object.values(row).toString().trimStart().trimEnd();
                     const args = createArgs(argsObj, rowItems);
 
-                    const executeResponse = await window.api.executeJavaClass(prepareEntriesInfos.dir, `${prepareEntriesInfos.classes.main} ${args}`);
+                    const executeResponse = await window.api.executeJavaClass(classesExecute.main, args);
                     console.log(executeResponse);
                     i++;
                     console.log(`linha ${i} de ${rows.length}`);
@@ -48,7 +48,7 @@ inputGerarList.addEventListener("click", async () => {
             }
 
         try {
-            const formatterResponse = await window.api.executeJavaClass(prepareEntriesInfos.dir, `${prepareEntriesInfos.classes.formatter} ${argsObj.fileName}`);
+            const formatterResponse = await window.api.executeJavaClass(classesExecute.formatter, argsObj.fileName);
             console.log(formatterResponse);
         } catch(error) {
             handleError(error, "Erro durante a formatação do documento: ");
@@ -114,7 +114,7 @@ async function prepareEntries(args, dir, file, className) {
 
         console.log("Código compilado com sucesso!");
 
-        const executeResponse = await window.api.executeJavaClass(dir, `${className} ${args}`);
+        const executeResponse = await window.api.executeJavaClass(className, args);
         console.log(executeResponse);
     } catch(error) {
         handleError(error, 'Erro durante compilação/execução:');
