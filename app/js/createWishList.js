@@ -49,6 +49,9 @@ inputGerarList.addEventListener("click", async () => {
                 i++;
                 console.log(`linha ${i} de ${rows.length}`);
             }
+        } catch(error) {
+            handleError(error, "Erro durante a execução da linha: ");
+        }
 
         try {
             const packageName = readXML.package_name;
