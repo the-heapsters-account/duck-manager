@@ -1,5 +1,5 @@
 const btnGerarDoc = document.querySelector(".btn-gerar-doc");
-const loadingDialogElement = document.querySelector("dialog#criar-lista-pedidos");
+const loadingDialogElement = document.querySelector("dialog#create-wish-list");
 const inputGerarList = document.querySelector("#btn-gerar-lista");
 
 btnGerarDoc.addEventListener("click", () => loadingDialogElement.showModal());
