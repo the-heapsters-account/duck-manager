@@ -51,10 +51,12 @@ inputGerarList.addEventListener("click", async () => {
             }
 
         try {
-            console.log(formatterResponse);
             const packageName = readXML.package_name;
             const className = readXML.class_name;
             const arg = readXML.arg;
+
+            const readResponse = await window.api.executeJavaClass(packageName, className, arg);
+            console.log(readResponse);
         } catch(error) {
             handleError(error, "Erro durante a leitura do documento: ");
         }
