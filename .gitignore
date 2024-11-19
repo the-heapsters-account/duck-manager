@@ -9,3 +9,4 @@ package-lock.json
 *.zip
 *.bat
 lista-de-pedidos/src/plugin/xml/file_destiny.xml
+lista-de-pedidos/src/plugin/target/classes/*
