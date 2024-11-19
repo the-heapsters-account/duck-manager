@@ -113,17 +113,3 @@ function closeDialog() {
     btnGerarDoc.removeAttribute("disabled");
     inputGerarList.removeAttribute("disabled");
 }
-
-async function prepareEntries(args, className) {
-    try {
-        const compileResponse = await window.api.compileJavaFile();
-        if(compileResponse !== '') throw new Error('Erro na compilação do código');
-
-        console.log("Código compilado com sucesso!");
-
-        const executeResponse = await window.api.executeJavaClass(className, args);
-        console.log(executeResponse);
-    } catch(error) {
-        handleError(error, 'Erro durante compilação/execução:');
-    }
-}
