@@ -35,18 +35,19 @@ inputGerarList.addEventListener("click", async () => {
         setArgs(argsObj, getInfos);
         let i = 0;
 
-            try {
-                for(const row of rows) {
-                    const rowItems = Object.values(row).toString().trimStart().trimEnd();
-                    const args = createArgs(argsObj, rowItems);
+        try {
+            for(const row of rows) {
+                const rowItems = Object.values(row).toString().trimStart().trimEnd();
 
-                    const executeResponse = await window.api.executeJavaClass(classesExecute.main, args);
-                    console.log(executeResponse);
-                    i++;
-                    console.log(`linha ${i} de ${rows.length}`);
-                }
-            } catch(error) {
-                handleError(error, "Erro durante a execução da linha: ");
+                const packageName = createXML.package_name;
+                const className = createXML.class_name;
+                const args = createXML.args = createArgs(argsObj, rowItems);
+
+                // const executeResponse = await window.api.executeJavaClass(packageName, className, args);
+                // console.log(executeResponse);
+
+                i++;
+                console.log(`linha ${i} de ${rows.length}`);
             }
 
         try {
