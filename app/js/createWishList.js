@@ -54,7 +54,7 @@ inputGerarList.addEventListener("click", async () => {
             const formatterResponse = await window.api.executeJavaClass(classesExecute.formatter, argsObj.fileName);
             console.log(formatterResponse);
         } catch(error) {
-            handleError(error, "Erro durante a formatação do documento: ");
+            handleError(error, "Erro durante a leitura do documento: ");
         }
     } catch(error) {
         handleError(error, "Não foi possível gerar a lista de pedidos: ");
