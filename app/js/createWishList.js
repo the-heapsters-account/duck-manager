@@ -29,6 +29,7 @@ inputGerarList.addEventListener("click", async () => {
         const rows = await window.api.executeQuery(query);
 
         // if(!compileResponseVerify) throw new Error('Erro na compilação do código: ' + compileResponseVerify);
+        console.log(compileResponse);
         console.log('Código compilado com sucesso!');
 
         setArgs(argsObj, getInfos);
