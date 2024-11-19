@@ -1,3 +1,5 @@
+package com.plugin.createDocs.createXML;
+
 import java.io.File;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.DocumentBuilder;
@@ -5,12 +7,14 @@ import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
+import java.util.List;
 
 import org.w3c.dom.Attr;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
-import java.util.List;
+import com.plugin.tools.xml.MakeArrayList;
+
 
 public class CreateXML {
     public static void main(String[] args) {
@@ -115,7 +119,7 @@ public class CreateXML {
 
             // salvando o documento
             transformer.transform(source, result);
-        } catch (Exception exception) {
+        } catch(Exception exception) {
             exception.printStackTrace();
         }
     }

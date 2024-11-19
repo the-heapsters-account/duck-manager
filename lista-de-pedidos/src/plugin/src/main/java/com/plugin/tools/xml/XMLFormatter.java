@@ -1,3 +1,5 @@
+package com.plugin.tools.xml;
+
 import java.io.*;
 import org.w3c.dom.Document;
 import org.xml.sax.InputSource;
@@ -19,9 +21,9 @@ public class XMLFormatter {
 
     private String readFile(String filePath) throws IOException {
         StringBuilder content = new StringBuilder();
-        try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
+        try(BufferedReader br = new BufferedReader(new FileReader(filePath))) {
             String line;
-            while ((line = br.readLine()) != null) {
+            while((line = br.readLine()) != null) {
                 content.append(line).append("\n");
             }
         }
@@ -29,7 +31,7 @@ public class XMLFormatter {
     }
 
     private void writeFile(String filePath, String formattedXml) throws IOException {
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath))) {
+        try(BufferedWriter writer = new BufferedWriter(new FileWriter(filePath))) {
             writer.write(formattedXml);
         }
     }
@@ -50,7 +52,7 @@ public class XMLFormatter {
             transformer.transform(new javax.xml.transform.dom.DOMSource(document), new StreamResult(writer));
 
             return writer.toString();
-        } catch (Exception e) {
+        } catch(Exception e) {
             throw new Exception("erro ao formatar documento: ", e);
         }
     }
