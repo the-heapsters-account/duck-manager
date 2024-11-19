@@ -10,5 +10,6 @@ contextBridge.exposeInMainWorld("api", {
     getTableDB: () => ipcRenderer.invoke('get-table-db'),
     getQuantidadeMinima: () => ipcRenderer.invoke('get-quantidade-minima'),
     getInfosListaPedidos: () => ipcRenderer.invoke('get-infos-lista-pedidos'),
-    getNameColumnQuantity: () => ipcRenderer.invoke('get-name-column-quantity')
+    getNameColumnQuantity: () => ipcRenderer.invoke('get-name-column-quantity'),
+    getInfosClassesExecute: () => ipcRenderer.invoke('get-infos-classes-execute')
 });
