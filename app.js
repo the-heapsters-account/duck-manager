@@ -105,10 +105,14 @@ ipcMain.handle('execute-query', async (event, query) => {
 });
 
 // handler de execução de arquivos Java
-ipcMain.handle('compile-java-file', () => { return execCommand(`cd ${paths.dirJava} && javac -d bin *.java`, `erro ao compilar o arquivo Java "${fileJava}": `) });
+ipcMain.handle('compile-java-files', () => {
+    return execCommand(`cd ${paths.dirJava} && mvn clean compile`, `erro ao compilar o(s) arquivo(s) Java: `);
+});
 
 // handler de execução de classes Java
-ipcMain.handle('execute-java-class', (event, classJava, args) => { return execCommand(`cd ${paths.dirJava} && java -cp bin ${classJava} ${args}`, `erro ao executar a classe Java "${classJava}": `) });
+ipcMain.handle('execute-java-class', (event, packageName, className, args) => {
+    return execCommand(`cd ${paths.dirJava} && mvn exec:java -Dexec.mainClass=com.plugin.${packageName}.${className} -Dexec.args="${args}"`, `erro ao executar a classe Java "${className}": `)
+});
 
 // handler pra pegar as colunas do banco de dados que serão usadas
 ipcMain.handle('get-columns-db', () => {
