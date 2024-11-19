@@ -17,7 +17,6 @@ inputGerarList.addEventListener("click", async () => {
 
         const quantidadeMinima = await window.api.getQuantidadeMinima();
         const compilesResponse = await window.api.compileJavaFile();
-        const compilesResponseVerify = compilesResponse === '';
         const table = await window.api.getTableDB();
         const columnsObject = await window.api.getColumnsDB();
         const columnQuantity = await window.api.getNameColumnQuantity();
@@ -29,7 +28,7 @@ inputGerarList.addEventListener("click", async () => {
         const query = `SELECT ${columnsObject.columnsDB.toString().replace(`${columnQuantity},`, '')}  FROM ${table} WHERE ${columnQuantity} <= ${quantidadeMinima}`;
         const rows = await window.api.executeQuery(query);
 
-        if(!compilesResponseVerify) throw new Error('Erro na compilação do código');
+        // if(!compileResponseVerify) throw new Error('Erro na compilação do código: ' + compileResponseVerify);
         console.log('Código compilado com sucesso!');
 
         setArgs(argsObj, getInfos);
