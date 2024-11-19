@@ -170,6 +170,13 @@ ipcMain.handle('get-name-column-quantity', () => {
     return columnSelectedName;
 });
 
+//handler pra pegar as informações necessárias para a execução de classes
+ipcMain.handle('get-infos-classes-execute', () => {
+    const settings = readSettingsJSON();
+
+    return settings.infos_classes_execute;
+});
+
 // fechando a janela do app em no windows e linux
 app.on("window-all-closed", () => { if(process.platform != "darwin") app.quit() });
 

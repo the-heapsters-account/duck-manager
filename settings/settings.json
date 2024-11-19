@@ -32,5 +32,22 @@
   },
   "columns_importants": {
     "column_quantity": "estoque"
+  },
+  "infos_classes_execute": {
+    "createXML": {
+        "package_name": "xml.createXML",
+        "class_name": "CreateXML",
+        "args": ""
+    },
+    "readXML": {
+        "package_name": "xml.readXML",
+        "class_name": "ReadXML",
+        "arg": "file_destiny"
+    },
+    "createSpreadsheet": {
+        "package_name": "createSpreadsheet",
+        "class_name": "CreateSpreadsheet",
+        "args": ""
+    }
   }
 }
