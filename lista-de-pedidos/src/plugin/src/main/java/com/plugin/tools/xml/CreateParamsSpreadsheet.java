@@ -51,9 +51,7 @@ public class CreateParamsSpreadsheet {
 
             createTxt.addLine("");
 
-            NodeList infosList = doc.getElementsByTagName("infos-list");
-            System.out.println("Elemento: infos-list");
-
+            NodeList infosList = doc.getElementsByTagName("columns-names");
             for(int i = 0; i < infosList.getLength(); i++) {
                 Node info = infosList.item(i);
 
