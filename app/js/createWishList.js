@@ -44,8 +44,8 @@ inputGerarList.addEventListener("click", async () => {
                 const className = createXML.class_name;
                 const args = createXML.args = createArgs(argsObj, rowItems);
 
-                // const executeResponse = await window.api.executeJavaClass(packageName, className, args);
-                // console.log(executeResponse);
+                const executeResponse = await window.api.executeJavaClass(packageName, className, args);
+                console.log(executeResponse);
 
                 i++;
                 console.log(`linha ${i} de ${rows.length}`);
