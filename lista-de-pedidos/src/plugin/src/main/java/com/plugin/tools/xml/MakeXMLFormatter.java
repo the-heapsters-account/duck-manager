@@ -5,7 +5,7 @@ public class MakeXMLFormatter {
         XMLFormatter xmlFormatter = new XMLFormatter();
 
         try {
-            xmlFormatter.formatXMLFromFile("xml/" + args[0] + ".xml");
+            xmlFormatter.formatXMLFromFile("extras/xml/" + args[0] + ".xml");
             System.out.println("Arquivo XML formatado com sucesso!");
         } catch(Exception e) {
             e.printStackTrace();
