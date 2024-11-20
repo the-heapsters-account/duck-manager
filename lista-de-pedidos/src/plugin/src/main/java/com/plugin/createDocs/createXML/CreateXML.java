@@ -20,17 +20,12 @@ public class CreateXML {
         try {
             MakeArrayList makeArrayList = new MakeArrayList();
 
-            String nameFile = args[0];
-            File xmlDir = new File("xml");
-            if(!xmlDir.exists()) xmlDir.mkdirs();
-            File xmlFile = new File(xmlDir, nameFile + ".xml");
+            String fileName = args[0];
+            File xmlFile = new File("extras/xml/" + fileName + ".xml");
 
-            List<String> attrNamesColumnsList = makeArrayList.makeList(args[1]);
-            List<String> attrValuesColumnsList = makeArrayList.makeList(args[2]);
-            List<String> tagValuesColumnsList = makeArrayList.makeList(args[3]);
-
-            List<String> attrNamesInfosList = makeArrayList.makeList(args[4]);
-            List<String> tagValuesInfosList = makeArrayList.makeList(args[5]);
+            List<String> tagValuesNameColumns = makeArrayList.makeList(args[1]);
+            List<String> tagValuesColumns = makeArrayList.makeList(args[2]);
+            List<String> tagValuesInfos = makeArrayList.makeList(args[3]);
 
             String rootElementName = "wish-list";
 
