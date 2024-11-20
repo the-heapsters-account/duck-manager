@@ -20,13 +20,14 @@ public class CreateParamsSpreadsheet {
         }
 
         String fileName = args[0];
-        CreateTxt createTxt = new CreateTxt("args.txt");
+        CreateTxt createTxt = new CreateTxt("extras/args.txt");
         createTxt.createFile();
 
         try {
             DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
-            Document doc = docBuilder.parse(new File("xml/" + fileName + ".xml"));
+            Document doc = docBuilder.parse(new File("extras/xml/" + fileName + ".xml"));
+
             GetContentsElement getContentsElement = new GetContentsElement();
 
             doc.getDocumentElement().normalize();
