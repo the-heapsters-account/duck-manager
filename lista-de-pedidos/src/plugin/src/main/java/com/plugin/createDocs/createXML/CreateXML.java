@@ -34,7 +34,6 @@ public class CreateXML {
             Document doc;
 
             if(xmlFile.exists()) {
-                // carrega o documento existente
                 doc = docBuilder.parse(xmlFile);
                 doc.getDocumentElement().normalize();
 
@@ -43,7 +42,6 @@ public class CreateXML {
                 Element columns = doc.createElement("columns");
                 items.appendChild(columns);
 
-                // adicionar novas colunas ao documento existente
                 for(int i = 0; i < attrNamesColumnsList.size(); i++) {
                     Element column = doc.createElement("column");
                     Attr attrName = doc.createAttribute(attrNamesColumnsList.get(i));
@@ -55,10 +53,8 @@ public class CreateXML {
 
                 System.out.println("XML atualizado com sucesso!");
             } else {
-                // criar um novo documento
                 doc = docBuilder.newDocument();
 
-                // cria atributos para adicionar ao root
                 Attr xmlns = doc.createAttribute("xmlns:xsi");
                 xmlns.setValue("http://www.w3.org/2001/XMLSchema-instance");
                 Attr xsi = doc.createAttribute("xsi:noNamespaceSchemaLocation");
@@ -70,14 +66,12 @@ public class CreateXML {
                 root.setAttributeNode(xmlns);
                 root.setAttributeNode(xsi);
 
-                // criando o elemento de items
                 Element items = doc.createElement("items");
                 root.appendChild(items);
 
                 Element columns = doc.createElement("columns");
                 items.appendChild(columns);
 
-                // loop para adicionar colunas
                 for(int i = 0; i < attrNamesColumnsList.size(); i++) {
                     Element column = doc.createElement("column");
                     Attr attrName = doc.createAttribute(attrNamesColumnsList.get(i));
@@ -87,7 +81,6 @@ public class CreateXML {
                     columns.appendChild(column);
                 }
 
-                // criando o elemento de infos-list
                 Element infos_list = doc.createElement("infos-list");
                 root.appendChild(infos_list);
 
@@ -103,15 +96,11 @@ public class CreateXML {
                 System.out.println("XML criado com sucesso!");
             }
 
-            // configuração do Transformer para salvar o documento em um arquivo
             TransformerFactory transformerFactory = TransformerFactory.newInstance();
             Transformer transformer = transformerFactory.newTransformer();
-
-            // streamResult para salvar o documento no arquivo
             DOMSource source = new DOMSource(doc);
             StreamResult result = new StreamResult(xmlFile);
 
-            // salvando o documento
             transformer.transform(source, result);
         } catch(Exception exception) {
             exception.printStackTrace();
