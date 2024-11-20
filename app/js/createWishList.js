@@ -55,9 +55,9 @@ inputGerarList.addEventListener("click", async () => {
         }
 
         try {
-            const packageName = readXML.package_name;
-            const className = readXML.class_name;
-            const arg = readXML.arg;
+            const packageName = createParamsSpreadsheet.package_name;
+            const className = createParamsSpreadsheet.class_name;
+            const arg = createParamsSpreadsheet.arg;
 
             const readResponse = await window.api.executeJavaClass(packageName, className, arg);
             console.log(readResponse);
