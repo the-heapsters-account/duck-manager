@@ -23,9 +23,9 @@
               <mainClass>com.plugin.createDocs.createXML.CreateXML</mainClass>
             </configuration>
           </execution>
-          <execution>
 
             <id>run-read-xml</id>
+          <execution>
             <goals>
               <goal>java</goal>
             </goals>
