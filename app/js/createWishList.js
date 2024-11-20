@@ -95,10 +95,6 @@ function createArgsObject() {
             db: null,
             spreadsheet: null
         },
-        columnsImportants: {
-            columnProduct: null,
-            columnQuantity: null
-        }
     };
 }
 
