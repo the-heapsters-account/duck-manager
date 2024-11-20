@@ -35,7 +35,7 @@
   },
   "infos_classes_execute": {
     "createXML": {
-        "package_name": "xml.createXML",
+        "package_name": "createDocs.createXML",
         "class_name": "CreateXML",
         "args": ""
     },
