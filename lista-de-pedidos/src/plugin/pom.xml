@@ -33,6 +33,26 @@
               <mainClass>com.plugin.tools.xml.CreateParamsSpreadsheet</mainClass>
             </configuration>
           </execution>
+
+          <execution>
+            <id>format-xml</id>
+            <goals>
+              <goal>java</goal>
+            </goals>
+            <configuration>
+              <mainClass>com.plugin.tools.xml.MakeXMLFormatter</mainClass>
+            </configuration>
+          </execution>
+
+          <execution>
+            <id>create-spreadsheet</id>
+            <goals>
+              <goal>java</goal>
+            </goals>
+            <configuration>
+              <mainClass>com.plugin.createDocs.createSpreadsheet.CreateSpreadsheet</mainClass>
+            </configuration>
+          </execution>
         </executions>
       </plugin>
     </plugins>
