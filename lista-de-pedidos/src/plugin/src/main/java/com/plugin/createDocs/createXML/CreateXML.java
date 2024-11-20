@@ -15,7 +15,6 @@ import org.w3c.dom.Element;
 
 import com.plugin.tools.xml.MakeArrayList;
 
-
 public class CreateXML {
     public static void main(String[] args) {
         try {
