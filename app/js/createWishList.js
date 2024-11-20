@@ -49,6 +49,8 @@ inputGerarList.addEventListener("click", async () => {
 
                 i++;
                 console.log(`linha ${i} de ${rows.length}`);
+
+                if(i === 2) break;
             }
         } catch(error) {
             handleError(error, "Erro durante a execução da linha: ");
