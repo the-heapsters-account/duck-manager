@@ -1,11 +1,8 @@
 package com.plugin.createDocs.createTxt;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
+import java.io.*;
+import java.nio.file.*;
+import java.util.ArrayList;
 import java.util.List;
 
 public class CreateTxt {
@@ -16,12 +13,12 @@ public class CreateTxt {
     }
 
     public void createFile() throws Exception {
-        try {
-            File file = new File(fileName);
+        File file = new File(fileName);
 
-            if(!file.createNewFile()) throw new Exception("O arquivo " + fileName + " já existe");
-        } catch (IOException e) {
-            e.printStackTrace();
+        if(file.exists()) {
+            throw new Exception("O arquivo já existe: " + fileName);
+        } else if(!file.createNewFile()) {
+            throw new Exception("Não foi possível criar o arquivo: " + fileName);
         }
     }
 
@@ -29,21 +26,18 @@ public class CreateTxt {
         try(BufferedWriter writer = new BufferedWriter(new FileWriter(fileName, true))) {
             writer.write(line);
             writer.newLine();
-            System.out.println("Linha adicionada ao documento.");
-        } catch (IOException e) {
-            e.printStackTrace();
+        } catch(IOException e) {
+            System.err.println("Erro ao escrever no arquivo: " + e.getMessage());
         }
     }
 
     public List<String> readFile() {
+        List<String> lines = new ArrayList<>();
         try {
-            List<String> lines = Files.readAllLines(Paths.get(fileName));
-
-            return lines;
-        } catch (IOException e) {
-            e.printStackTrace();
+            lines = Files.readAllLines(Paths.get(fileName));
+        } catch(IOException e) {
+            System.err.println("Erro ao ler o arquivo: " + e.getMessage());
         }
-
-        return null;
+        return lines;
     }
 }
