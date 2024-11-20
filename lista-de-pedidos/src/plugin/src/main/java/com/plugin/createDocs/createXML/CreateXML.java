@@ -44,10 +44,8 @@ public class CreateXML {
 
                 for(int i = 0; i < attrNamesColumnsList.size(); i++) {
                     Element column = doc.createElement("column");
-                    Attr attrName = doc.createAttribute(attrNamesColumnsList.get(i));
-                    attrName.setValue(attrValuesColumnsList.get(i));
-                    column.setAttributeNode(attrName);
-                    column.appendChild(doc.createTextNode(tagValuesColumnsList.get(i)));
+                    String columnValueFormatted = columnValue.toString().replaceAll("_", " ").replaceAll("__", " ").replaceAll("  ", " ");
+                    column.appendChild(doc.createTextNode(columnValueFormatted));
                     columns.appendChild(column);
                 }
 
@@ -55,12 +53,6 @@ public class CreateXML {
             } else {
                 doc = docBuilder.newDocument();
 
-                Attr xmlns = doc.createAttribute("xmlns:xsi");
-                xmlns.setValue("http://www.w3.org/2001/XMLSchema-instance");
-                Attr xsi = doc.createAttribute("xsi:noNamespaceSchemaLocation");
-                xsi.setValue("model.xsd");
-
-                // adicionando o root
                 Element root = doc.createElement(rootElementName);
                 doc.appendChild(root);
                 root.setAttributeNode(xmlns);
@@ -74,10 +66,8 @@ public class CreateXML {
 
                 for(int i = 0; i < attrNamesColumnsList.size(); i++) {
                     Element column = doc.createElement("column");
-                    Attr attrName = doc.createAttribute(attrNamesColumnsList.get(i));
-                    attrName.setValue(attrValuesColumnsList.get(i));
-                    column.setAttributeNode(attrName);
-                    column.appendChild(doc.createTextNode(tagValuesColumnsList.get(i)));
+                    String columnValueFormatted = columnValue.toString().replaceAll("_", " ").replaceAll("__", " ").replaceAll("  ", " ");
+                    column.appendChild(doc.createTextNode(columnValueFormatted));
                     columns.appendChild(column);
                 }
 
