@@ -13,6 +13,7 @@ inputGerarList.addEventListener("click", async () => {
         const classesExecute = await window.api.getInfosClassesExecute();
         const createXML = classesExecute.createXML;
         const createParamsSpreadsheet = classesExecute.createParamsSpreadsheet;
+        const formatXML = classesExecute.formatXML;
         const createSpreadsheet = classesExecute.createSpreadsheet;
 
         const quantidadeMinima = await window.api.getQuantidadeMinima();
@@ -60,6 +61,17 @@ inputGerarList.addEventListener("click", async () => {
 
             const readResponse = await window.api.executeJavaClass(packageName, className, arg);
             console.log(readResponse);
+        } catch(error) {
+            handleError(error, "Erro durante a leitura do documento: ");
+        }
+
+        try {
+            const packageName = formatXML.package_name;
+            const className = formatXML.class_name;
+            const arg = formatXML.arg;
+
+            const formatResponse = await window.api.executeJavaClass(packageName, className, arg);
+            console.log(formatResponse);
         } catch(error) {
             handleError(error, "Erro durante a leitura do documento: ");
         }
