@@ -12,7 +12,7 @@ inputGerarList.addEventListener("click", async () => {
         const compileResponse = await window.api.compileJavaFile();
         const classesExecute = await window.api.getInfosClassesExecute();
         const createXML = classesExecute.createXML;
-        const readXML = classesExecute.readXML;
+        const createParamsSpreadsheet = classesExecute.createParamsSpreadsheet;
         const createSpreadsheet = classesExecute.createSpreadsheet;
 
         const quantidadeMinima = await window.api.getQuantidadeMinima();
