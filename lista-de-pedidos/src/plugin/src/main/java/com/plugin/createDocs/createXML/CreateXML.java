@@ -87,6 +87,16 @@ public class CreateXML {
                     columnName.appendChild(doc.createTextNode(nameColumnFormatted));
                     columnsNames.appendChild(columnName);
                 }
+
+                Element infos = doc.createElement("infos");
+                tagValues.appendChild(infos);
+                for(String info : tagValuesInfos) {
+                    Element tag = doc.createElement("tag");
+                    String infoFormatted = info.toString().replaceAll("_", " ").replaceAll("__", " ").replaceAll("  ", " ");
+                    tag.appendChild(doc.createTextNode(infoFormatted));
+                    infos.appendChild(tag);
+                }
+
                 System.out.println("XML criado com sucesso!");
             }
 
