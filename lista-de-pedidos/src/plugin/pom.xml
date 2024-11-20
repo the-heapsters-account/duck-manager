@@ -14,7 +14,6 @@
         <artifactId>exec-maven-plugin</artifactId>
         <version>3.5.0</version>
         <executions>
-          <!-- criar o doc xml -->
           <execution>
             <id>run-create-xml</id>
             <goals>
@@ -26,7 +25,6 @@
           </execution>
           <execution>
 
-            <!-- ler o doc xml pra pegar o conteúdo -->
             <id>run-read-xml</id>
             <goals>
               <goal>java</goal>
@@ -41,7 +39,6 @@
   </build>
 
   <dependencies>
-    <!-- Dependências do projeto -->
     <dependency>
       <groupId>org.apache.poi</groupId>
       <artifactId>poi</artifactId>
