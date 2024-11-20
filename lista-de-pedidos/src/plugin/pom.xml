@@ -15,7 +15,7 @@
         <version>3.5.0</version>
         <executions>
           <execution>
-            <id>run-create-xml</id>
+            <id>create-xml</id>
             <goals>
               <goal>java</goal>
             </goals>
@@ -24,8 +24,8 @@
             </configuration>
           </execution>
 
-            <id>run-read-xml</id>
           <execution>
+            <id>read-xml</id>
             <goals>
               <goal>java</goal>
             </goals>
