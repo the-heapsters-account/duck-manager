@@ -39,9 +39,9 @@
         "class_name": "CreateXML",
         "args": ""
     },
-        "package_name": "xml.readXML",
-        "class_name": "ReadXML",
     "formatXML": {
+        "package_name": "tools.xml",
+        "class_name": "MakeXMLFormatter",
         "arg": "file_destiny"
     },
     "createSpreadsheet": {
