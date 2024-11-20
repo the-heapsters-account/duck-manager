@@ -144,7 +144,7 @@ dialog[open] {
     background-color: var(--color02);
 }
 #input-table-selected{
-    width: 210px;
+    width: 280px;
     padding: 5px;
     border-radius: 5px;
     height: 20px;
@@ -160,14 +160,20 @@ dialog[open] {
 .btn-close{
     height: 25px;
     width: 60px;
+    color: var(--color05);
     background-color: var(--color03);
     border-radius: 10px;
 }
 .btn-save{
     height: 25px;
     width: 60px;
+    color: var(--color05);
     background-color: var(--color03);
     border-radius: 10px;
+}
+.exit-and-save{
+    margin-top: 10px;
+    text-align: center;
 }
 dialog[open] h1, dialog[open] h2 {
     text-align: center;
