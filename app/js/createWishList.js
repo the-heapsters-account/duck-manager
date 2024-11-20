@@ -9,7 +9,7 @@ inputGerarList.addEventListener("click", async () => {
     inputGerarList.setAttribute('disabled', '');
 
     try {
-        const compileResponse = await window.api.compileJavaFile();
+        // const compileResponse = await window.api.compileJavaFile();
         const classesExecute = await window.api.getInfosClassesExecute();
         const createXML = classesExecute.createXML;
         const createParamsSpreadsheet = classesExecute.createParamsSpreadsheet;
@@ -99,21 +99,18 @@ function createArgsObject() {
 }
 
 function setArgs(argsObj, getInfos) {
-    argsObj.attributesNames.db = `"${getInfos.dbColumns.dbColumnsNamesPresentation}"`;
-    argsObj.attributesValues.db = `"${getInfos.dbColumns.dbColumnsNames.join(",")}"`;
+    argsObj.attributesNames.db = getInfos.dbColumns.dbColumnsNamesPresentation;
+    argsObj.attributesValues.db = getInfos.dbColumns.dbColumnsNames.join(",");
 
-    argsObj.attributesNames.spreadsheet = `"${getInfos.spreadsheetInfos.namesInfo.join(",")}"`;
-    argsObj.attributesValues.spreadsheet = `"${getInfos.spreadsheetInfos.namesInfoPresentation}"`;
-
-    argsObj.columnsImportants.columnProduct = `"${getInfos.columnsImportants.columnProduct}"`;
-    argsObj.columnsImportants.columnQuantity = `"${getInfos.columnsImportants.columnQuantity}"`;
+    argsObj.attributesNames.spreadsheet = getInfos.spreadsheetInfos.namesInfo.join(",");
+    argsObj.attributesValues.spreadsheet = getInfos.spreadsheetInfos.namesInfoPresentation;
 }
 
 function createArgs(argsObj, row) {
-    const argsItemsDB = `${argsObj.attributesNames.db} ${argsObj.attributesValues.db}`;
-    const argsSInfoSpreadsheet = `${argsObj.attributesNames.spreadsheet.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replaceAll(' ', '-')} ${argsObj.attributesValues.spreadsheet}`;
+    const argsItemsDB = argsObj.attributesValues.db.toString().replaceAll(' ', '_');
+    const argsInfoSpreadsheet = argsObj.attributesValues.spreadsheet.toString().replaceAll(' ', '_');
 
-    return `"${argsObj.fileName}" ${argsItemsDB} "${row}" ${argsSInfoSpreadsheet}`;
+    return `${argsObj.fileName} ${argsItemsDB} ${row.toString().replaceAll("|", " ").replaceAll(" ", "_")} ${argsInfoSpreadsheet.replaceAll(" ", "_")}`;
 }
 
 function handleError(error, message) {
