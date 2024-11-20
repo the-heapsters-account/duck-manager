@@ -42,7 +42,7 @@ public class CreateXML {
                 Element columns = doc.createElement("columns");
                 items.appendChild(columns);
 
-                for(int i = 0; i < attrNamesColumnsList.size(); i++) {
+                for(String columnValue : tagValuesColumns) {
                     Element column = doc.createElement("column");
                     String columnValueFormatted = columnValue.toString().replaceAll("_", " ").replaceAll("__", " ").replaceAll("  ", " ");
                     column.appendChild(doc.createTextNode(columnValueFormatted));
@@ -55,7 +55,13 @@ public class CreateXML {
 
                 Element root = doc.createElement(rootElementName);
                 doc.appendChild(root);
+
+                Attr xmlns = doc.createAttribute("xmlns:xsi");
+                xmlns.setValue("http://www.w3.org/2001/XMLSchema-instance");
                 root.setAttributeNode(xmlns);
+
+                Attr xsi = doc.createAttribute("xsi:noNamespaceSchemaLocation");
+                xsi.setValue("model/model.xsd");
                 root.setAttributeNode(xsi);
 
                 Element items = doc.createElement("items");
@@ -63,25 +69,23 @@ public class CreateXML {
 
                 Element columns = doc.createElement("columns");
                 items.appendChild(columns);
-
-                for(int i = 0; i < attrNamesColumnsList.size(); i++) {
+                for(String columnValue : tagValuesColumns) {
                     Element column = doc.createElement("column");
                     String columnValueFormatted = columnValue.toString().replaceAll("_", " ").replaceAll("__", " ").replaceAll("  ", " ");
                     column.appendChild(doc.createTextNode(columnValueFormatted));
                     columns.appendChild(column);
                 }
 
-                Element infos_list = doc.createElement("infos-list");
-                root.appendChild(infos_list);
+                Element tagValues = doc.createElement("tag-values");
+                root.appendChild(tagValues);
 
-                // loop para adicionar infos
-                for(int i = 0; i < attrNamesInfosList.size(); i++) {
-                    Element info = doc.createElement("info");
-                    Attr attrInfo = doc.createAttribute(attrNamesInfosList.get(i));
-                    attrInfo.setValue(""); // Atribuindo um valor padrão vazio
-                    info.setAttributeNode(attrInfo);
-                    info.appendChild(doc.createTextNode(tagValuesInfosList.get(i)));
-                    infos_list.appendChild(info);
+                Element columnsNames = doc.createElement("columns-names");
+                tagValues.appendChild(columnsNames);
+                for(String nameColumn : tagValuesNameColumns) {
+                    Element columnName = doc.createElement("column-name");
+                    String nameColumnFormatted = nameColumn.toString().replaceAll("_", " ").replaceAll("__", " ").replaceAll("  ", " ");
+                    columnName.appendChild(doc.createTextNode(nameColumnFormatted));
+                    columnsNames.appendChild(columnName);
                 }
                 System.out.println("XML criado com sucesso!");
             }
