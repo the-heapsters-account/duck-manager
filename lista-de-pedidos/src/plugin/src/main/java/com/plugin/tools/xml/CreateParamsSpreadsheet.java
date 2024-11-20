@@ -33,8 +33,6 @@ public class CreateParamsSpreadsheet {
             doc.getDocumentElement().normalize();
 
             NodeList columns = doc.getElementsByTagName("columns");
-            System.out.println("Elemento: columns");
-
             for(int i = 0; i < columns.getLength(); i++) {
                 Node column = columns.item(i);
 
