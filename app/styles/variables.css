@@ -7,6 +7,18 @@
     --color05: #e7e7e7;
     --color06: #2f2f2f;
     --color07: #414141;
+    --color08: #c7c7c7;
+    --color09: #848484;
+    --color10: #aaa;
+    --color11: #717171;
+    --color12: #909090;
+    --color13: #494949;
+    --color14: #444;
+    --color15: #616161;
+    --color16: #e1e1e1;
+    --color17: #cbcbcb;
+    --color18: #7c7c7c;
+    --color19: #f5f5f5;
 
     /* fonts */
     --arial-font: Arial, Helvetica, sans-serif;
@@ -33,4 +45,5 @@
     --background-configs: no-repeat center;
     --background-size: 100%;
     --input-size: 25px;
+    --border-radius: 5px;
 }
