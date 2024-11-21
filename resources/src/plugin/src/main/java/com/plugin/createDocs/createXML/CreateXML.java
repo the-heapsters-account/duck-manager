@@ -25,7 +25,8 @@ public class CreateXML {
 
             List<String> tagValuesNameColumns = makeArrayList.makeList(args[1]);
             List<String> tagValuesColumns = makeArrayList.makeList(args[2]);
-            List<String> tagValuesInfos = makeArrayList.makeList(args[3]);
+            List<String> tagNamesInfos = makeArrayList.makeList(args[3]);
+            List<String> tagValuesInfos = makeArrayList.makeList(args[4]);
 
             String rootElementName = "wish-list";
 
@@ -60,10 +61,6 @@ public class CreateXML {
                 xmlns.setValue("http://www.w3.org/2001/XMLSchema-instance");
                 root.setAttributeNode(xmlns);
 
-                Attr xsi = doc.createAttribute("xsi:noNamespaceSchemaLocation");
-                xsi.setValue("model/model.xsd");
-                root.setAttributeNode(xsi);
-
                 Element items = doc.createElement("items");
                 root.appendChild(items);
 
@@ -88,13 +85,22 @@ public class CreateXML {
                     columnsNames.appendChild(columnName);
                 }
 
-                Element infos = doc.createElement("infos");
-                tagValues.appendChild(infos);
+                Element names = doc.createElement("names");
+                tagValues.appendChild(names);
+                for(String info : tagNamesInfos) {
+                    Element name = doc.createElement("name");
+                    String infoFormatted = info.toString().replaceAll("_", " ");
+                    name.appendChild(doc.createTextNode(infoFormatted));
+                    names.appendChild(name);
+                }
+
+                Element values = doc.createElement("values");
+                tagValues.appendChild(values);
                 for(String info : tagValuesInfos) {
-                    Element tag = doc.createElement("tag");
-                    String infoFormatted = info.toString().replaceAll("_", " ").replaceAll("__", " ").replaceAll("  ", " ");
-                    tag.appendChild(doc.createTextNode(infoFormatted));
-                    infos.appendChild(tag);
+                    Element value = doc.createElement("value");
+                    String infoFormatted = info.toString().replaceAll("_", " ");
+                    value.appendChild(doc.createTextNode(infoFormatted));
+                    values.appendChild(value);
                 }
 
                 System.out.println("XML criado com sucesso!");

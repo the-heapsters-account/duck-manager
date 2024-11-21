@@ -66,9 +66,26 @@ public class CreateParamsSpreadsheet {
 
             createTxt.addLine("");
 
-            NodeList infos = doc.getElementsByTagName("infos");
-            for(int i = 0; i < infos.getLength(); i++) {
-                Node info = infos.item(i);
+            NodeList infosNames = doc.getElementsByTagName("names");
+            for(int i = 0; i < infosNames.getLength(); i++) {
+                Node info = infosNames.item(i);
+
+                if(info.getNodeType() == Node.ELEMENT_NODE) {
+                    Element element = (Element) info;
+                    NodeList childNodes = element.getChildNodes();
+                    List<String> contents = getContentsElement.getContents(childNodes);
+                    String contentFormatted = contents.toString().replace("[", "").replace("]", "");
+
+                    createTxt.addLine(contentFormatted);
+                    System.out.println(contentFormatted);
+                }
+            }
+
+            createTxt.addLine("");
+
+            NodeList infosValues = doc.getElementsByTagName("values");
+            for(int i = 0; i < infosValues.getLength(); i++) {
+                Node info = infosValues.item(i);
 
                 if(info.getNodeType() == Node.ELEMENT_NODE) {
                     Element element = (Element) info;
