@@ -67,10 +67,16 @@ inputGerarList.addEventListener("click", async () => {
             handleError(error, "Erro durante a leitura do documento: ");
         }
 
-        try {
-            const packageName = formatXML.package_name;
-            const className = formatXML.class_name;
-            const arg = formatXML.arg;
+        // try {
+        //     const packageName = formatXML.package_name;
+        //     const className = formatXML.class_name;
+        //     const arg = formatXML.arg;
+
+        //     const formatResponse = await window.api.executeJavaClass(packageName, className, arg);
+        //     console.log(formatResponse);
+        // } catch(error) {
+        //     handleError("Erro durante a formatação do documento: ", error);
+        // }
 
             const formatResponse = await window.api.executeJavaClass(packageName, className, arg);
             console.log(formatResponse);
