@@ -45,11 +45,11 @@ inputGerarList.addEventListener("click", async () => {
 
                 console.log(args);
 
-                i++;
-                if(i === 2) break;
+                const executeResponse = await window.api.executeJavaClass(packageName, className, args);
             }
         } catch(error) {
-            handleError(error, "Erro durante a execução da linha: ");
+            await window.api.deleteFiles();
+            handleError("Erro durante a execução da linha: ", error);
         }
 
         try {
@@ -57,10 +57,11 @@ inputGerarList.addEventListener("click", async () => {
             const className = createParamsSpreadsheet.class_name;
             const arg = createParamsSpreadsheet.arg;
 
+            // const readResponse = await window.api.executeJavaClass(packageName, className, arg);
             const readResponse = await window.api.executeJavaClass(packageName, className, arg);
-            console.log(readResponse);
         } catch(error) {
-            handleError(error, "Erro durante a leitura do documento: ");
+            await window.api.deleteFiles();
+            handleError("Erro durante na criação de parâmetros: ", error);
         }
 
         // try {
@@ -74,13 +75,31 @@ inputGerarList.addEventListener("click", async () => {
         //     handleError("Erro durante a formatação do documento: ", error);
         // }
 
-            const formatResponse = await window.api.executeJavaClass(packageName, className, arg);
-            console.log(formatResponse);
+        try {
+            const packageName = createSpreadsheet.package_name;
+            const className = createSpreadsheet.class_name;
+            const date = getDateToday();
+            const hour = getHour();
+            const nameFile = `lista-de-pedidos-${date}-${hour}`;
+
+            const createSpreadsheetResponse = await window.api.executeJavaClass(packageName, className, nameFile);
+            console.log(createSpreadsheetResponse);
+
+            if(createSpreadsheetResponse.search("SUCCESS")) {
+                alert("Lista de pedidos criada com sucesso!");
+                const responseDel = await window.api.deleteFiles();
+                const responseMove = await window.api.moveFile(nameFile + ".xls");
+
+                console.log(responseDel);
+                console.log(responseMove);
+            }
         } catch(error) {
-            handleError(error, "Erro durante a leitura do documento: ");
+            await window.api.deleteFiles();
+            handleError("Não foi possível finalizar o processo de criação da planilha: ", error);
         }
     } catch(error) {
-        handleError(error, "Não foi possível gerar a lista de pedidos: ");
+        await window.api.deleteFiles();
+        handleError("Não foi possível gerar a lista de pedidos: ", error);
     } finally {
         closeDialog();
         msg.style.display = "none";
@@ -90,7 +109,7 @@ inputGerarList.addEventListener("click", async () => {
 
 function createArgsObject() {
     return {
-        fileName: '"file-destiny"',
+        fileName: '"file_destiny"',
         attributesNames: {
             db: null,
             spreadsheet: null
@@ -112,12 +131,12 @@ function setArgs(argsObj, getInfos) {
 
 function createArgs(argsObj, row) {
     const argsItemsDB = argsObj.attributesValues.db.toString().replaceAll(' ', '_');
-    const argsInfoSpreadsheet = argsObj.attributesValues.spreadsheet.toString().replaceAll(' ', '_');
+    const argsInfoSpreadsheet = `${argsObj.attributesNames.spreadsheet.toString().replaceAll(' ', '_')} ${argsObj.attributesValues.spreadsheet.toString().replaceAll(' ', '_')}`;
 
-    return `${argsObj.fileName} ${argsItemsDB} ${row.toString().replaceAll("|", " ").replaceAll(" ", "_")} ${argsInfoSpreadsheet.replaceAll(" ", "_")}`;
+    return `${argsObj.fileName} ${argsItemsDB} ${row.toString().replaceAll("|", " ").replaceAll(" ", "_")} ${argsInfoSpreadsheet}`;
 }
 
-function handleError(error, message) {
+function handleError(message, error) {
     alert(`${message} ${error.message}`);
     console.error(`${message} `, error);
 }
