@@ -8,6 +8,4 @@ package-lock.json
 *.txt
 *.zip
 *.bat
-lista-de-pedidos/src/plugin/xml/file_destiny.xml
 lista-de-pedidos/src/plugin/extras/xml/file_destiny.xml
-*.lst
