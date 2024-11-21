@@ -28,11 +28,32 @@ buttonSave.addEventListener("click", () => {
             },
             table_selected: tableSelectedInput?.value || "",
         },
-        db_columns: {
-            // adição dinâmica
+        db_columns: {},
+        spreadsheet_infos: {},
+        columns_importants: {
+            column_quantity: "estoque"
         },
-        spreadsheet_infos: {
-            // adição dinâmica
+        infos_classes_execute: {
+            createXML: {
+                package_name: "createDocs.createXML",
+                class_name: "CreateXML",
+                args: ""
+            },
+            formatXML: {
+                package_name: "tools.xml",
+                class_name: "MakeXMLFormatter",
+                arg: "file_destiny"
+            },
+            createParamsSpreadsheet: {
+                package_name: "tools.xml",
+                class_name: "CreateParamsSpreadsheet",
+                arg: "file_destiny"
+            },
+            createSpreadsheet: {
+                package_name: "createSpreadsheet",
+                class_name: "CreateSpreadsheet",
+                args: ""
+            }
         }
     };
 
