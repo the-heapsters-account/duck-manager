@@ -125,42 +125,161 @@ main {
 }
 
 dialog[open] {
-    background-color: var(--color05);
+    display: grid;
     width: 600px;
+    min-height: 500px;
     border: none;
     border-radius: 15px;
+    padding: 10px;
+    place-self: center;
+}
+dialog[open] #settings {
+    background-color: var(--color05);
+}
+#create-wish-list {
+    place-items: start center;
+    position: relative;
+}
+#create-wish-list input {
+    width: 100%;
+    padding: 10px;
+    border-radius: var(--border-radius);
+    background-color: var(--color03);
+    color: var(--color05);
+
+    font-size: 1.5em;
+}
+#create-wish-list input:disabled {
+    opacity: 50%;
+}
+#create-wish-list #loading {
+    display: grid;
+    font-size: 1.5em;
+    place-self: center;
+    height: 100%;
+}
+#create-wish-list #msg {
+    display: none;
+    position: absolute;
+    top: 65px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    margin: auto;
+    font-family: var(--arial-font);
+    opacity: 60%;
+    font-size: 1.1em;
+}
+dialog[open] h1, dialog[open] h2 {
+    text-align: center;
+}
+dialog[open] .content section {
+    padding: 10px 0;
+}
+dialog[open] .content section p {
+    text-align: center;
+}
+dialog[open] .content section p input {
+    border-radius: var(--border-radius);
+    transition: all .5s ease;
+    padding: 2px 5px;
+}
+dialog[open] .content section p input[type="number"] {
+    width: 8%;
+}
+dialog[open] .content section p input:focus {
+    background-color: var(--color08);
+    color: var(--color04);
+}
+dialog[open] .content section section ul {
     display: grid;
     place-self: center;
-    padding: 10px;
+
+    margin-top: 5px;
 }
-#input-quantidade-minima{
-    width: 70px;
-    padding: 2px;
-    border-radius: 5px;
-    background-color: var(--color02);
+dialog[open] .content #db-settings-columns li, dialog[open] .content #spreadsheet-infos li {
+    display: flex;
 }
-#input-table-selected{
-    width: 280px;
+dialog[open] .content #spreadsheet-infos li input,
+dialog[open] .content #db-settings-columns li input {
     padding: 5px;
-    border-radius: 5px;
-    height: 20px;
-    background-color: var(--color02);
+
+    font-size: 1.2em;
+
+    color: #fff;
 }
-#input-column-quantity{
-    width: 210px;
+dialog[open] .content #db-settings-columns li input:first-child,
+dialog[open] .content #spreadsheet-infos li input:first-child {
+    background-color: var(--color09);
+    transition: all .5s ease;
+}
+dialog[open] .content #db-settings-columns li input:first-child:focus,
+dialog[open] .content #spreadsheet-infos li input:first-child:focus {
+    background-color: var(--color12);
+}
+dialog[open] .content #db-settings-columns li input:last-child,
+dialog[open] .content #spreadsheet-infos li input:last-child {
+    background-color: var(--color10);
+    transition: all .5s ease;
+}
+dialog[open] .content #db-settings-columns li input:last-child:focus,
+dialog[open] .content #spreadsheet-infos li input:last-child:focus {
+    background-color: var(--color12);
+}
+dialog[open] .content #db-settings-columns li:first-child input:first-child,
+dialog[open] .content #spreadsheet-infos li:first-child input:first-child {
+    border-top-left-radius: var(--border-radius);
+}
+dialog[open] .content #db-settings-columns li:first-child input:last-child,
+dialog[open] .content #spreadsheet-infos li:first-child input:last-child {
+    border-top-right-radius: var(--border-radius);
+}
+dialog[open]#settings .content #db-settings-columns input[value="+"],
+dialog[open]#settings .content #spreadsheet-infos input[value="+"] {
+    border-bottom-right-radius: var(--border-radius);
+    border-bottom-left-radius: var(--border-radius);
+    background-color: var(--color11);
+    width: 100%;
+
+    transition: all .5s ease;
+}
+dialog[open]#settings .content #spreadsheet-infos input[value="+"]:hover,
+dialog[open]#settings .content #db-settings-columns input[value="+"]:hover {
+    background-color: var(--color13);
+}
+dialog[open] .content #db-settings {
+    border-radius: var(--border-radius);
+    background-color: var(--color01);
+}
+dialog[open] .content #db-settings li {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+dialog[open] .content #db-settings li label {
+    color: #fff;
+}
+dialog[open] .content #db-settings li input {
+    color: #000;
+}
+dialog[open] .content #db-settings li label, dialog[open] .content #db-settings li input {
     padding: 5px;
-    border-radius: 5px;
-    height: 20px;
-    background-color: var(--color02);
 }
-.btn-close{
-    height: 25px;
-    width: 60px;
-    color: var(--color05);
-    background-color: var(--color03);
-    border-radius: 10px;
+dialog[open] .content #db-settings li:first-child input {
+    border-top-right-radius: var(--border-radius);
 }
-.btn-save{
+dialog[open] .content #db-settings li:last-child input {
+    border-bottom-right-radius: var(--border-radius);
+}
+dialog[open] .content #db-settings li input {
+    transition: all .5s ease;
+}
+dialog[open] .content #db-settings li label:focus, dialog[open] .content #db-settings li input:focus {
+    background-color: var(--color08);
+}
+
+.btn-close, .btn-save {
     height: 25px;
     width: 60px;
     color: var(--color05);
@@ -171,17 +290,9 @@ dialog[open] {
     margin-top: 10px;
     text-align: center;
 }
-dialog[open] h1, dialog[open] h2 {
-    text-align: center;
-}
-
-/* configurar depois */
-/* dialog[open]#settings .content #db-settings-columns input[value="+"] {
-    width: 100%;
-} */
 
 table {
-    background-color: #2095c4c0;
+    background-color: var(--color14);
     width: 100%;
     border-collapse: separate;
     overflow: hidden;
@@ -192,24 +303,20 @@ table thead {
 table th, table td {
     padding: 12px;
     text-align: center;
-    /* font-family: ; */
 }
 table th {
-    background-color: #1f4a7c;
-    color: #021a4e;
+    background-color: var(--color15);
+    color: var(--color16);
     font-weight: bold;
     font-size: 16px;
     text-transform: uppercase;
 }
 table td {
     font-size: 14px;
-    color: #333;
+    color: var(--color17);
     font-weight: bold;
 }
-table tbody tr:hover {
-    background-color: #e6f2ff;
-}
-table td:first-child {
-    font-weight: bold;
-    color: #1f4a7c;
+table tbody tr:hover td {
+    background-color: var(--color18);
+    color: var(--color19);
 }
