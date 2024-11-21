@@ -95,19 +95,15 @@ header nav .barra-pesquisa .input-search {
 header nav .barra-pesquisa .input-search::-webkit-search-cancel-button {
     --size: 16px;
 
-    /* Remove default */
     -webkit-appearance: none;
     appearance: none;
 
-    /* Now your own custom styles */
     background: var(--icon-url-x) var(--background-configs);
     background-size: var(--size);
 
-    /* Dimensions */
-    width: var(--size);  /* Adjust as needed */
-    height: var(--size); /* Adjust as needed */
+    width: var(--size);
+    height: var(--size);
 
-    /* Ensuring it's properly positioned */
     cursor: pointer;
 }
 header nav .barra-pesquisa .input-search, header nav .barra-pesquisa .input-search::placeholder {
