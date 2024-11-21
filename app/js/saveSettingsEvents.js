@@ -12,7 +12,7 @@ buttonSave.addEventListener("click", () => {
     const tableSelectedInput = document.querySelector("#input-table-selected");
 
     const settings = {
-        quantidade_minima: parseInt(quantidadeMinimaInput.value),
+        quantidade_minima: parseInt(quantidadeMinimaInput?.value || 0),
         atalhos: {
             produtos: "F1",
             "lista de pedidos": "F2",
@@ -21,12 +21,12 @@ buttonSave.addEventListener("click", () => {
         },
         db_configs: {
             connection: {
-                host: hostInput.value,
-                user: userInput.value,
-                password: passwordInput.value,
-                database: databaseInput.value,
+                host: hostInput?.value || "",
+                user: userInput?.value || "",
+                password: passwordInput?.value || "",
+                database: databaseInput?.value || "",
             },
-            table_selected: tableSelectedInput.value,
+            table_selected: tableSelectedInput?.value || "",
         },
         db_columns: {
             // adição dinâmica
@@ -37,16 +37,33 @@ buttonSave.addEventListener("click", () => {
     };
 
     for(const inputsColumn of settingsDBColumns.children) {
-        const columnNameVerify = inputsColumn.children[0].value !== "+" && inputsColumn.children[0].getAttribute("type") === "text";
+        const columnNameElement = inputsColumn.children[0];
+        const columnValueElement = inputsColumn.children[1];
 
-        if(columnNameVerify) settings.db_columns[inputsColumn.children[0].value] = inputsColumn.children[1].value;
+        const columnName = columnNameElement?.value;
+        const columnValue = columnValueElement?.value;
+
+        const columnNameVerify = columnName && columnName !== "+" && columnNameElement?.getAttribute("type") === "text";
+        const columnValueVerify = columnValue && columnValue.trim() !== "";
+
+        if(columnNameVerify && columnValueVerify) {
+            settings.db_columns[columnName] = columnValue;
+        }
     }
 
     for(const inputSpreadsheetInfo of settingsSpreadsheetInfos.children) {
-        const inputSpreadsheetInfoInsert = inputSpreadsheetInfo.children[0].value !== "+";
-        const inputSpreadsheetInfoValue = inputSpreadsheetInfo.children[1] !== undefined;
+        const infoNameElement = inputSpreadsheetInfo.children[0];
+        const infoValueElement = inputSpreadsheetInfo.children[1];
 
-        inputSpreadsheetInfoInsert && inputSpreadsheetInfoValue ? settings.spreadsheet_infos[inputSpreadsheetInfo.children[0].value] = inputSpreadsheetInfo.children[1].value : null;
+        const infoName = infoNameElement?.value;
+        const infoValue = infoValueElement?.value;
+
+        const infoNameVerify = infoName && infoName !== "+";
+        const infoValueVerify = infoValue && infoValue.trim() !== "";
+
+        if(infoNameVerify && infoValueVerify) {
+            settings.spreadsheet_infos[infoName] = infoValue;
+        }
     }
 
     window.api.saveConfigs(settings).then((response) => {
