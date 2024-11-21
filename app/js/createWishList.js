@@ -16,11 +16,9 @@ inputGerarList.addEventListener("click", async () => {
     startLoadingAnimation();
 
     try {
-        // const compileResponse = await window.api.compileJavaFile();
         const classesExecute = await window.api.getInfosClassesExecute();
         const createXML = classesExecute.createXML;
         const createParamsSpreadsheet = classesExecute.createParamsSpreadsheet;
-        const formatXML = classesExecute.formatXML;
         const createSpreadsheet = classesExecute.createSpreadsheet;
 
         const quantidadeMinima = await window.api.getQuantidadeMinima();
@@ -35,10 +33,6 @@ inputGerarList.addEventListener("click", async () => {
 
         const query = `SELECT ${columnsObject.columnsDB.toString().replace(`${columnQuantity},`, '')}  FROM ${table} WHERE ${columnQuantity} <= ${quantidadeMinima}`;
         const rows = await window.api.executeQuery(query);
-
-        // if(!compileResponseVerify) throw new Error('Erro na compilação do código: ' + compileResponseVerify);
-        console.log(compileResponse);
-        console.log('Código compilado com sucesso!');
 
         setArgs(argsObj, getInfos);
         let i = 0;
@@ -55,8 +49,6 @@ inputGerarList.addEventListener("click", async () => {
                 console.log(executeResponse);
 
                 i++;
-                console.log(`linha ${i} de ${rows.length}`);
-
                 if(i === 2) break;
             }
         } catch(error) {
