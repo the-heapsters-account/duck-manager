@@ -35,8 +35,6 @@ inputGerarList.addEventListener("click", async () => {
         const rows = await window.api.executeQuery(query);
 
         setArgs(argsObj, getInfos);
-        let i = 0;
-
         try {
             for(const row of rows) {
                 const rowItems = Object.values(row).toString().trimStart().trimEnd();
