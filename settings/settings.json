@@ -35,24 +35,24 @@
   },
   "infos_classes_execute": {
     "createXML": {
-        "package_name": "createDocs.createXML",
-        "class_name": "CreateXML",
-        "args": ""
+      "package_name": "createDocs.createXML",
+      "class_name": "CreateXML",
+      "args": ""
     },
     "formatXML": {
-        "package_name": "tools.xml",
-        "class_name": "MakeXMLFormatter",
-        "arg": "file_destiny"
+      "package_name": "tools.xml",
+      "class_name": "MakeXMLFormatter",
+      "arg": "file_destiny"
     },
     "createParamsSpreadsheet": {
-        "package_name": "tools.xml",
-        "class_name": "CreateParamsSpreadsheet",
-        "arg": "file_destiny"
+      "package_name": "tools.xml",
+      "class_name": "CreateParamsSpreadsheet",
+      "arg": "file_destiny"
     },
     "createSpreadsheet": {
-        "package_name": "createSpreadsheet",
-        "class_name": "CreateSpreadsheet",
-        "args": ""
+      "package_name": "createDocs.createSpreadsheet",
+      "class_name": "CreateSpreadsheet",
+      "args": ""
     }
   }
 }
