@@ -1,12 +1,19 @@
 const btnGerarDoc = document.querySelector(".btn-gerar-doc");
 const loadingDialogElement = document.querySelector("dialog#create-wish-list");
 const inputGerarList = document.querySelector("#btn-gerar-lista");
+const loading = document.querySelector("#loading");
+const msg = document.querySelector("#msg");
+
+let ellipsisInterval;
 
 btnGerarDoc.addEventListener("click", () => loadingDialogElement.showModal());
 
 inputGerarList.addEventListener("click", async () => {
     loadingDialogElement.showModal();
     inputGerarList.setAttribute('disabled', '');
+    loading.style.display = "block";
+    msg.style.display = "block";
+    startLoadingAnimation();
 
     try {
         // const compileResponse = await window.api.compileJavaFile();
@@ -87,6 +94,8 @@ inputGerarList.addEventListener("click", async () => {
         handleError(error, "Não foi possível gerar a lista de pedidos: ");
     } finally {
         closeDialog();
+        msg.style.display = "none";
+        stopLoadingAnimation();
     }
 });
 
