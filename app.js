@@ -52,10 +52,9 @@ async function moveFile(origin, destiny, fileName) {
 function execCommand(cmd, msgError) {
     return new Promise((resolve, reject) => {
         exec(cmd, (error, stdout, stderr) => {
-        if(error) return reject(msgError + error.message);
-        if(stderr) return reject("error: " + stderr);
-
-        resolve(stdout);
+            if(error) return reject(msgError + error.message);
+            if(stderr) return reject("error: " + stderr);
+            resolve(stdout);
         });
     });
 }
@@ -69,16 +68,16 @@ function readSettingsJSON() {
 }
 
 function getObjectKeys(object) {
-    return Object.keys(object)
+    return Object.keys(object);
 }
 
 function getObjectValues(object) {
-    return Object.values(object)
+    return Object.values(object);
 }
 
 app.whenReady().then(() => {
-    widthSize = 800;
-    heightSize = 600;
+    const widthSize = 800;
+    const heightSize = 600;
 
     const win = new BrowserWindow({
         width: widthSize,
@@ -94,10 +93,8 @@ app.whenReady().then(() => {
         }
     });
 
-    win.webContents.openDevTools();
     win.loadFile(paths.app);
     win.maximize();
-    // win.removeMenu();
 });
 
 // handler de pegar as configurações
@@ -144,12 +141,12 @@ ipcMain.handle('execute-query', async (event, query) => {
 
 // handler de execução de arquivos Java
 ipcMain.handle('compile-java-files', () => {
-    return execCommand(`cd ${paths.dirJava} && mvn clean compile`, `erro ao compilar o(s) arquivo(s) Java: `);
+    return execCommand(`cd ${paths.dirJava} && mvn clean compile`, `Erro ao compilar o(s) arquivo(s) Java: `);
 });
 
 // handler de execução de classes Java
 ipcMain.handle('execute-java-class', (event, packageName, className, args) => {
-    return execCommand(`cd ${paths.dirJava} && mvn exec:java -Dexec.mainClass=com.plugin.${packageName}.${className} -Dexec.args="${args}"`, `erro ao executar a classe Java "${className}": `)
+    return execCommand(`cd ${paths.dirJava} && mvn exec:java -Dexec.mainClass=com.plugin.${packageName}.${className} -Dexec.args="${args}"`, `Erro ao executar a classe Java "${className}": `);
 });
 
 // handler pra pegar as colunas do banco de dados que serão usadas
@@ -197,7 +194,7 @@ ipcMain.handle('get-infos-lista-pedidos', () => {
         columnsImportants: {
             columnQuantity: settings.columns_importants.column_quantity
         }
-    }
+    };
 });
 
 //handler pra pegar a coluna que contém a quantidade dos produtos pra pegar o nome selecionado
