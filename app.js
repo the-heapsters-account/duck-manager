@@ -18,6 +18,35 @@ const paths = {
         dist: "resources/planilhas"
     }
 };
+
+async function deleteFile(pathFile) {
+    try {
+        await fs.promises.unlink(path.join(__dirname, pathFile));
+        return "Arquivo deletado com sucesso";
+    } catch(err) {
+        return "Erro ao deletar o arquivo: " + err;
+    }
+}
+
+async function moveFile(origin, destiny, fileName) {
+    const pathOrigin = path.join(__dirname, origin, fileName); // Caminho de origem
+    const pathDestiny = path.join(__dirname, destiny, fileName); // Caminho de destino
+
+    try {
+        // Verifique se o caminho de origem existe
+        await fs.promises.access(pathOrigin);
+        console.log(`Movendo arquivo de ${pathOrigin} para ${pathDestiny}`);
+
+        // Copiar o arquivo para o destino
+        await fs.promises.copyFile(pathOrigin, pathDestiny);
+        console.log('Arquivo copiado com sucesso!');
+
+        // Após copiar, deletar o arquivo de origem
+        await fs.promises.unlink(pathOrigin);
+        return 'Arquivo original excluído com sucesso!';
+    } catch(err) {
+        return 'Erro ao mover o arquivo: ' + err.message;
+    }
 }
 
 function execCommand(cmd, msgError) {
@@ -186,8 +215,16 @@ ipcMain.handle('get-infos-classes-execute', () => {
     return settings.infos_classes_execute;
 });
 
-// fechando a janela do app em no windows e linux
-app.on("window-all-closed", () => { if(process.platform != "darwin") app.quit() });
+ipcMain.handle('delete-files', async () => {
+    const delArgs = await deleteFile(paths.toDelete.args);
+    const delXML = await deleteFile(paths.toDelete.xml);
+    return { delArgs, delXML };
+});
 
-// abrindo a aplicação no macOS
-app.on("activate", () => { if(BrowserWindow.getAllWindows().length === 0)  createWindow() });
+ipcMain.handle('move-file', async (event, fileName) => {
+    return await moveFile("resources/src/plugin/spreadsheets", "resources/planilhas", fileName);
+});
+
+app.on("window-all-closed", () => { if(process.platform !== "darwin") app.quit(); });
+
+app.on("activate", () => { if(BrowserWindow.getAllWindows().length === 0) createWindow(); });

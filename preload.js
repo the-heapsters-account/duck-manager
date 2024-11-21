@@ -11,5 +11,7 @@ contextBridge.exposeInMainWorld("api", {
     getQuantidadeMinima: () => ipcRenderer.invoke('get-quantidade-minima'),
     getInfosListaPedidos: () => ipcRenderer.invoke('get-infos-lista-pedidos'),
     getNameColumnQuantity: () => ipcRenderer.invoke('get-name-column-quantity'),
-    getInfosClassesExecute: () => ipcRenderer.invoke('get-infos-classes-execute')
+    getInfosClassesExecute: () => ipcRenderer.invoke('get-infos-classes-execute'),
+    deleteFiles: () => ipcRenderer.invoke('delete-files'),
+    moveFile: nameFile => ipcRenderer.invoke('move-file', nameFile),
 });
