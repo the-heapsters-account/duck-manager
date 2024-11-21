@@ -7,8 +7,17 @@ const { exec } = require('child_process');
 const paths = {
     settingsJSON: 'settings/settings.json',
     icon: 'resources/imgs/logo.png',
-    dirJava: 'lista-de-pedidos/src/plugin',
-    app: 'app/app.html'
+    dirJava: 'resources/src/plugin',
+    app: 'app/app.html',
+    toDelete: {
+        args: "resources/src/plugin/extras/args.txt",
+        xml: "resources/src/plugin/extras/xml/file_destiny.xml"
+    },
+    toMove: {
+        file: "resources/src/plugin/spreadsheets/",
+        dist: "resources/planilhas"
+    }
+};
 }
 
 function execCommand(cmd, msgError) {
