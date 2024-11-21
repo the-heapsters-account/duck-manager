@@ -123,3 +123,40 @@ function closeDialog() {
     btnGerarDoc.removeAttribute("disabled");
     inputGerarList.removeAttribute("disabled");
 }
+
+function startLoadingAnimation() {
+    const ellipsis = document.getElementById("ellipsis");
+    let dots = 0;
+
+    ellipsisInterval = setInterval(() => {
+        ellipsis.innerHTML = '.'.repeat(dots);
+        dots = (dots + 1) % 4;
+    }, 500);
+}
+
+function stopLoadingAnimation() {
+    clearInterval(ellipsisInterval);
+    document.getElementById("ellipsis").innerHTML = '';
+}
+
+function getDateToday() {
+    const dateToday = new Date();
+
+    const day = String(dateToday.getDate()).padStart(2, '0');
+    const month = String(dateToday.getMonth() + 1).padStart(2, '0');
+    const year = dateToday.getFullYear();
+
+    const dateFormatted = `${day}_${month}_${year}`;
+
+    return dateFormatted;
+}
+
+function getHour() {
+    const dateToday = new Date();
+
+    const hours = dateToday.getHours();
+    const minutes = dateToday.getMinutes();
+    const seconds = dateToday.getSeconds();
+
+    return `${hours}_${minutes}_${seconds}`;
+}
