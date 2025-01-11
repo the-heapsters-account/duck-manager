@@ -45,7 +45,7 @@
       "oneClick": false,
       "perMachine": false,
       "allowElevation": false,
-      "createDesktopShortcut": true
+      "createDesktopShortcut": "always",
     }
   },
   "dependencies": {
