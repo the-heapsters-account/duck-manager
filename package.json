@@ -5,8 +5,8 @@
   "main": "app.js",
   "scripts": {
     "start": "nodemon",
-    "packaging": "npx @electron/packager . --platform=win32 --arch=x64 --out=package --overwrite --ignore(lista de pedidos|package|tests|resources|presentation|\\.gitignore|README.md|nodemon.json) --icon=resources/imgs/logo.ico",
-    "building": "electron-builder"
+    "package": "npx @electron/packager . --platform=win32 --arch=x64 --out=package --overwrite --ignore(lista de pedidos|package|tests|resources|presentation|\\.gitignore|README.md|nodemon.json) --icon=resources/imgs/logo.ico",
+    "build": "electron-builder"
   },
   "author": "Edgar Augusto, Pedro Arthur, João Gilberto, Pedro dos anjos, Ana Marcella, Lucas Madureira, Murylo Costa, Thiago Titi",
   "license": "MIT",
