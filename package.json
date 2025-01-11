@@ -46,6 +46,8 @@
       "perMachine": false,
       "allowElevation": false,
       "createDesktopShortcut": "always",
+      "allowToChangeInstallationDirectory": true,
+      "shortcutName": "Duck Manager"
     }
   },
   "dependencies": {
