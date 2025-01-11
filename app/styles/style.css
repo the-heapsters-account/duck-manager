@@ -106,7 +106,8 @@ header nav .barra-pesquisa .input-search::-webkit-search-cancel-button {
 
     cursor: pointer;
 }
-header nav .barra-pesquisa .input-search, header nav .barra-pesquisa .input-search::placeholder {
+header nav .barra-pesquisa .input-search,
+header nav .barra-pesquisa .input-search::placeholder {
     color: var(--color03);
 }
 header nav .barra-pesquisa .btn-search {
@@ -198,7 +199,8 @@ dialog[open] .content section section ul {
 
     margin-top: 5px;
 }
-dialog[open] .content #db-settings-columns li, dialog[open] .content #spreadsheet-infos li {
+dialog[open] .content #db-settings-columns li,
+dialog[open] .content #spreadsheet-infos li {
     display: flex;
 }
 dialog[open] .content #spreadsheet-infos li input,
@@ -263,7 +265,8 @@ dialog[open] .content #db-settings li label {
 dialog[open] .content #db-settings li input {
     color: #000;
 }
-dialog[open] .content #db-settings li label, dialog[open] .content #db-settings li input {
+dialog[open] .content #db-settings li label,
+dialog[open] .content #db-settings li input {
     padding: 5px;
 }
 dialog[open] .content #db-settings li:first-child input {
@@ -275,11 +278,13 @@ dialog[open] .content #db-settings li:last-child input {
 dialog[open] .content #db-settings li input {
     transition: all .5s ease;
 }
-dialog[open] .content #db-settings li label:focus, dialog[open] .content #db-settings li input:focus {
+dialog[open] .content #db-settings li label:focus,
+dialog[open] .content #db-settings li input:focus {
     background-color: var(--color08);
 }
 
-.btn-close, .btn-save {
+.btn-close,
+.btn-save {
     height: 25px;
     width: 60px;
     color: var(--color05);
@@ -289,6 +294,10 @@ dialog[open] .content #db-settings li label:focus, dialog[open] .content #db-set
 .exit-and-save{
     margin-top: 10px;
     text-align: center;
+
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 }
 
 table {
@@ -300,7 +309,8 @@ table {
 table thead {
     border-spacing: 2px;
 }
-table th, table td {
+table th,
+table td {
     padding: 12px;
     text-align: center;
 }
