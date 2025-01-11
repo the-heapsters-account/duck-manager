@@ -219,7 +219,7 @@ ipcMain.handle('delete-files', async () => {
 });
 
 ipcMain.handle('move-file', async (event, fileName) => {
-    return await moveFile("resources/src/plugin/spreadsheets", "resources/planilhas", fileName);
+    return await moveFile("resources/src/plugin/extras/spreadsheets", "resources/planilhas", fileName);
 });
 
 app.on("window-all-closed", () => { if(process.platform !== "darwin") app.quit(); });
