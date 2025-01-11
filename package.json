@@ -11,7 +11,7 @@
   "author": "The Heapsters",
   "license": "MIT",
   "build": {
-    "appId": "com.theheapsters.duckmanager",
+    "appId": "com.the_heapsters.duck_manager",
     "productName": "Duck Manager",
     "directories": {
       "output": "build"
