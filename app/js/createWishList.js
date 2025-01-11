@@ -31,7 +31,7 @@ inputGerarList.addEventListener("click", async () => {
         argsObj.fileName = "file_destiny";
         const getInfos = await window.api.getInfosListaPedidos();
 
-        const query = `SELECT ${columnsObject.columnsDB.toString().replace(`${columnQuantity},`, '')}  FROM ${table} WHERE ${columnQuantity} <= ${quantidadeMinima}`;
+        const query = `SELECT ${columnsObject.columnsDB.toString().replace(`${columnQuantity},`, '')} FROM ${table} WHERE ${columnQuantity} <= ${quantidadeMinima}`;
         const rows = await window.api.executeQuery(query);
 
         setArgs(argsObj, getInfos);
