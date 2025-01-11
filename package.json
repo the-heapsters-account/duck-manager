@@ -10,10 +10,6 @@
   },
   "author": "The Heapsters",
   "license": "MIT",
-  "dependencies": {
-    "fs": "^0.0.1-security",
-    "mysql2": "^3.11.3"
-  },
   "build": {
     "appId": "com.theheapsters.duckmanager",
     "productName": "Duck Manager",
@@ -51,6 +47,10 @@
       "allowElevation": false,
       "createDesktopShortcut": true
     }
+  },
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "mysql2": "^3.11.3"
   },
   "devDependencies": {
     "@electron/packager": "^18.3.5",
