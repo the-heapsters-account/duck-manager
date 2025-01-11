@@ -29,7 +29,7 @@
       "!**/node_modules/**/example/**",
       "!**/node_modules/**/docs/**"
     ],
-    "asar": true,
+    "asar": false,
     "win": {
       "icon": "resources/imgs/logo.ico",
       "target": [
