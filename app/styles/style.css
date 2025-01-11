@@ -134,7 +134,7 @@ dialog[open] {
     padding: 10px;
     place-self: center;
 }
-dialog[open] #settings {
+dialog[open]#settings {
     background-color: var(--color05);
 }
 #create-wish-list {
