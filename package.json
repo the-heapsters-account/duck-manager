@@ -30,6 +30,9 @@
       "!**/node_modules/**/docs/**"
     ],
     "asar": false,
+    "asarUnpack": [
+      "settings/settings.json"
+    ],
     "win": {
       "icon": "resources/imgs/logo.ico",
       "target": [
