@@ -19,6 +19,8 @@
     "files": [
       "app/**/*",
       "app.js",
+      "preload.js",
+      "settings/settings.json",
       "package.json",
       "!**/*.log",
       "!**/*.map",
