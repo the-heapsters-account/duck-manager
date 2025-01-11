@@ -132,7 +132,7 @@ public class CreateSpreadsheet {
             sheet.autoSizeColumn(i);
         }
 
-        try (FileOutputStream fileOut = new FileOutputStream("spreadsheets/" + fileName + ".xls")) {
+        try (FileOutputStream fileOut = new FileOutputStream("extras/spreadsheets/" + fileName + ".xls")) {
             workbook.write(fileOut);
         } catch(IOException e) {
             e.printStackTrace();
