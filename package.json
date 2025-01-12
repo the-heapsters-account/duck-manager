@@ -18,6 +18,7 @@
     },
     "files": [
       "app/**/*",
+      "resources/**/*",
       "app.js",
       "preload.js",
       "settings/settings.json",
@@ -25,7 +26,8 @@
     ],
     "asar": false,
     "asarUnpack": [
-      "settings/settings.json"
+      "settings/settings.json",
+      "resources/**/*"
     ],
     "win": {
       "icon": "resources/imgs/logo.ico",
