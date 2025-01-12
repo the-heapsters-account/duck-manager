@@ -119,6 +119,21 @@ main {
     background: var(--icon-url-logo) var(--background-configs);
     background-size: 380px;
 }
+main {
+    overflow: auto;
+}
+main::-webkit-scrollbar {
+    width: 6px;
+}
+main::-webkit-scrollbar-button {
+    height: 0;
+}
+main::-webkit-scrollbar-thumb {
+    background-color: var(--color04);
+}
+main::-webkit-scrollbar-track-piece {
+    background-color: var(--color02);
+}
 
 dialog:modal {
     display: grid;
@@ -131,6 +146,17 @@ dialog:modal {
 }
 dialog:modal#settings {
     background-color: var(--color05);
+}
+dialog:modal::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-button {
+    height: 5px;
+    background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: var(--color03);
 }
 #create-wish-list {
     place-items: start center;
