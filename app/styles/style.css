@@ -323,6 +323,7 @@ dialog:modal .content #db-settings li input:focus {
 }
 
 table {
+    opacity: .9;
     background-color: var(--color14);
     width: 100%;
     border-collapse: separate;
