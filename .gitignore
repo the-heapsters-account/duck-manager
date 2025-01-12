@@ -1,12 +1,12 @@
 node_modules/
 bin/
 package/
-app builded/
+build/
+*.xls
 *.class
 *.py
 package-lock.json
 *.txt
 *.zip
 *.bat
-lista-de-pedidos/src/plugin/extras/xml/file_destiny.xml
 *.lst
