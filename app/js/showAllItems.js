@@ -1,5 +1,6 @@
 const productButton = document.querySelector('.btn-products');
 const productSection = document.querySelector('.product-container');
+const main = document.querySelector('main');
 
 productButton.addEventListener("click", () => {
     productSection.innerHTML = '';
@@ -35,6 +36,7 @@ productButton.addEventListener("click", () => {
 
                 tableElements.table.appendChild(tableElements.tBody);
                 productSection.appendChild(tableElements.table);
+                main.style.filter = 'grayscale(1)';
             } catch(error) {
                 alert(error);
                 console.error(error);
