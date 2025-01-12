@@ -175,7 +175,7 @@ dialog:modal::-webkit-scrollbar {
     opacity: 50%;
 }
 #create-wish-list #loading {
-    display: grid;
+    display: none;
     font-size: 1.5em;
     place-self: center;
     height: 100%;
