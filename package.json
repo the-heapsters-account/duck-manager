@@ -21,15 +21,7 @@
       "app.js",
       "preload.js",
       "settings/settings.json",
-      "package.json",
-      "!**/*.log",
-      "!**/*.map",
-      "!node_modules/**/{test,docs,example}/**",
-      "!**/node_modules/**/.*",
-      "!**/node_modules/**/*.md",
-      "!**/node_modules/**/test/**",
-      "!**/node_modules/**/example/**",
-      "!**/node_modules/**/docs/**"
+      "package.json"
     ],
     "asar": false,
     "asarUnpack": [
